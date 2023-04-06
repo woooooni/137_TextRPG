@@ -45,7 +45,7 @@ void CInventory::UseItem(int _iIndex)
 	if (_iIndex < m_vecItems.size()) {
 		if (m_vecItems[_iIndex]->GetItem()->strType == "소모품") {
 			// 플레이어 피 회복
-			m_pPlayer->Set_CurHp(m_vecItems[_iIndex]->GetItem()->iRecovery);
+			m_pPlayer->Reflect_Stat(m_vecItems[_iIndex], false);
 
 			m_vecItems[_iIndex]->SetAmount(-1);
 			// 개수 0개되면 지우기
