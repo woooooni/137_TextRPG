@@ -29,6 +29,9 @@
     <Filter Include="04. Object">
       <UniqueIdentifier>{084fa814-4c34-4b89-a576-36de73d84ae1}</UniqueIdentifier>
     </Filter>
+    <Filter Include="22. Equip">
+      <UniqueIdentifier>{4f3218d4-b0ff-496f-a404-11ab46b0d9f0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -67,6 +70,9 @@
     <ClInclude Include="CObj.h">
       <Filter>04. Object</Filter>
     </ClInclude>
+    <ClInclude Include="CEquip.h">
+      <Filter>22. Equip</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Lecture2_GitPractice.cpp" />
@@ -87,6 +93,9 @@
     </ClCompile>
     <ClCompile Include="CObj.cpp">
       <Filter>04. Object</Filter>
+    </ClCompile>
+    <ClCompile Include="CEquip.cpp">
+      <Filter>22. Equip</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
