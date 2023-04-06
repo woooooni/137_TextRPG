@@ -3,10 +3,7 @@
 
 
 CScene_Field::CScene_Field()
-<<<<<<< .merge_file_dPaePx
-=======
 	:CScene(SCENE_TYPE::FIELD)
->>>>>>> .merge_file_0lfuwS
 {
 }
 
@@ -18,10 +15,10 @@ CScene_Field::~CScene_Field()
 void CScene_Field::Enter()
 {
 	if(nullptr == m_pPlayer)
-		//TODO :: ÇÃ·¹ÀÌ¾î Á¤º¸¸¦ °¡Á®¿À±â.
+		//TODO :: í”Œë ˆì´ì–´ ì •ë³´ë¥¼ ê°€ì ¸ì˜¤ê¸°.
 
 
-	cout << "1. ÃÊ±Ş\t 2. Áß±Ş\t 3.°í±Ş (-1 : ³ª°¡±â)" << endl;
+	cout << "1. ì´ˆê¸‰\t 2. ì¤‘ê¸‰\t 3.ê³ ê¸‰ (-1 : ë‚˜ê°€ê¸°)" << endl;
 
 	cout << "--->";
 
@@ -33,14 +30,14 @@ void CScene_Field::Enter()
 	switch (iInput)
 	{
 	case 1:
-		//TODO :: ÃÊ±Ş ¸ó½ºÅÍ »ı¼º
+		//TODO :: ì´ˆê¸‰ ëª¬ìŠ¤í„° ìƒì„±
 		// m_pMonster = 
 		break;
 	case 2:
-		//TODO :: Áß±Ş ¸ó½ºÅÍ »ı¼º
+		//TODO :: ì¤‘ê¸‰ ëª¬ìŠ¤í„° ìƒì„±
 		break;
 	case 3:
-		//TODO :: °í±Ş ¸ó½ºÅÍ »ı¼º
+		//TODO :: ê³ ê¸‰ ëª¬ìŠ¤í„° ìƒì„±
 		break;
 		
 	default:
@@ -56,10 +53,10 @@ void CScene_Field::Update()
 void CScene_Field::Render()
 {
 	/*	TODO :: 
-		- Player, Monster Á¤º¸ Ãâ·Â. 
-		- Player, Monster ½Î¿ì±â.
-		- Player, Monster HP ÆÇÁ¤.
-		- Player, Monster º¸»ó.
+		- Player, Monster ì •ë³´ ì¶œë ¥. 
+		- Player, Monster ì‹¸ìš°ê¸°.
+		- Player, Monster HP íŒì •.
+		- Player, Monster ë³´ìƒ.
 	*/
 
 }
