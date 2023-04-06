@@ -121,6 +121,12 @@
     <ClInclude Include="Inventory.h">
       <Filter>Inventory</Filter>
     </ClInclude>
+<<<<<<< HEAD
+=======
+    <ClInclude Include="Shop.h">
+      <Filter>03. Scene\01. Shop</Filter>
+    </ClInclude>
+>>>>>>> release/Jongseok
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Lecture2_GitPractice.cpp" />
@@ -175,5 +181,11 @@
     <ClCompile Include="Inventory.cpp">
       <Filter>Inventory</Filter>
     </ClCompile>
+<<<<<<< HEAD
+=======
+    <ClCompile Include="Shop.cpp">
+      <Filter>03. Scene\01. Shop</Filter>
+    </ClCompile>
+>>>>>>> release/Jongseok
   </ItemGroup>
 </Project>

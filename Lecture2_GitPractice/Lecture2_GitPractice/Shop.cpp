@@ -2,7 +2,7 @@
 #include "Shop.h"
 
 
-CShop::CShop()// :m_pDummyItem(nullptr),m_pDummyPlayer(nullptr)
+CShop::CShop()// :m_pDummyItem(nullptr),m_pDummyPlayer(nullptr) m_pInven(nullptr)
 {
 
 }
@@ -12,39 +12,9 @@ CShop::~CShop()
 {
 }
 
-void CShop::Initialize()
+void CShop::Enter()
 {
-	//m_pDummyItem
-}
-
-void CShop::Update()
-{
-	int iInput(0);
-	while (true)
-	{
-		cout << "1. 초급상점 2. 중급상점 3. 고급상점 0. 전단계:";
-		cin >> iInput;
-		switch (iInput)
-		{
-		case 1:
-			ShowItem(0);
-			break;
-		case 2:
-			ShowItem(1);
-			break;
-		case 3:
-			ShowItem(0);
-			break;
-		case 0:
-			return;
-		}
-
-	}
-
-}
-
-void CShop::Release()
-{
+	//아이템 객체 받아오기? 생성?
 }
 
 void CShop::ShowItem(int _iShopLevel)
@@ -127,8 +97,33 @@ void CShop::SellItem()
 
 }
 
-void CShop::Enter()
+
+
+
+void CShop::Update()
 {
+	int iInput(0);
+	while (true)
+	{
+		cout << "1. 초급상점 2. 중급상점 3. 고급상점 0. 전단계:";
+		cin >> iInput;
+		switch (iInput)
+		{
+		case 1:
+			ShowItem(0);
+			break;
+		case 2:
+			ShowItem(1);
+			break;
+		case 3:
+			ShowItem(2);
+			break;
+		case 0:
+			return;
+		}
+
+	}
+
 }
 
 void CShop::Render()
@@ -137,4 +132,8 @@ void CShop::Render()
 
 void CShop::Exit()
 {
+	cout << "상점 주인 : 쇼핑할 시간이 없어 ? 다 끓인 차라도 한 잔 들고 가게."<<endl;
+	system("pause");
+
+	// safedelete 아이템들?
 }
