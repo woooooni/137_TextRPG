@@ -23,7 +23,11 @@ void CSceneMgr::Initialize()
 
 void CSceneMgr::Update()
 {
+<<<<<<< .merge_file_7c5w4d
+
+=======
 	
+>>>>>>> .merge_file_7rp6T0
 }
 
 void CSceneMgr::Render()

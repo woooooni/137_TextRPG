@@ -3,7 +3,10 @@
 
 
 CScene_Field::CScene_Field()
+<<<<<<< .merge_file_dPaePx
+=======
 	:CScene(SCENE_TYPE::FIELD)
+>>>>>>> .merge_file_0lfuwS
 {
 }
 
