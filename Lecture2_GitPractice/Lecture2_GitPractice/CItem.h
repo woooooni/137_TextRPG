@@ -5,15 +5,11 @@
 class CItem
 {
 public:
-	explicit CItem();
 	explicit CItem() : iAmount(0) {}
 	virtual ~CItem();
 
 protected:
 	tagItem* m_tItem;
-
-public:
-	tagItem* GetItem() { return m_tItem; }
 	int iAmount;
 public:
 	tagItem* GetItem() { return m_tItem; }

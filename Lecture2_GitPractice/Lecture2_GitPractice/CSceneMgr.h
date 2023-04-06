@@ -5,6 +5,9 @@ class CSceneMgr
 {
 	SINGLETON(CSceneMgr);
 
+private:
+	vector<CScene*>		m_vecScene;
+	CScene*				m_pCurrScene;
 
 public:
 	void ChangeScene(SCENE_TYPE _eType);
@@ -15,9 +18,6 @@ public:
 	void Render();
 	void Release();
 
-private:
-	vector<CScene*>		m_vecScene;
-	CScene*				m_pCurrScene;
 
 };
 

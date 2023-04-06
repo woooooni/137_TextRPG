@@ -1,9 +1,7 @@
 #pragma once
 #include "CInventory.h"
-#include "CPlayer.h"
 
 class CInventory;
-class CPlayer;
 
 class CEquip
 {
@@ -19,11 +17,10 @@ public:
 
 	void Equip_Item(CItem* _pItem);
 	void Unequip_Item(CItem* _pItem);
-	void Unequip_All() { m_mapEquip.clear(); }
+
 
 private:
-	map<string, CItem*> m_mapEquip;
-	map<string, CItem*>::iterator m_iter;
-	CPlayer* m_pEqPlayer;
+	map<string, CItem*> mapEquip;
+	map<string, CItem*>::iterator iter;
 };
 

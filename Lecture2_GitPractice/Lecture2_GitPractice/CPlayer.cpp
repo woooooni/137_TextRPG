@@ -39,9 +39,6 @@ void CPlayer::Update()
 
 void CPlayer::Render()
 {
-	CAttackObj::Render();
-	//TODO :: 플레이어 정보 출력
-
 }
 
 void CPlayer::Release()

@@ -4,12 +4,10 @@
 
 CMaplePants::CMaplePants()
 {
-	m_tItem->strName = "ë©”ì´í”Œë°”ì§€";
-	m_tItem->strType = "ë°©ì–´êµ¬";
-	m_tItem->strRare = "ë ˆì–´";
-	m_tItem->iAtk = 0;
-	m_tItem->strDetailType = "í•˜ì˜";
-	m_tItem->strRare = "ë ˆì–´";
+	m_tItem->strName = "¸ÞÀÌÇÃ¹ÙÁö";
+	m_tItem->strType = "¹æ¾î±¸";
+	m_tItem->strDetailType = "ÇÏÀÇ";
+	m_tItem->strRare = "·¹¾î";
 	m_tItem->iHp = 20;
 	m_tItem->iPrice = 6000;
 }

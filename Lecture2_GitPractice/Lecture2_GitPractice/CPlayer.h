@@ -26,7 +26,7 @@ public:
 	bool Set_Money(int _iMoney)			{ if (0 > _iMoney) return false; m_iMoney = _iMoney; return true; }
 
 private:
-	PLAYER_JOB		m_eJob;
-	int				m_iMoney;
+	PLAYER_JOB m_eJob;
+	int m_iMoney;
 };
 
