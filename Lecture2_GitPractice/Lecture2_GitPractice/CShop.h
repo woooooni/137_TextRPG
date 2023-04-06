@@ -14,17 +14,12 @@ public:
 	void ShowItem(int);
 	void BuyItem(/*CItem* pItem*/);
 	void SellItem();
-<<<<<<< .merge_file_UGNVe1
 private:
 
 
 
-=======
-
-
 public:
->>>>>>> .merge_file_FalLEk
-	// CSceneÀ»(¸¦) ÅëÇØ »ó¼ÓµÊ
+	// CSceneÃ€Â»(Â¸Â¦) Ã…Ã«Ã‡Ã˜ Â»Ã³Â¼Ã“ÂµÃŠ
 	virtual void Enter() override;
 
 	virtual void Update() override;
