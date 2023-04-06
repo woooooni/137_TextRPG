@@ -25,7 +25,7 @@ void CShop::ShowItem(int _iShopLevel)
 	int iInput(0);
 	while(true)
 	{
-		cout << "Take your time and look around(1. 무기 2. 방어구 3.포션 4. etc(?)):";
+		cout << "상점 주인 : 어서오세요! 좋은것들만 모아놨습니다. (1. 무기 2. 방어구 3.포션 4. etc(?)):";
 		cin >> iInput;
 		switch (iInput)
 		{
@@ -89,7 +89,7 @@ void CShop::SellItem()
 			/*if (아이템 판매(iInput, &iMoney))
 			{
 			
-				cout << "판매 성공" << endl;
+				cout << "좋은 물건이군요. 좋은 값에 쳐드리죠." << endl;
 			}
 			else
 				cout << "판매 실패" << endl;*/
