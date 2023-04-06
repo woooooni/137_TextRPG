@@ -4,7 +4,7 @@
 //
 
 #pragma once
-
+using namespace std;
 
 #include "targetver.h"
 #include <iostream>
@@ -24,4 +24,3 @@
 #include "Enum_String.h"
 #include "Define.h"
 
-using namespace std;

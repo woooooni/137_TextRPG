@@ -154,9 +154,19 @@
     <ClInclude Include="Define.h" />
     <ClInclude Include="Enum.h" />
     <ClInclude Include="Enum_String.h" />
+    <ClInclude Include="FruitDagger.h" />
+    <ClInclude Include="Inventory.h" />
+    <ClInclude Include="Item.h" />
+    <ClInclude Include="ItemPack.h" />
+    <ClInclude Include="Mace.h" />
+    <ClInclude Include="MapleCloth.h" />
+    <ClInclude Include="MapleHat.h" />
+    <ClInclude Include="MaplePants.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="Struct.h" />
     <ClInclude Include="targetver.h" />
+    <ClInclude Include="WarBow.h" />
+    <ClInclude Include="WoodWand.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CEquip.cpp" />
@@ -165,13 +175,23 @@
     <ClCompile Include="CScene.cpp" />
     <ClCompile Include="CSceneMgr.cpp" />
     <ClCompile Include="CScene_Field.cpp" />
+    <ClCompile Include="FruitDagger.cpp" />
+    <ClCompile Include="Inventory.cpp" />
+    <ClCompile Include="Item.cpp" />
+    <ClCompile Include="ItemPack.cpp" />
     <ClCompile Include="Lecture2_GitPractice.cpp" />
+    <ClCompile Include="Mace.cpp" />
+    <ClCompile Include="MapleCloth.cpp" />
+    <ClCompile Include="MapleHat.cpp" />
+    <ClCompile Include="MaplePants.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="WarBow.cpp" />
+    <ClCompile Include="WoodWand.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
