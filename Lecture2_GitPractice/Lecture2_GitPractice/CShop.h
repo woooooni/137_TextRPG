@@ -14,10 +14,16 @@ public:
 	void ShowItem(int);
 	void BuyItem(/*CItem* pItem*/);
 	void SellItem();
+<<<<<<< .merge_file_UGNVe1
 private:
 
 
 
+=======
+
+
+public:
+>>>>>>> .merge_file_FalLEk
 	// CScene을(를) 통해 상속됨
 	virtual void Enter() override;
 

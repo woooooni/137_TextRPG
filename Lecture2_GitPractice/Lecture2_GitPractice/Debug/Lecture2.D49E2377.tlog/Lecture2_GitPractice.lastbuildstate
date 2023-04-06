@@ -1,2 +1,6 @@
 #TargetFrameworkVersion=v4.0:PlatformToolSet=v140:EnableManagedIncrementalBuild=false:VCToolArchitecture=Native32Bit:WindowsTargetPlatformVersion=8.1
+<<<<<<< .merge_file_Sgplh0
 Debug|Win32|C:\Users\kang2\Documents\137_TextRPG\Lecture2_GitPractice\|
+=======
+Debug|Win32|C:\Users\xodnj\Desktop\137_TextRPG\Lecture2_GitPractice\|
+>>>>>>> .merge_file_FBOAf4

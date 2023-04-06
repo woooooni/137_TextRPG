@@ -1,7 +1,13 @@
 #pragma once
+<<<<<<< .merge_file_I07I8O
 #include "CObj.h"
 class CMonster :
 	public CObj
+=======
+#include "CAttackObj.h"
+class CMonster :
+	public CAttackObj
+>>>>>>> .merge_file_MPh6Wu
 {
 
 public:
