@@ -3,10 +3,7 @@
 
 
 CShop::CShop()// :m_pDummyItem(nullptr),m_pDummyPlayer(nullptr) m_pInven(nullptr)
-<<<<<<< .merge_file_oE3CVZ
-=======
 	:CScene(SCENE_TYPE::SHOP)
->>>>>>> .merge_file_HuGpBg
 {
 
 }
@@ -34,7 +31,7 @@ void CShop::ShowItem(int _iShopLevel)
 	int iInput(0);
 	while(true)
 	{
-		cout << "ªÛ¡° ¡÷¿Œ : æÓº≠ø¿ººø‰! ¡¡¿∫∞ÕµÈ∏∏ ∏æ∆≥˘Ω¿¥œ¥Ÿ. (1. π´±‚ 2. πÊæÓ±∏ 3.∆˜º« 4. etc(?)):";
+		cout << "ÏÉÅÏ†ê Ï£ºÏù∏ : Ïñ¥ÏÑúÏò§ÏÑ∏Ïöî! Ï¢ãÏùÄÍ≤ÉÎì§Îßå Î™®ÏïÑÎÜ®ÏäµÎãàÎã§. (1. Î¨¥Í∏∞ 2. Î∞©Ïñ¥Íµ¨ 3.Ìè¨ÏÖò 4. etc(?)):";
 		cin >> iInput;
 		switch (iInput)
 		{
@@ -47,7 +44,7 @@ void CShop::ShowItem(int _iShopLevel)
 		case 3:
 			vecItemList[(int)SHOP_LEVEL::BEGGINER][2];
 		default:
-			cout << "ªÛ¡° ¡÷¿Œ : ¿Ã∫¡ ∞≈±‰ √‚¿‘ ±›¡ˆ∂Û∞Ì!." << endl;
+			cout << "ÏÉÅÏ†ê Ï£ºÏù∏ : Ïù¥Î¥ê Í±∞Í∏¥ Ï∂úÏûÖ Í∏àÏßÄÎùºÍ≥†!." << endl;
 			system("pause");
 			break;
 		}
@@ -63,11 +60,11 @@ void CShop::BuyItem(void)
 	}
 	else if(m_Inventory->isFull;)
 	{
-		cout<<"¿Œ∫•≈‰∏Æ∞° ∞°µÊ √°Ω¿¥œ¥Ÿ."<<endl;
+		cout<<"Ïù∏Î≤§ÌÜ†Î¶¨Í∞Ä Í∞ÄÎìù Ï∞ºÏäµÎãàÎã§."<<endl;
 	}
 	else
 	{
-	cout << "±∏∏≈ º∫∞¯" << endl;
+	cout << "Íµ¨Îß§ ÏÑ±Í≥µ" << endl;
 	}
 	*/
 }
@@ -81,24 +78,24 @@ void CShop::SellItem()
 		system("cls");
 		/*m_pPlayer->Render();
 		m_pInventory->Render();*/
-		cout << "∆«∏≈«“ æ∆¿Ã≈€¿ª ∞Ì∏£Ω√ø¿.(0. ≥™∞°±‚):" << endl;
+		cout << "ÌåêÎß§Ìï† ÏïÑÏù¥ÌÖúÏùÑ Í≥†Î•¥ÏãúÏò§.(0. ÎÇòÍ∞ÄÍ∏∞):" << endl;
 		cin >> iInput;
 		--iInput;
 	
 			if (0 > iInput)
 				return;
 /*
-			if (√÷¥Î ¿Œ∫•≈‰∏Æ < iInput)
+			if (ÏµúÎåÄ Ïù∏Î≤§ÌÜ†Î¶¨ < iInput)
 				continue;
 */
 			int		iMoney = 0;
-			/*if (æ∆¿Ã≈€ ∆«∏≈(iInput, &iMoney))
+			/*if (ÏïÑÏù¥ÌÖú ÌåêÎß§(iInput, &iMoney))
 			{
 			
-				cout << "¡¡¿∫ π∞∞«¿Ã±∫. ¡¡¿∫ ∞™ø° √ƒµÂ∏Æ¡ˆ." << endl;
+				cout << "Ï¢ãÏùÄ Î¨ºÍ±¥Ïù¥Íµ∞. Ï¢ãÏùÄ Í∞íÏóê Ï≥êÎìúÎ¶¨ÏßÄ." << endl;
 			}
 			else
-				cout << "π∫∞° ¿ﬂ∏¯µ∆±∏∏∏" << endl;*/
+				cout << "Î≠îÍ∞Ä ÏûòÎ™ªÎêêÍµ¨Îßå" << endl;*/
 	}
 
 }
@@ -111,7 +108,7 @@ void CShop::Update()
 	int iInput(0);
 	while (true)
 	{
-		cout << "1. √ ±ﬁªÛ¡° 2. ¡ﬂ±ﬁªÛ¡° 3. ∞Ì±ﬁªÛ¡° 0. ¿¸¥‹∞Ë:";
+		cout << "1. Ï¥àÍ∏âÏÉÅÏ†ê 2. Ï§ëÍ∏âÏÉÅÏ†ê 3. Í≥†Í∏âÏÉÅÏ†ê 0. Ï†ÑÎã®Í≥Ñ:";
 		cin >> iInput;
 		switch (iInput)
 		{
@@ -138,8 +135,8 @@ void CShop::Render()
 
 void CShop::Exit()
 {
-	cout << "ªÛ¡° ¡÷¿Œ : ºÓ«Œ«“ Ω√∞£¿Ã æ¯æÓ ? ¥Ÿ ≤˙¿Œ ¬˜∂Ûµµ «— ¿‹ µÈ∞Ì ∞°∞‘."<<endl;
+	cout << "ÏÉÅÏ†ê Ï£ºÏù∏ : ÏáºÌïëÌï† ÏãúÍ∞ÑÏù¥ ÏóÜÏñ¥ ? Îã§ ÎÅìÏù∏ Ï∞®ÎùºÎèÑ Ìïú Ïûî Îì§Í≥† Í∞ÄÍ≤å."<<endl;
 	system("pause");
 
-	// safedelete æ∆¿Ã≈€µÈ?
+	// safedelete ÏïÑÏù¥ÌÖúÎì§?
 }
