@@ -1,7 +1,7 @@
 #pragma once
 #include "CObj.h"
 
-typedef struct tagStat // Struct.h·Î ¿Å°Ü¾ß ÇÑ´Ù. 
+typedef struct tagStat // Struct.hë¡œ ì˜®ê²¨ì•¼ í•œë‹¤. 
 {
 	int m_iMaxHp;
 	int m_iCurHp;
@@ -34,7 +34,6 @@ public:
 	~CAttackObj();
 
 public:
-<<<<<<< .merge_file_sfsjVz
 
 	// Access Methods
 	const bool Set_Name(const string& _strName) { if ("" == _strName) return false;  m_strName = _strName; return true; }
@@ -46,8 +45,7 @@ public:
 	const ATTACK_OBJ_STAT& Get_Stat() const { return m_tStat; }
 	const string& Get_Name() const { return m_strName; }
 
-=======
-	// CObjÀ»(¸¦) ÅëÇØ »ó¼ÓµÊ
+	// CObjì„(ë¥¼) í†µí•´ ìƒì†ë¨
 	virtual void Initialize() override;
 	virtual void Update() override;
 	virtual void Render() override;
@@ -65,25 +63,19 @@ public:
 	const string& Get_Name() const					{ return m_strName; }
 
 public:
->>>>>>> .merge_file_Qe9iq0
-	// Attack °ü·Ã
+	// Attack ê´€ë ¨
 	const bool Attack(CAttackObj* const _pAttackObj);
 	const bool Damaged(const int _iDamage);
 
-<<<<<<< .merge_file_sfsjVz
 	const bool Is_dead() const { return m_bDead; }
 	void Revive() { m_bDead = true; }
-=======
+	
 	const bool Is_dead() const						{ return m_bDead; }
 	void Revive()									{ m_bDead = true; }
->>>>>>> .merge_file_Qe9iq0
 
 protected:
-	string m_strName; // ¾ÆÀÌÅÛÀº ÀÌ¸§À» ±¸Á¶Ã¼¿¡ ÀúÀå.. ±×·³ ÇÃ·¹ÀÌ¾î¶û ¸ó½ºÅÍ´Â ¿©±â¿¡?
+	string m_strName; // ì•„ì´í…œì€ ì´ë¦„ì„ êµ¬ì¡°ì²´ì— ì €ì¥.. ê·¸ëŸ¼ í”Œë ˆì´ì–´ë‘ ëª¬ìŠ¤í„°ëŠ” ì—¬ê¸°ì—?
 	bool  m_bDead;
 	ATTACK_OBJ_STAT m_tStat;
-<<<<<<< .merge_file_sfsjVz
-=======
 
->>>>>>> .merge_file_Qe9iq0
 };
