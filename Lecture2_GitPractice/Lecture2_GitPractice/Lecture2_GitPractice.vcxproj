@@ -146,7 +146,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CGameCore.h" />
+    <ClInclude Include="CObj.h" />
+    <ClInclude Include="CScene.h" />
     <ClInclude Include="CSceneMgr.h" />
+    <ClInclude Include="CScene_Field.h" />
     <ClInclude Include="Define.h" />
     <ClInclude Include="Enum.h" />
     <ClInclude Include="Enum_String.h" />
@@ -156,7 +159,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CGameCore.cpp" />
+    <ClCompile Include="CObj.cpp" />
+    <ClCompile Include="CScene.cpp" />
     <ClCompile Include="CSceneMgr.cpp" />
+    <ClCompile Include="CScene_Field.cpp" />
     <ClCompile Include="Lecture2_GitPractice.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>

@@ -1,24 +1,33 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Default">
+    <Filter Include="01. GameCore">
+      <UniqueIdentifier>{88146729-2bbc-43f0-a9e0-b7350ca8b98f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02. Manager">
+      <UniqueIdentifier>{3ade48e0-1479-400d-98ab-16c93a338862}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02. Manager\Scene">
+      <UniqueIdentifier>{44fa1341-7f2e-4061-8b3e-2b560db3e3ec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="03. Scene">
+      <UniqueIdentifier>{1ed40fa4-a20b-4d5b-b54f-0e8c51b26542}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="03. Scene\00. Field">
+      <UniqueIdentifier>{e0b88185-80ac-4dc9-ba2c-3a9ac17c3856}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="00. Default">
       <UniqueIdentifier>{627a8bb3-3b85-4994-9d05-412f34c07faf}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Default\리소스 파일">
+    <Filter Include="00. Default\리소스 파일">
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Define">
+    <Filter Include="99. Define">
       <UniqueIdentifier>{eaffccb0-f846-4ccd-8db9-28287fd9f2db}</UniqueIdentifier>
     </Filter>
-    <Filter Include="00. GameCore">
-      <UniqueIdentifier>{88146729-2bbc-43f0-a9e0-b7350ca8b98f}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="01. Manager">
-      <UniqueIdentifier>{3ade48e0-1479-400d-98ab-16c93a338862}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="01. Manager\Scene">
-      <UniqueIdentifier>{44fa1341-7f2e-4061-8b3e-2b560db3e3ec}</UniqueIdentifier>
+    <Filter Include="04. Object">
+      <UniqueIdentifier>{084fa814-4c34-4b89-a576-36de73d84ae1}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -26,40 +35,58 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="targetver.h">
-      <Filter>Default</Filter>
+      <Filter>00. Default</Filter>
     </ClInclude>
     <ClInclude Include="stdafx.h">
-      <Filter>Define</Filter>
+      <Filter>99. Define</Filter>
     </ClInclude>
     <ClInclude Include="Define.h">
-      <Filter>Define</Filter>
+      <Filter>99. Define</Filter>
     </ClInclude>
     <ClInclude Include="Enum.h">
-      <Filter>Define</Filter>
+      <Filter>99. Define</Filter>
     </ClInclude>
     <ClInclude Include="Enum_String.h">
-      <Filter>Define</Filter>
+      <Filter>99. Define</Filter>
     </ClInclude>
     <ClInclude Include="Struct.h">
-      <Filter>Define</Filter>
+      <Filter>99. Define</Filter>
     </ClInclude>
     <ClInclude Include="CGameCore.h">
-      <Filter>00. GameCore</Filter>
+      <Filter>01. GameCore</Filter>
     </ClInclude>
     <ClInclude Include="CSceneMgr.h">
-      <Filter>01. Manager\Scene</Filter>
+      <Filter>02. Manager\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="CScene.h">
+      <Filter>03. Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="CScene_Field.h">
+      <Filter>03. Scene\00. Field</Filter>
+    </ClInclude>
+    <ClInclude Include="CObj.h">
+      <Filter>04. Object</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Lecture2_GitPractice.cpp" />
     <ClCompile Include="stdafx.cpp">
-      <Filter>Define</Filter>
+      <Filter>99. Define</Filter>
     </ClCompile>
     <ClCompile Include="CGameCore.cpp">
-      <Filter>00. GameCore</Filter>
+      <Filter>01. GameCore</Filter>
     </ClCompile>
     <ClCompile Include="CSceneMgr.cpp">
-      <Filter>01. Manager\Scene</Filter>
+      <Filter>02. Manager\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="CScene.cpp">
+      <Filter>03. Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="CScene_Field.cpp">
+      <Filter>03. Scene\00. Field</Filter>
+    </ClCompile>
+    <ClCompile Include="CObj.cpp">
+      <Filter>04. Object</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
