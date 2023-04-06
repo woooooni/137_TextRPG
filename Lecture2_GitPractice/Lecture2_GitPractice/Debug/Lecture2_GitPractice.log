@@ -1,11 +1,9 @@
-<<<<<<< HEAD
-﻿  CInventory.cpp
-c:\users\kang2\documents\137_textrpg\lecture2_gitpractice\lecture2_gitpractice\cinventory.cpp(40): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
-  LINK : C:\Users\kang2\Documents\137_TextRPG\Lecture2_GitPractice\Debug\Lecture2_GitPractice.exe을(를) 찾을 수 없거나 마지막 증분 링크에 의해 빌드되지 않았습니다. 전체 링크를 수행하고 있습니다.
-  Lecture2_GitPractice.vcxproj -> C:\Users\kang2\Documents\137_TextRPG\Lecture2_GitPractice\Debug\Lecture2_GitPractice.exe
-  Lecture2_GitPractice.vcxproj -> C:\Users\kang2\Documents\137_TextRPG\Lecture2_GitPractice\Debug\Lecture2_GitPractice.pdb (Full PDB)
-=======
-﻿  CPlayer.cpp
-  Lecture2_GitPractice.vcxproj -> C:\Users\ChanYoon\Desktop\Programming\Projects\TextRPG_Team\Lecture2_GitPractice\Debug\Lecture2_GitPractice.exe
-  Lecture2_GitPractice.vcxproj -> C:\Users\ChanYoon\Desktop\Programming\Projects\TextRPG_Team\Lecture2_GitPractice\Debug\Lecture2_GitPractice.pdb (Full PDB)
->>>>>>> release/Chan
+﻿  CEquip.cpp
+  코드를 생성하고 있습니다...
+  컴파일하고 있습니다...
+  CInventory.cpp
+c:\users\xodnj\desktop\137_tp\lecture2_gitpractice\lecture2_gitpractice\cinventory.cpp(40): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+  코드를 생성하고 있습니다...
+  LINK : C:\Users\xodnj\Desktop\137_TP\Lecture2_GitPractice\Debug\Lecture2_GitPractice.exe을(를) 찾을 수 없거나 마지막 증분 링크에 의해 빌드되지 않았습니다. 전체 링크를 수행하고 있습니다.
+  Lecture2_GitPractice.vcxproj -> C:\Users\xodnj\Desktop\137_TP\Lecture2_GitPractice\Debug\Lecture2_GitPractice.exe
+  Lecture2_GitPractice.vcxproj -> C:\Users\xodnj\Desktop\137_TP\Lecture2_GitPractice\Debug\Lecture2_GitPractice.pdb (Full PDB)

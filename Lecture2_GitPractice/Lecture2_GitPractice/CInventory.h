@@ -2,7 +2,8 @@
 #include "Define.h"
 #include "Struct.h"
 #include "CItem.h"
-#include "CEquip.h"
+
+class CEquip;
 
 class CInventory
 {
