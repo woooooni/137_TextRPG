@@ -1,6 +1,7 @@
 #include "stdafx.h"
 #include "CInventory.h"
 #include "CEquip.h"
+#include "CPlayer.h"
 #include <algorithm>
 
 CInventory::CInventory()

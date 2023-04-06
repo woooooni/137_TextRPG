@@ -4,6 +4,7 @@
 #include "CItem.h"
 
 class CEquip;
+class CPlayer;
 
 class CInventory
 {
@@ -15,7 +16,10 @@ private:
 	vector<CItem*> m_vecItems;
 	vector<CItem*>::iterator invenIter;
 	CEquip* m_pEquip;
+	CPlayer* m_pPlayer;
 
+public:
+	void SetPlayer(CPlayer* _pPlayer) { m_pPlayer = _pPlayer; }
 public:
 	void Init();
 	void Render();
@@ -25,5 +29,11 @@ public:
 public:
 	void AddItem(CItem* _pItem, int _iAmount);
 	void UseItem(int _iIndex);
+};
+
+struct tagSort{
+	bool operator()(CItem* _item1, CItem* _item2) {
+		return _item1->GetItem()->strType > _item2->GetItem()->strType;
+	}
 };
 
