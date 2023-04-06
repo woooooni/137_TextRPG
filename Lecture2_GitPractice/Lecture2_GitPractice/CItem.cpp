@@ -1,6 +1,15 @@
 #include "stdafx.h"
 #include "CItem.h"
 
+<<<<<<< .merge_file_QCoE1C
+
+CItem::CItem()
+{
+}
+
+
+=======
+>>>>>>> .merge_file_JQ6UPI
 CItem::~CItem()
 {
 }

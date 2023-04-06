@@ -45,7 +45,11 @@ const bool CAttackObj::Damaged(const int _iDamage)
 
 	if (0 >= m_tStat.m_iCurHp)
 	{
+<<<<<<< .merge_file_R0LPUh
+		if (Set_Dead)
+=======
 		if (Set_Dead())
+>>>>>>> .merge_file_OdgdX9
 			return true;
 		else
 			return false;
@@ -54,6 +58,8 @@ const bool CAttackObj::Damaged(const int _iDamage)
 	return true;
 }
 
+<<<<<<< .merge_file_R0LPUh
+=======
 void CAttackObj::Initialize()
 {
 }
@@ -70,3 +76,4 @@ void CAttackObj::Release()
 {
 }
 
+>>>>>>> .merge_file_OdgdX9
