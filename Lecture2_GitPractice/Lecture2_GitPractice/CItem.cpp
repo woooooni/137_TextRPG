@@ -1,6 +1,12 @@
 #include "stdafx.h"
 #include "CItem.h"
 
+
+CItem::CItem()
+{
+}
+
+
 CItem::~CItem()
 {
 }
@@ -9,9 +15,9 @@ void CItem::Render()
 {
 	cout << m_tItem->strName << "(" << m_tItem->strRare << ")" << "\t" << m_tItem->strType << endl;
 
-	if (m_tItem->strType == "¹«±â")   cout << "°ø°İ·Â: " << m_tItem->iAtk;
-	if (m_tItem->strType == "¹æ¾î±¸") cout << "Ã¼·Â: " << m_tItem->iHp;
+	if (m_tItem->strType == "å…¬æ‰")   cout << "å‚æ‹œä»¿: " << m_tItem->iAtk;
+	if (m_tItem->strType == "è§„ç»¢å¤‡") cout << "çœ‰ä»¿: " << m_tItem->iHp;
 
-	cout << "\n°¡°İ: " << m_tItem->iPrice << endl;
+	cout << "\nå•Šæ‹œ: " << m_tItem->iPrice << endl;
 	cout << "===============================" << endl;
 }

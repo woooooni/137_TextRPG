@@ -1,12 +1,6 @@
 #include "stdafx.h"
 #include "CScene_Field.h"
-#include "CAttackObj.h"
-#include "CMonster.h"
-#include "CMonster_Easy.h"
-#include "CMonster_Normal.h"
-#include "CMonster_Hard.h"
-#include "CSceneMgr.h"
-#include "CPlayer.h"
+
 
 CScene_Field::CScene_Field()
 	:CScene(SCENE_TYPE::FIELD)
@@ -20,26 +14,32 @@ CScene_Field::~CScene_Field()
 
 void CScene_Field::Enter()
 {
-	system("cls");
 	if(nullptr == m_pPlayer)
-		//TODO :: ÇÃ·¹ÀÌ¾î Á¤º¸¸¦ °¡Á®¿À±â.
+		//TODO :: í”Œë ˆì´ì–´ ì •ë³´ë¥¼ ê°€ì ¸ì˜¤ê¸°.
 
-	cout << "1. ÃÊ±Ş\t 2. Áß±Ş\t 3.°í±Ş (-1 : ³ª°¡±â)" << endl;
+
+	cout << "1. ì´ˆê¸‰\t 2. ì¤‘ê¸‰\t 3.ê³ ê¸‰ (-1 : ë‚˜ê°€ê¸°)" << endl;
 
 	cout << "--->";
+
+	int iInput = Input();
+
+	if (iInput == -1)
+		return;
 	
-	switch (Input())
+	switch (iInput)
 	{
 	case 1:
-		//TODO :: ÃÊ±Ş ¸ó½ºÅÍ »ı¼º
-		m_pMonster = new CMonster_Easy;
+		//TODO :: ì´ˆê¸‰ ëª¬ìŠ¤í„° ìƒì„±
+		// m_pMonster = 
 		break;
 	case 2:
-		m_pMonster = new CMonster_Normal;
+		//TODO :: ì¤‘ê¸‰ ëª¬ìŠ¤í„° ìƒì„±
 		break;
 	case 3:
-		m_pMonster = new CMonster_Hard;
+		//TODO :: ê³ ê¸‰ ëª¬ìŠ¤í„° ìƒì„±
 		break;
+		
 	default:
 		break;
 	}
@@ -47,52 +47,16 @@ void CScene_Field::Enter()
 
 void CScene_Field::Update()
 {
-	if (nullptr == m_pMonster)
-	{
-		cout << "»ç³ÉÅÍ¿¡¼­ ³ª°©´Ï´Ù." << endl;
-		system("pause");
-		CSceneMgr::GetInst()->ChangeScene(SCENE_TYPE::LOBBY);
-	}
-
-	Render();
-
-	cout << "1. ¶§¸°´Ù.\t 2. µµ¸Á°£´Ù." << endl;
-	cout << "-->";
-
-	if (1 == Input())
-	{
-		m_pPlayer->Attack(m_pMonster);
-
-		if (m_pMonster->Is_dead())
-		{
-			cout << "ÇÃ·¹ÀÌ¾î Win." << endl;
-			cout << m_pPlayer->Set_Money(m_pPlayer->Get_Money() + 100);
-			system("pause");
-			CSceneMgr::GetInst()->ChangeScene(SCENE_TYPE::LOBBY);
-		}
-
-		m_pMonster->Attack(m_pPlayer);
-	}
-
-	else if (2 == Input())
-	{
-
-	}
-
-	else
-	{
-
-	}
 
 }
 
 void CScene_Field::Render()
 {
 	/*	TODO :: 
-		- Player, Monster Á¤º¸ Ãâ·Â. 
-		- Player, Monster ½Î¿ì±â.
-		- Player, Monster HP ÆÇÁ¤.
-		- Player, Monster º¸»ó.
+		- Player, Monster ì •ë³´ ì¶œë ¥. 
+		- Player, Monster ì‹¸ìš°ê¸°.
+		- Player, Monster HP íŒì •.
+		- Player, Monster ë³´ìƒ.
 	*/
 
 }

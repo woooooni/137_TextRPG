@@ -1,0 +1,64 @@
+﻿  CScene.cpp
+c:\users\xodnj\desktop\137_textrpg\lecture2_gitpractice\lecture2_gitpractice\cscene.cpp(5): error C2511: 'CScene::CScene(void)': 오버로드된 멤버 함수가 'CScene'에 없습니다.
+  c:\users\xodnj\desktop\137_textrpg\lecture2_gitpractice\lecture2_gitpractice\cscene.h(3): note: 'CScene' 선언을 참조하십시오.
+  CPlayer.cpp
+c:\users\xodnj\desktop\137_textrpg\lecture2_gitpractice\lecture2_gitpractice\cattackobj.h : warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+  CMaplePants.cpp
+c:\users\xodnj\desktop\137_textrpg\lecture2_gitpractice\lecture2_gitpractice\cmaplepants.cpp : warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+c:\users\xodnj\desktop\137_textrpg\lecture2_gitpractice\lecture2_gitpractice\cmaplepants.cpp(8): error C2001: 상수에 줄 바꿈 문자가 있습니다.
+c:\users\xodnj\desktop\137_textrpg\lecture2_gitpractice\lecture2_gitpractice\cmaplepants.cpp(9): error C2146: 구문 오류: ';'이(가) 'm_tItem' 식별자 앞에 없습니다.
+c:\users\xodnj\desktop\137_textrpg\lecture2_gitpractice\lecture2_gitpractice\cmaplepants.cpp(11): error C2039: 'strDetailType': 'tagItem'의 멤버가 아닙니다.
+  c:\users\xodnj\desktop\137_textrpg\lecture2_gitpractice\lecture2_gitpractice\struct.h(5): note: 'tagItem' 선언을 참조하십시오.
+  CMapleHat.cpp
+c:\users\xodnj\desktop\137_textrpg\lecture2_gitpractice\lecture2_gitpractice\cmaplehat.cpp : warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+c:\users\xodnj\desktop\137_textrpg\lecture2_gitpractice\lecture2_gitpractice\cmaplehat.cpp(7): error C2001: 상수에 줄 바꿈 문자가 있습니다.
+c:\users\xodnj\desktop\137_textrpg\lecture2_gitpractice\lecture2_gitpractice\cmaplehat.cpp(8): error C2146: 구문 오류: ';'이(가) 'm_tItem' 식별자 앞에 없습니다.
+c:\users\xodnj\desktop\137_textrpg\lecture2_gitpractice\lecture2_gitpractice\cmaplehat.cpp(8): error C2001: 상수에 줄 바꿈 문자가 있습니다.
+c:\users\xodnj\desktop\137_textrpg\lecture2_gitpractice\lecture2_gitpractice\cmaplehat.cpp(9): error C2146: 구문 오류: ';'이(가) 'm_tItem' 식별자 앞에 없습니다.
+c:\users\xodnj\desktop\137_textrpg\lecture2_gitpractice\lecture2_gitpractice\cmaplehat.cpp(9): error C2039: 'strDetailType': 'tagItem'의 멤버가 아닙니다.
+  c:\users\xodnj\desktop\137_textrpg\lecture2_gitpractice\lecture2_gitpractice\struct.h(5): note: 'tagItem' 선언을 참조하십시오.
+  CMapleCloth.cpp
+c:\users\xodnj\desktop\137_textrpg\lecture2_gitpractice\lecture2_gitpractice\cmaplecloth.cpp : warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+c:\users\xodnj\desktop\137_textrpg\lecture2_gitpractice\lecture2_gitpractice\cmaplecloth.cpp(8): error C2001: 상수에 줄 바꿈 문자가 있습니다.
+c:\users\xodnj\desktop\137_textrpg\lecture2_gitpractice\lecture2_gitpractice\cmaplecloth.cpp(9): error C2146: 구문 오류: ';'이(가) 'm_tItem' 식별자 앞에 없습니다.
+c:\users\xodnj\desktop\137_textrpg\lecture2_gitpractice\lecture2_gitpractice\cmaplecloth.cpp(11): error C2039: 'strDetailType': 'tagItem'의 멤버가 아닙니다.
+  c:\users\xodnj\desktop\137_textrpg\lecture2_gitpractice\lecture2_gitpractice\struct.h(5): note: 'tagItem' 선언을 참조하십시오.
+  CItem.cpp
+c:\users\xodnj\desktop\137_textrpg\lecture2_gitpractice\lecture2_gitpractice\citem.cpp : warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+c:\users\xodnj\desktop\137_textrpg\lecture2_gitpractice\lecture2_gitpractice\citem.cpp(6): error C2084: 'CItem::CItem(void)' 함수에 이미 본문이 있습니다.
+  c:\users\xodnj\desktop\137_textrpg\lecture2_gitpractice\lecture2_gitpractice\citem.h(8): note: '{ctor}'의 이전 정의를 참조하십시오.
+c:\users\xodnj\desktop\137_textrpg\lecture2_gitpractice\lecture2_gitpractice\citem.cpp(19): error C2065: '됦뼁': 선언되지 않은 식별자입니다.
+c:\users\xodnj\desktop\137_textrpg\lecture2_gitpractice\lecture2_gitpractice\citem.cpp(19): error C2001: 상수에 줄 바꿈 문자가 있습니다.
+c:\users\xodnj\desktop\137_textrpg\lecture2_gitpractice\lecture2_gitpractice\citem.cpp(21): error C2146: 구문 오류: ')'이(가) 'cout' 식별자 앞에 없습니다.
+  CInventory.cpp
+c:\users\xodnj\desktop\137_textrpg\lecture2_gitpractice\lecture2_gitpractice\cinventory.cpp(45): error C2039: 'GetAmount': 'CItem'의 멤버가 아닙니다.
+  c:\users\xodnj\desktop\137_textrpg\lecture2_gitpractice\lecture2_gitpractice\citem.h(6): note: 'CItem' 선언을 참조하십시오.
+  CEquip.cpp
+c:\users\xodnj\desktop\137_textrpg\lecture2_gitpractice\lecture2_gitpractice\cattackobj.h : warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+c:\users\xodnj\desktop\137_textrpg\lecture2_gitpractice\lecture2_gitpractice\cequip.cpp(51): error C2039: 'strDetailType': 'tagItem'의 멤버가 아닙니다.
+  c:\users\xodnj\desktop\137_textrpg\lecture2_gitpractice\lecture2_gitpractice\struct.h(5): note: 'tagItem' 선언을 참조하십시오.
+c:\users\xodnj\desktop\137_textrpg\lecture2_gitpractice\lecture2_gitpractice\cequip.cpp(60): error C2039: 'strDetailType': 'tagItem'의 멤버가 아닙니다.
+  c:\users\xodnj\desktop\137_textrpg\lecture2_gitpractice\lecture2_gitpractice\struct.h(5): note: 'tagItem' 선언을 참조하십시오.
+c:\users\xodnj\desktop\137_textrpg\lecture2_gitpractice\lecture2_gitpractice\cequip.cpp(60): error C2664: 'std::_Tree_iterator<std::_Tree_val<std::_Tree_simple_types<std::pair<const _Kty,_Ty>>>> std::_Tree<std::_Tmap_traits<_Kty,_Ty,_Pr,_Alloc,false>>::insert(std::_Tree_const_iterator<std::_Tree_val<std::_Tree_simple_types<std::pair<const _Kty,_Ty>>>>,const std::pair<const _Kty,_Ty> &)': 인수 1을(를) 'initializer list'에서 'std::pair<const _Kty,_Ty> &&'(으)로 변환할 수 없습니다.
+          with
+          [
+              _Kty=std::string,
+              _Ty=CItem *,
+              _Pr=std::less<std::string>,
+              _Alloc=std::allocator<std::pair<const std::string,CItem *>>
+          ]
+          and
+          [
+              _Kty=std::string,
+              _Ty=CItem *
+          ]
+  c:\users\xodnj\desktop\137_textrpg\lecture2_gitpractice\lecture2_gitpractice\cequip.cpp(60): note: 원인: 'initializer list'에서 'std::pair<const _Kty,_Ty>'(으)로 변환할 수 없습니다.
+          with
+          [
+              _Kty=std::string,
+              _Ty=CItem *
+          ]
+  c:\users\xodnj\desktop\137_textrpg\lecture2_gitpractice\lecture2_gitpractice\cequip.cpp(60): note: 소스 형식을 가져올 수 있는 생성자가 없거나 생성자 오버로드 확인이 모호합니다.
+  CAttackObj.cpp
+c:\users\xodnj\desktop\137_textrpg\lecture2_gitpractice\lecture2_gitpractice\cattackobj.h : warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+  코드를 생성하고 있습니다...

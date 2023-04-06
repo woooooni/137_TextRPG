@@ -1,10 +1,16 @@
 #pragma once
 #include "stdafx.h"
 
-// æ∆¿Ã≈€
+// ¬æ√Ü√Ä√å√Ö√õ
 struct tagItem {
 	string strName;
 	string strType;
+	string strRare;
+
+	int iAtk;
+	int iHp;
+
+	int iPrice;
 	string strDetailType = "";
 	string strRare;
 

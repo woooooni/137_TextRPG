@@ -1,21 +1,21 @@
 #pragma once
+#include "CObj.h"
+class CMonster :
+	public CObj
 #include "CAttackObj.h"
 class CMonster :
 	public CAttackObj
 {
 
 public:
-	explicit CMonster(string _strName, int _iMoney);
+	explicit CMonster();
 	virtual ~CMonster();
 
 public:
-	// CObjÀ»(¸¦) ÅëÇØ »ó¼ÓµÊ
-	virtual void Initialize()	= 0;
-	virtual void Update()		= 0;
-	virtual void Render()		= 0;
-	virtual void Release()		= 0;
-
-private:
-	int m_iMoney;
+	// CObjÃ€Â»(Â¸Â¦) Ã…Ã«Ã‡Ã˜ Â»Ã³Â¼Ã“ÂµÃŠ
+	virtual void Initialize() override;
+	virtual void Update() override;
+	virtual void Render() override;
+	virtual void Release() override;
 };
 
