@@ -1,5 +1,7 @@
 #include "stdafx.h"
 #include "CInventory.h"
+#include "CEquip.h"
+#include <algorithm>
 
 CInventory::CInventory()
 {
@@ -19,6 +21,8 @@ void CInventory::Render()
 	for (; invenIter != m_vecItems.end(); ++invenIter) {
 		(*invenIter)->Render();
 	}
+
+	sort(m_vecItems.begin(), m_vecItems.end(), tagSort());
 }
 
 void CInventory::Update()
@@ -40,16 +44,18 @@ void CInventory::UseItem(int _iIndex)
 	if (_iIndex < m_vecItems.size()) {
 		if (m_vecItems[_iIndex]->GetItem()->strType == "소모품") {
 			// 플레이어 피 회복
-			m_vecItems[_iIndex]->SetAmount(-1);
+			m_pPlayer->Set_CurHp(m_vecItems[_iIndex]->GetItem()->iRecovery);
 
+			m_vecItems[_iIndex]->SetAmount(-1);
+			// 개수 0개되면 지우기
 			if (m_vecItems[_iIndex]->GetAmount() <= 0) {
 				m_vecItems.erase(m_vecItems.begin() + _iIndex);
 			}
 		}
 		else {
 			// 장비 착용
-			// m_pEquip->Equip_Item(m_vecItems[_iIndex]);
-			// 지우기
+			m_pEquip->Equip_Item(m_vecItems[_iIndex]);
+			// 인벤토리에서 지우기
 			m_vecItems.erase(m_vecItems.begin() + _iIndex);
 		}
 	}

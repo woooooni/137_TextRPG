@@ -1,11 +1,6 @@
-<<<<<<< HEAD
 ﻿  CInventory.cpp
-c:\users\kang2\documents\137_textrpg\lecture2_gitpractice\lecture2_gitpractice\cinventory.cpp(40): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
-  LINK : C:\Users\kang2\Documents\137_TextRPG\Lecture2_GitPractice\Debug\Lecture2_GitPractice.exe을(를) 찾을 수 없거나 마지막 증분 링크에 의해 빌드되지 않았습니다. 전체 링크를 수행하고 있습니다.
-  Lecture2_GitPractice.vcxproj -> C:\Users\kang2\Documents\137_TextRPG\Lecture2_GitPractice\Debug\Lecture2_GitPractice.exe
-  Lecture2_GitPractice.vcxproj -> C:\Users\kang2\Documents\137_TextRPG\Lecture2_GitPractice\Debug\Lecture2_GitPractice.pdb (Full PDB)
-=======
-﻿  CPlayer.cpp
-  Lecture2_GitPractice.vcxproj -> C:\Users\ChanYoon\Desktop\Programming\Projects\TextRPG_Team\Lecture2_GitPractice\Debug\Lecture2_GitPractice.exe
-  Lecture2_GitPractice.vcxproj -> C:\Users\ChanYoon\Desktop\Programming\Projects\TextRPG_Team\Lecture2_GitPractice\Debug\Lecture2_GitPractice.pdb (Full PDB)
->>>>>>> release/Chan
+c:\users\kang2\documents\137_textrpg\lecture2_gitpractice\lecture2_gitpractice\cinventory.cpp(36): error C2572: 'CInventory::AddItem': 기본 인수 재정의. 매개 변수 1
+  c:\users\kang2\documents\137_textrpg\lecture2_gitpractice\lecture2_gitpractice\cinventory.h(28): note: 'CInventory::AddItem' 선언을 참조하십시오.
+c:\users\kang2\documents\137_textrpg\lecture2_gitpractice\lecture2_gitpractice\cinventory.cpp(44): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+  CEquip.cpp
+  코드를 생성하고 있습니다...
