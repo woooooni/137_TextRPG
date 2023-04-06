@@ -7,20 +7,28 @@ class CShop:public CScene
 public:
 	CShop();
 	~CShop();
+	//void		Set_Player(CEntity* pPlayer) { m_pPlayer = pPlayer; }
+	//void		Set_Inven(CInventory* pInven) { m_pInventory = pInven; }
 
-	void Initialize();
-	void Update();
-	void Release();
+
 	void ShowItem(int);
 	void BuyItem(/*CItem* pItem*/);
 	void SellItem();
 private:
 
+
+
 	// CScene을(를) 통해 상속됨
 	virtual void Enter() override;
+
+	virtual void Update() override;
+
 	virtual void Render() override;
+
 	virtual void Exit() override;
+
 	//CDummy* m_pDummyItem[(int)(ITEM_CODE::END)];
-	//CDummy* m_pDummyPlayer;
+	//CPlayer* m_pDummyPlayer;
+	//CItem* m_pDummyInven;
 };
 

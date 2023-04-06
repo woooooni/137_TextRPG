@@ -91,7 +91,9 @@
     <ClInclude Include="CMonster.h">
       <Filter>04. Object\Monster</Filter>
     </ClInclude>
-    <ClInclude Include="Shop.h" />
+    <ClInclude Include="Shop.h">
+      <Filter>03. Scene\01. Shop</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Lecture2_GitPractice.cpp" />
@@ -122,6 +124,8 @@
     <ClCompile Include="CMonster.cpp">
       <Filter>04. Object\Monster</Filter>
     </ClCompile>
-    <ClCompile Include="Shop.cpp" />
+    <ClCompile Include="Shop.cpp">
+      <Filter>03. Scene\01. Shop</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
