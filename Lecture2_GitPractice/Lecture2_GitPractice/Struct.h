@@ -9,6 +9,7 @@ struct tagItem {
 
 	int iAtk;
 	int iHp;
+	int iRecovery;
 
 	int iPrice;
 };

@@ -50,6 +50,9 @@
     <Filter Include="07. Item\Items\Armor">
       <UniqueIdentifier>{6bb013d4-af3e-43e9-8250-5b05da8f783c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="07. Item\Items\Potions">
+      <UniqueIdentifier>{96722abe-eab1-4956-b183-cd339d032171}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -121,6 +124,15 @@
     <ClInclude Include="CMaplePants.h">
       <Filter>07. Item\Items\Armor</Filter>
     </ClInclude>
+    <ClInclude Include="CWhitePotion.h">
+      <Filter>07. Item\Items\Potions</Filter>
+    </ClInclude>
+    <ClInclude Include="CRedPotion.h">
+      <Filter>07. Item\Items\Potions</Filter>
+    </ClInclude>
+    <ClInclude Include="COrangePotion.h">
+      <Filter>07. Item\Items\Potions</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Lecture2_GitPractice.cpp" />
@@ -174,6 +186,15 @@
     </ClCompile>
     <ClCompile Include="CMaplePants.cpp">
       <Filter>07. Item\Items\Armor</Filter>
+    </ClCompile>
+    <ClCompile Include="CRedPotion.cpp">
+      <Filter>07. Item\Items\Potions</Filter>
+    </ClCompile>
+    <ClCompile Include="CWhitePotion.cpp">
+      <Filter>07. Item\Items\Potions</Filter>
+    </ClCompile>
+    <ClCompile Include="COrangePotion.cpp">
+      <Filter>07. Item\Items\Potions</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
