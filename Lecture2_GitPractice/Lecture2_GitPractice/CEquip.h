@@ -17,6 +17,7 @@ public:
 	void Render();
 	void Release();
 
+public:
 	void Equip_Item(CItem* _pItem);
 	void Unequip_Item(CItem* _pItem);
 	void Unequip_All() { m_mapEquip.clear(); }
@@ -24,6 +25,7 @@ public:
 private:
 	map<string, CItem*> m_mapEquip;
 	map<string, CItem*>::iterator m_iter;
-	CPlayer* m_pEqPlayer;
+	CPlayer*	 m_pEqPlayer;
+	CInventory*  m_EqInven;
 };
 
