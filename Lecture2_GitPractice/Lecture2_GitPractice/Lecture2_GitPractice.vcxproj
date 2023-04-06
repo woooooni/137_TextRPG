@@ -146,52 +146,52 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CEquip.h" />
+    <ClInclude Include="CFruitDagger.h" />
     <ClInclude Include="CGameCore.h" />
+    <ClInclude Include="CInventory.h" />
+    <ClInclude Include="CItem.h" />
+    <ClInclude Include="CMace.h" />
+    <ClInclude Include="CMapleCloth.h" />
+    <ClInclude Include="CMapleHat.h" />
+    <ClInclude Include="CMaplePants.h" />
     <ClInclude Include="CObj.h" />
     <ClInclude Include="CScene.h" />
     <ClInclude Include="CSceneMgr.h" />
     <ClInclude Include="CScene_Field.h" />
+    <ClInclude Include="CWarBow.h" />
+    <ClInclude Include="CWoodWand.h" />
     <ClInclude Include="Define.h" />
     <ClInclude Include="Enum.h" />
     <ClInclude Include="Enum_String.h" />
-    <ClInclude Include="FruitDagger.h" />
-    <ClInclude Include="Inventory.h" />
-    <ClInclude Include="Item.h" />
-    <ClInclude Include="ItemPack.h" />
-    <ClInclude Include="Mace.h" />
-    <ClInclude Include="MapleCloth.h" />
-    <ClInclude Include="MapleHat.h" />
-    <ClInclude Include="MaplePants.h" />
+    <ClInclude Include="CItemPack.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="Struct.h" />
     <ClInclude Include="targetver.h" />
-    <ClInclude Include="WarBow.h" />
-    <ClInclude Include="WoodWand.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CEquip.cpp" />
+    <ClCompile Include="CFruitDagger.cpp" />
     <ClCompile Include="CGameCore.cpp" />
+    <ClCompile Include="CInventory.cpp" />
+    <ClCompile Include="CItem.cpp" />
+    <ClCompile Include="CMace.cpp" />
+    <ClCompile Include="CMapleCloth.cpp" />
+    <ClCompile Include="CMapleHat.cpp" />
+    <ClCompile Include="CMaplePants.cpp" />
     <ClCompile Include="CObj.cpp" />
     <ClCompile Include="CScene.cpp" />
     <ClCompile Include="CSceneMgr.cpp" />
     <ClCompile Include="CScene_Field.cpp" />
-    <ClCompile Include="FruitDagger.cpp" />
-    <ClCompile Include="Inventory.cpp" />
-    <ClCompile Include="Item.cpp" />
-    <ClCompile Include="ItemPack.cpp" />
+    <ClCompile Include="CItemPack.cpp" />
+    <ClCompile Include="CWarBow.cpp" />
+    <ClCompile Include="CWoodWand.cpp" />
     <ClCompile Include="Lecture2_GitPractice.cpp" />
-    <ClCompile Include="Mace.cpp" />
-    <ClCompile Include="MapleCloth.cpp" />
-    <ClCompile Include="MapleHat.cpp" />
-    <ClCompile Include="MaplePants.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="WarBow.cpp" />
-    <ClCompile Include="WoodWand.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
