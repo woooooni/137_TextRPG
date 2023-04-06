@@ -66,5 +66,6 @@ void CEquip::Unequip_Item(CItem* _pItem)
 {
   m_iter = m_mapEquip.find(_pItem->GetItem()->strName);
   m_mapEquip.erase(m_iter);
+  m_EqInven->AddItem(_pItem, 1);
   // 장비 해제시 플레이어 능력치 변화
 }
