@@ -182,9 +182,9 @@
     <ClCompile Include="CScene.cpp" />
     <ClCompile Include="CSceneMgr.cpp" />
     <ClCompile Include="CScene_Field.cpp" />
-    <ClCompile Include="CItemPack.cpp" />
     <ClCompile Include="CWarBow.cpp" />
     <ClCompile Include="CWoodWand.cpp" />
+    <ClCompile Include="CItemPack.cpp" />
     <ClCompile Include="Lecture2_GitPractice.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
