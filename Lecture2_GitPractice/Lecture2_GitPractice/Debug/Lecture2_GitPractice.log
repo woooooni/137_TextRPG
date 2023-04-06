@@ -1,15 +1,2 @@
 ﻿  stdafx.cpp
-  Shop.cpp
-  Player.cpp
-  Lecture2_GitPractice.cpp
-  CScene_Field.cpp
-  CSceneMgr.cpp
-  CScene.cpp
-  CObj.cpp
-  CMonster.cpp
-  CGameCore.cpp
-  CEquip.cpp
-  코드를 생성하고 있습니다...
-  LINK : C:\Users\xodnj\Desktop\137_TextRPG\Lecture2_GitPractice\Debug\Lecture2_GitPractice.exe을(를) 찾을 수 없거나 마지막 증분 링크에 의해 빌드되지 않았습니다. 전체 링크를 수행하고 있습니다.
-  Lecture2_GitPractice.vcxproj -> C:\Users\xodnj\Desktop\137_TextRPG\Lecture2_GitPractice\Debug\Lecture2_GitPractice.exe
-  Lecture2_GitPractice.vcxproj -> C:\Users\xodnj\Desktop\137_TextRPG\Lecture2_GitPractice\Debug\Lecture2_GitPractice.pdb (Full PDB)
+c:\users\kang2\documents\137_textrpg\lecture2_gitpractice\lecture2_gitpractice\stdafx.cpp : fatal error C1041: 프로그램 데이터베이스 'C:\Users\kang2\Documents\137_TextRPG\Lecture2_GitPractice\Lecture2_GitPractice\Debug\vc140.idb'을(를) 열 수 없습니다. 여러 CL.EXE에서 동일한 .PDB 파일에 쓰는 경우 /FS를 사용하십시오.

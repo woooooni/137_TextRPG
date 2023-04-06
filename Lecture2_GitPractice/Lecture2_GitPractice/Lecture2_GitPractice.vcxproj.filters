@@ -32,17 +32,23 @@
     <Filter Include="22. Equip">
       <UniqueIdentifier>{4f3218d4-b0ff-496f-a404-11ab46b0d9f0}</UniqueIdentifier>
     </Filter>
-    <Filter Include="04. Object\Player">
-      <UniqueIdentifier>{864a5c88-998d-47d0-8875-39f7225ccdcc}</UniqueIdentifier>
+    <Filter Include="Inventory">
+      <UniqueIdentifier>{9ac05a62-c421-4a2d-9816-b2d2b44c5235}</UniqueIdentifier>
     </Filter>
-    <Filter Include="04. Object\Monster">
-      <UniqueIdentifier>{2e2cae45-7aee-4106-ac17-168e8955c381}</UniqueIdentifier>
+    <Filter Include="07. Item">
+      <UniqueIdentifier>{ca02f817-2f31-42b7-9648-aac2ad013f03}</UniqueIdentifier>
     </Filter>
-    <Filter Include="02. Manager\Game">
-      <UniqueIdentifier>{9da0221d-7c08-4c2c-a1b6-9cf6ab086639}</UniqueIdentifier>
+    <Filter Include="07. Item\ItemPackage">
+      <UniqueIdentifier>{e1474b24-8012-4c03-b2bc-15a8507d1ec6}</UniqueIdentifier>
     </Filter>
-    <Filter Include="03. Scene\01. Shop">
-      <UniqueIdentifier>{af30f4a4-4452-4dbd-88ee-6e22082f3bf0}</UniqueIdentifier>
+    <Filter Include="07. Item\Items">
+      <UniqueIdentifier>{06c79f12-fe9b-41f3-b87e-28febe6a51b4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="07. Item\Items\Weapon">
+      <UniqueIdentifier>{2229b185-7796-438f-9edb-06cc24d52a51}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="07. Item\Items\Armor">
+      <UniqueIdentifier>{6bb013d4-af3e-43e9-8250-5b05da8f783c}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -85,13 +91,36 @@
     <ClInclude Include="CEquip.h">
       <Filter>22. Equip</Filter>
     </ClInclude>
-    <ClInclude Include="Player.h">
-      <Filter>04. Object\Player</Filter>
+    <ClInclude Include="Item.h">
+      <Filter>07. Item</Filter>
     </ClInclude>
-    <ClInclude Include="CMonster.h">
-      <Filter>04. Object\Monster</Filter>
+    <ClInclude Include="ItemPack.h">
+      <Filter>07. Item\ItemPackage</Filter>
     </ClInclude>
-    <ClInclude Include="Shop.h" />
+    <ClInclude Include="Mace.h">
+      <Filter>07. Item\Items\Weapon</Filter>
+    </ClInclude>
+    <ClInclude Include="WoodWand.h">
+      <Filter>07. Item\Items\Weapon</Filter>
+    </ClInclude>
+    <ClInclude Include="WarBow.h">
+      <Filter>07. Item\Items\Weapon</Filter>
+    </ClInclude>
+    <ClInclude Include="FruitDagger.h">
+      <Filter>07. Item\Items\Weapon</Filter>
+    </ClInclude>
+    <ClInclude Include="MapleCloth.h">
+      <Filter>07. Item\Items\Armor</Filter>
+    </ClInclude>
+    <ClInclude Include="MapleHat.h">
+      <Filter>07. Item\Items\Armor</Filter>
+    </ClInclude>
+    <ClInclude Include="MaplePants.h">
+      <Filter>07. Item\Items\Armor</Filter>
+    </ClInclude>
+    <ClInclude Include="Inventory.h">
+      <Filter>Inventory</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Lecture2_GitPractice.cpp" />
@@ -116,12 +145,35 @@
     <ClCompile Include="CEquip.cpp">
       <Filter>22. Equip</Filter>
     </ClCompile>
-    <ClCompile Include="Player.cpp">
-      <Filter>04. Object\Player</Filter>
+    <ClCompile Include="Item.cpp">
+      <Filter>07. Item</Filter>
     </ClCompile>
-    <ClCompile Include="CMonster.cpp">
-      <Filter>04. Object\Monster</Filter>
+    <ClCompile Include="ItemPack.cpp">
+      <Filter>07. Item\ItemPackage</Filter>
     </ClCompile>
-    <ClCompile Include="Shop.cpp" />
+    <ClCompile Include="Mace.cpp">
+      <Filter>07. Item\Items\Weapon</Filter>
+    </ClCompile>
+    <ClCompile Include="WoodWand.cpp">
+      <Filter>07. Item\Items\Weapon</Filter>
+    </ClCompile>
+    <ClCompile Include="WarBow.cpp">
+      <Filter>07. Item\Items\Weapon</Filter>
+    </ClCompile>
+    <ClCompile Include="FruitDagger.cpp">
+      <Filter>07. Item\Items\Weapon</Filter>
+    </ClCompile>
+    <ClCompile Include="MapleCloth.cpp">
+      <Filter>07. Item\Items\Armor</Filter>
+    </ClCompile>
+    <ClCompile Include="MapleHat.cpp">
+      <Filter>07. Item\Items\Armor</Filter>
+    </ClCompile>
+    <ClCompile Include="MaplePants.cpp">
+      <Filter>07. Item\Items\Armor</Filter>
+    </ClCompile>
+    <ClCompile Include="Inventory.cpp">
+      <Filter>Inventory</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
