@@ -21,8 +21,6 @@ void CEquip::Update()
 
 void CEquip::Render()
 {
-	iter = mapEquip.begin();
-
 	if (!mapEquip.empty())
 	{
 		if (iter->second != nullptr) cout << "장비한 모자 : " << iter->second->GetItem()->strName << endl; ++iter;
@@ -45,13 +43,12 @@ void CEquip::Equip_Item(CItem* _pItem)
 
 void CEquip::Unequip_Item(CItem* _pItem)
 {
-<<<<<<< HEAD
+
   iter = mapEquip.find(_pItem->GetItem()->strName);
   mapEquip.erase(iter);
-=======
   m_iter = m_mapEquip.find(_pItem->GetItem()->strName);
   m_mapEquip.erase(m_iter);
   m_EqInven->AddItem(_pItem, 1);
   // 장비 해제시 플레이어 능력치 변화
->>>>>>> dff3d02a47d9f321c1e661a63983fda99f74138c
+
 }
