@@ -45,7 +45,7 @@ const bool CAttackObj::Damaged(const int _iDamage)
 
 	if (0 >= m_tStat.m_iCurHp)
 	{
-		if (Set_Dead)
+		if (Set_Dead())
 			return true;
 		else
 			return false;
