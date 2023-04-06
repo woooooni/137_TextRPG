@@ -1,5 +1,7 @@
 Lecture2_GitPractice/Lecture2_GitPractice.VC.VC.opendb
-*.filters
-*.suo
-*.ipch
-*.VC.db
+<<<<<<< .merge_file_lhokYf
+Lecture2_GitPractice/Lecture2_GitPractice/Lecture2_GitPractice.vcxproj.filters
+=======
+Lecture2_GitPractice/Lecture2_GitPractice/Lecture2_GitPractice.vcxproj.filters
+Lecture2_GitPractice/Lecture2_GitPractice/Lecture2_GitPractice.vcxproj
+>>>>>>> .merge_file_PU8Qs5
