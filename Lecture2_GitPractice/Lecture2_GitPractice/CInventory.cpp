@@ -29,7 +29,7 @@ void CInventory::Release()
 {
 }
 
-void CInventory::AddItem(CItem * _pItem, int _iAmount = 1)
+void CInventory::AddItem(CItem * _pItem, int _iAmount)
 {
 	_pItem->SetAmount(_iAmount);
 	m_vecItems.push_back(_pItem);
@@ -48,7 +48,7 @@ void CInventory::UseItem(int _iIndex)
 		}
 		else {
 			// 장비 착용
-
+			// m_pEquip->Equip_Item(m_vecItems[_iIndex]);
 			// 지우기
 			m_vecItems.erase(m_vecItems.begin() + _iIndex);
 		}
