@@ -8,10 +8,11 @@ class CPlayer : public CAttackObj
 public:
 	explicit CPlayer();
 	explicit CPlayer(const string& _strName, const ATTACK_OBJ_STAT& _tStat, const OBJECT_TYPE& _eObjType);
-	explicit CPlayer(const string& _strName, const ATTACK_OBJ_STAT& _tStat, const OBJECT_TYPE& _eObjType, const int& _iMoney);
-	explicit CPlayer(const string& _strName, const ATTACK_OBJ_STAT& _tStat, const OBJECT_TYPE& _eObjType, const PLAYER_JOB& _eJob, const int& _iMoney);
+	explicit CPlayer(const string& _strName, const ATTACK_OBJ_STAT& _tStat, const OBJECT_TYPE& _eObjType, const PLAYER_JOB& _eJob);
 	virtual ~CPlayer();
 
+public:
+	// Override
 	virtual void Initialize() override;
 	virtual void Update() override;
 	virtual void Render() override;
@@ -19,14 +20,15 @@ public:
 
 public:
 	// Access Methods 
-	PLAYER_JOB Get_Job()				{ return m_eJob; }
-	int Get_Money()						{ return m_iMoney; }
-	
+	PLAYER_JOB Get_Job() const			{ return m_eJob; }
 	bool Set_Job(PLAYER_JOB& _eJob)		{ if (PLAYER_JOB::END == _eJob) return false; m_eJob = _eJob; return true; }
-	bool Set_Money(int _iMoney)			{ if (0 > _iMoney) return false; m_iMoney = _iMoney; return true; }
+
+public:
+	// Item
+	bool Reflect_Stat(CItem* _pItem, bool _bUnEquip); // 아이템 적용시 스탯에 반영 ('장비 착용 해제'만 true, 나머지 장비 착용이나 포션 아이템 사용은 false)
+	bool Reflect_Stat(CItem& _rItem, bool _bUnEquip); // overloading
 
 private:
 	PLAYER_JOB m_eJob;
-	int m_iMoney;
 };
 
