@@ -32,6 +32,9 @@
     <Filter Include="22. Equip">
       <UniqueIdentifier>{4f3218d4-b0ff-496f-a404-11ab46b0d9f0}</UniqueIdentifier>
     </Filter>
+    <Filter Include="0.0.2 Shop">
+      <UniqueIdentifier>{bcdaeca7-08d4-4c97-bc07-2ea25caae9f5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -73,6 +76,9 @@
     <ClInclude Include="CEquip.h">
       <Filter>22. Equip</Filter>
     </ClInclude>
+    <ClInclude Include="Shop.h">
+      <Filter>0.0.2 Shop</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Lecture2_GitPractice.cpp" />
@@ -96,6 +102,9 @@
     </ClCompile>
     <ClCompile Include="CEquip.cpp">
       <Filter>22. Equip</Filter>
+    </ClCompile>
+    <ClCompile Include="Shop.cpp">
+      <Filter>0.0.2 Shop</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
