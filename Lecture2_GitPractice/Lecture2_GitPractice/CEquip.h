@@ -8,14 +8,16 @@ public:
 
 
 private:
-
-
+	//map<EQUIP_TYPE, CItem*> mapEquip;
+	//map<EQUIP_TYPE, CItem*>::iterator iter;
 
 public:
-	virtual void Initialize();
-	virtual void Update();
-	virtual void Render();
-	virtual void Release();
+	void Initialize();
+	void Update();
+	void Render();
+	void Release();
 
+	void Equip_Item(CItem* _pItem);
+	void Unequip_Item(CItem* _pItem);
 };
 
