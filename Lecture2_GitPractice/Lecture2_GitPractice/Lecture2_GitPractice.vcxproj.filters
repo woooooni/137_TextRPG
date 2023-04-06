@@ -32,9 +32,6 @@
     <Filter Include="22. Equip">
       <UniqueIdentifier>{4f3218d4-b0ff-496f-a404-11ab46b0d9f0}</UniqueIdentifier>
     </Filter>
-    <Filter Include="04. Object\Player">
-      <UniqueIdentifier>{864a5c88-998d-47d0-8875-39f7225ccdcc}</UniqueIdentifier>
-    </Filter>
     <Filter Include="04. Object\Monster">
       <UniqueIdentifier>{2e2cae45-7aee-4106-ac17-168e8955c381}</UniqueIdentifier>
     </Filter>
@@ -43,6 +40,12 @@
     </Filter>
     <Filter Include="03. Scene\01. Shop">
       <UniqueIdentifier>{af30f4a4-4452-4dbd-88ee-6e22082f3bf0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="04. Object\01.AttackObj">
+      <UniqueIdentifier>{b9ab87a6-c4f9-4821-9893-7573edcd4e5a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="04. Object\02.Player">
+      <UniqueIdentifier>{864a5c88-998d-47d0-8875-39f7225ccdcc}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -85,13 +88,14 @@
     <ClInclude Include="CEquip.h">
       <Filter>22. Equip</Filter>
     </ClInclude>
-    <ClInclude Include="Player.h">
-      <Filter>04. Object\Player</Filter>
-    </ClInclude>
     <ClInclude Include="CMonster.h">
       <Filter>04. Object\Monster</Filter>
     </ClInclude>
     <ClInclude Include="Shop.h" />
+    <ClInclude Include="CPlayer.h">
+      <Filter>04. Object\02.Player</Filter>
+    </ClInclude>
+    <ClInclude Include="CAttackObj.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Lecture2_GitPractice.cpp" />
@@ -116,12 +120,13 @@
     <ClCompile Include="CEquip.cpp">
       <Filter>22. Equip</Filter>
     </ClCompile>
-    <ClCompile Include="Player.cpp">
-      <Filter>04. Object\Player</Filter>
-    </ClCompile>
     <ClCompile Include="CMonster.cpp">
       <Filter>04. Object\Monster</Filter>
     </ClCompile>
+    <ClCompile Include="CPlayer.cpp">
+      <Filter>04. Object\02.Player</Filter>
+    </ClCompile>
     <ClCompile Include="Shop.cpp" />
+    <ClCompile Include="CAttackObj.cpp" />
   </ItemGroup>
 </Project>
