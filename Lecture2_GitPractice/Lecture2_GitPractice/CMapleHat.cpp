@@ -4,10 +4,10 @@
 
 CMapleHat::CMapleHat()
 {
-	m_tItem->strName = "¸ÞÀÌÇÃ¸ðÀÚ";
-	m_tItem->strType = "¹æ¾î±¸";
-	m_tItem->strDetailType = "¸ðÀÚ";
-	m_tItem->strRare = "·¹¾î";
+	m_tItem->strName = "ë©”ì´í”Œëª¨ìž";
+	m_tItem->strType = "ë°©ì–´êµ¬";
+	m_tItem->strDetailType = "ëª¨ìž";
+	m_tItem->strRare = "ë ˆì–´";
 	m_tItem->iAtk = 0;
 	m_tItem->iHp = 10;
 	m_tItem->iPrice = 5000;

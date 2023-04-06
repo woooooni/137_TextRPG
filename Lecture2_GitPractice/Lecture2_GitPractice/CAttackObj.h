@@ -1,7 +1,7 @@
 #pragma once
 #include "CObj.h"
 
-typedef struct tagStat // Struct.h·Î ¿Å°Ü¾ß ÇÑ´Ù. 
+typedef struct tagStat // Struct.hë¡œ ì˜®ê²¨ì•¼ í•œë‹¤. 
 {
 	int m_iMaxHp;
 	int m_iCurHp;
@@ -34,7 +34,18 @@ public:
 	~CAttackObj();
 
 public:
-	// CObjÀ»(¸¦) ÅëÇØ »ó¼ÓµÊ
+
+	// Access Methods
+	const bool Set_Name(const string& _strName) { if ("" == _strName) return false;  m_strName = _strName; return true; }
+	const bool Set_Dead() { if (true == m_bDead) return false; m_bDead = true;  return true; }
+	const bool Set_MaxHp(const int& _iMaxHp) { if (0 > _iMaxHp) return false; m_tStat.m_iMaxHp = _iMaxHp; return true; }
+	const bool Set_CurHp(const int& _iCurHp) { if (0 > _iCurHp) return false; m_tStat.m_iCurHp = _iCurHp; return true; }
+	const bool Set_Str(const int& _iStr) { if (0 > _iStr) return false; m_tStat.m_iStr = _iStr; return true; }
+
+	const ATTACK_OBJ_STAT& Get_Stat() const { return m_tStat; }
+	const string& Get_Name() const { return m_strName; }
+
+	// CObjì„(ë¥¼) í†µí•´ ìƒì†ë¨
 	virtual void Initialize() override;
 	virtual void Update() override;
 	virtual void Render() override;
@@ -52,15 +63,18 @@ public:
 	const string& Get_Name() const					{ return m_strName; }
 
 public:
-	// Attack °ü·Ã
+	// Attack ê´€ë ¨
 	const bool Attack(CAttackObj* const _pAttackObj);
 	const bool Damaged(const int _iDamage);
 
+	const bool Is_dead() const { return m_bDead; }
+	void Revive() { m_bDead = true; }
+	
 	const bool Is_dead() const						{ return m_bDead; }
 	void Revive()									{ m_bDead = true; }
 
 protected:
-	string m_strName; // ¾ÆÀÌÅÛÀº ÀÌ¸§À» ±¸Á¶Ã¼¿¡ ÀúÀå.. ±×·³ ÇÃ·¹ÀÌ¾î¶û ¸ó½ºÅÍ´Â ¿©±â¿¡?
+	string m_strName; // ì•„ì´í…œì€ ì´ë¦„ì„ êµ¬ì¡°ì²´ì— ì €ì¥.. ê·¸ëŸ¼ í”Œë ˆì´ì–´ë‘ ëª¬ìŠ¤í„°ëŠ” ì—¬ê¸°ì—?
 	bool  m_bDead;
 	ATTACK_OBJ_STAT m_tStat;
 

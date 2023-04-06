@@ -4,10 +4,12 @@
 
 CMapleCloth::CMapleCloth()
 {
-	m_tItem->strName = "¸ÞÀÌÇÃ¸ÇÅõ¸Ç";
-	m_tItem->strType = "¹æ¾î±¸";
-	m_tItem->strDetailType = "»óÀÇ";
-	m_tItem->strRare = "·¹¾î";
+	m_tItem->strName = "ë©”ì´í”Œë§¨íˆ¬ë§¨";
+	m_tItem->strType = "ë°©ì–´êµ¬";
+	m_tItem->strRare = "ë ˆì–´";
+	m_tItem->iAtk = 0;
+	m_tItem->strDetailType = "ìƒì˜";
+	m_tItem->strRare = "ë ˆì–´";
 	m_tItem->iHp = 30;
 	m_tItem->iPrice = 7000;
 }

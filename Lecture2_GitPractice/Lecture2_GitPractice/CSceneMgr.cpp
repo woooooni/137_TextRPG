@@ -23,7 +23,7 @@ void CSceneMgr::Initialize()
 
 void CSceneMgr::Update()
 {
-	
+
 }
 
 void CSceneMgr::Render()

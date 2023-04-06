@@ -1,4 +1,7 @@
 #pragma once
+#include "CObj.h"
+class CMonster :
+	public CObj
 #include "CAttackObj.h"
 class CMonster :
 	public CAttackObj
@@ -9,7 +12,7 @@ public:
 	virtual ~CMonster();
 
 public:
-	// CObjÀ»(¸¦) ÅëÇØ »ó¼ÓµÊ
+	// CObjÃ€Â»(Â¸Â¦) Ã…Ã«Ã‡Ã˜ Â»Ã³Â¼Ã“ÂµÃŠ
 	virtual void Initialize() override;
 	virtual void Update() override;
 	virtual void Render() override;
