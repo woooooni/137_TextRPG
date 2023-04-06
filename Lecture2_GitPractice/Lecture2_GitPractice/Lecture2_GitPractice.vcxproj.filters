@@ -20,6 +20,9 @@
     <Filter Include="01. Manager\Scene">
       <UniqueIdentifier>{44fa1341-7f2e-4061-8b3e-2b560db3e3ec}</UniqueIdentifier>
     </Filter>
+    <Filter Include="0.0.2 Shop">
+      <UniqueIdentifier>{bcdaeca7-08d4-4c97-bc07-2ea25caae9f5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -49,6 +52,9 @@
     <ClInclude Include="CSceneMgr.h">
       <Filter>01. Manager\Scene</Filter>
     </ClInclude>
+    <ClInclude Include="Shop.h">
+      <Filter>0.0.2 Shop</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Lecture2_GitPractice.cpp" />
@@ -60,6 +66,9 @@
     </ClCompile>
     <ClCompile Include="CSceneMgr.cpp">
       <Filter>01. Manager\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="Shop.cpp">
+      <Filter>0.0.2 Shop</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

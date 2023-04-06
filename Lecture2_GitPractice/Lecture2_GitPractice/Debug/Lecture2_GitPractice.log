@@ -1,0 +1,40 @@
+﻿빌드 시작: 2023-04-06 오후 1:57:45
+     1>2 노드의 "C:\Users\이종석\Desktop\TxtRPG 합작\Lecture2_GitPractice\Lecture2_GitPractice\Lecture2_GitPractice.vcxproj" 프로젝트(Build 대상)입니다.
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Yc"stdafx.h" /Fp"Debug\Lecture2_GitPractice.pch" /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt stdafx.cpp
+         stdafx.cpp
+     1>c:\users\이종석\desktop\txtrpg 합작\lecture2_gitpractice\lecture2_gitpractice\enum_string.h(4): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+     1>c:\users\이종석\desktop\txtrpg 합작\lecture2_gitpractice\lecture2_gitpractice\enum_string.h(4): error C2146: 구문 오류: ';'이(가) 'STR_STATE' 식별자 앞에 없습니다.
+     1>c:\users\이종석\desktop\txtrpg 합작\lecture2_gitpractice\lecture2_gitpractice\enum_string.h(4): error C2440: '초기화 중': 'const char [7]'에서 'int'(으)로 변환할 수 없습니다.
+         c:\users\이종석\desktop\txtrpg 합작\lecture2_gitpractice\lecture2_gitpractice\enum_string.h(4): note: 이 변환이 가능한 컨텍스트가 없습니다.
+     1>c:\users\이종석\desktop\txtrpg 합작\lecture2_gitpractice\lecture2_gitpractice\enum_string.h(4): error C2440: '초기화 중': 'const char [5]'에서 'int'(으)로 변환할 수 없습니다.
+         c:\users\이종석\desktop\txtrpg 합작\lecture2_gitpractice\lecture2_gitpractice\enum_string.h(4): note: 이 변환이 가능한 컨텍스트가 없습니다.
+     1>c:\users\이종석\desktop\txtrpg 합작\lecture2_gitpractice\lecture2_gitpractice\enum_string.h(5): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+     1>c:\users\이종석\desktop\txtrpg 합작\lecture2_gitpractice\lecture2_gitpractice\enum_string.h(5): error C2086: 'const int string': 재정의
+         c:\users\이종석\desktop\txtrpg 합작\lecture2_gitpractice\lecture2_gitpractice\enum_string.h(4): note: 'string' 선언을 참조하십시오.
+     1>c:\users\이종석\desktop\txtrpg 합작\lecture2_gitpractice\lecture2_gitpractice\enum_string.h(5): error C2146: 구문 오류: ';'이(가) 'STR_PROPERTY' 식별자 앞에 없습니다.
+     1>c:\users\이종석\desktop\txtrpg 합작\lecture2_gitpractice\lecture2_gitpractice\enum_string.h(5): error C2440: '초기화 중': 'const char [7]'에서 'int'(으)로 변환할 수 없습니다.
+         c:\users\이종석\desktop\txtrpg 합작\lecture2_gitpractice\lecture2_gitpractice\enum_string.h(5): note: 이 변환이 가능한 컨텍스트가 없습니다.
+     1>c:\users\이종석\desktop\txtrpg 합작\lecture2_gitpractice\lecture2_gitpractice\enum_string.h(5): error C2440: '초기화 중': 'const char [5]'에서 'int'(으)로 변환할 수 없습니다.
+         c:\users\이종석\desktop\txtrpg 합작\lecture2_gitpractice\lecture2_gitpractice\enum_string.h(5): note: 이 변환이 가능한 컨텍스트가 없습니다.
+     1>c:\users\이종석\desktop\txtrpg 합작\lecture2_gitpractice\lecture2_gitpractice\enum_string.h(5): error C2440: '초기화 중': 'const char [6]'에서 'int'(으)로 변환할 수 없습니다.
+         c:\users\이종석\desktop\txtrpg 합작\lecture2_gitpractice\lecture2_gitpractice\enum_string.h(5): note: 이 변환이 가능한 컨텍스트가 없습니다.
+     1>c:\users\이종석\desktop\txtrpg 합작\lecture2_gitpractice\lecture2_gitpractice\enum_string.h(5): error C2440: '초기화 중': 'const char [8]'에서 'int'(으)로 변환할 수 없습니다.
+         c:\users\이종석\desktop\txtrpg 합작\lecture2_gitpractice\lecture2_gitpractice\enum_string.h(5): note: 이 변환이 가능한 컨텍스트가 없습니다.
+     1>c:\users\이종석\desktop\txtrpg 합작\lecture2_gitpractice\lecture2_gitpractice\enum_string.h(5): error C2440: '초기화 중': 'const char [4]'에서 'int'(으)로 변환할 수 없습니다.
+         c:\users\이종석\desktop\txtrpg 합작\lecture2_gitpractice\lecture2_gitpractice\enum_string.h(5): note: 이 변환이 가능한 컨텍스트가 없습니다.
+     1>c:\users\이종석\desktop\txtrpg 합작\lecture2_gitpractice\lecture2_gitpractice\enum_string.h(6): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+     1>c:\users\이종석\desktop\txtrpg 합작\lecture2_gitpractice\lecture2_gitpractice\enum_string.h(6): error C2086: 'const int string': 재정의
+         c:\users\이종석\desktop\txtrpg 합작\lecture2_gitpractice\lecture2_gitpractice\enum_string.h(4): note: 'string' 선언을 참조하십시오.
+     1>c:\users\이종석\desktop\txtrpg 합작\lecture2_gitpractice\lecture2_gitpractice\enum_string.h(6): error C2146: 구문 오류: ';'이(가) 'STR_RARITY' 식별자 앞에 없습니다.
+     1>c:\users\이종석\desktop\txtrpg 합작\lecture2_gitpractice\lecture2_gitpractice\enum_string.h(6): error C2440: '초기화 중': 'const char [5]'에서 'int'(으)로 변환할 수 없습니다.
+         c:\users\이종석\desktop\txtrpg 합작\lecture2_gitpractice\lecture2_gitpractice\enum_string.h(6): note: 이 변환이 가능한 컨텍스트가 없습니다.
+     1>c:\users\이종석\desktop\txtrpg 합작\lecture2_gitpractice\lecture2_gitpractice\enum_string.h(6): error C2440: '초기화 중': 'const char [7]'에서 'int'(으)로 변환할 수 없습니다.
+         c:\users\이종석\desktop\txtrpg 합작\lecture2_gitpractice\lecture2_gitpractice\enum_string.h(6): note: 이 변환이 가능한 컨텍스트가 없습니다.
+     1>c:\users\이종석\desktop\txtrpg 합작\lecture2_gitpractice\lecture2_gitpractice\enum_string.h(6): error C2440: '초기화 중': 'const char [9]'에서 'int'(으)로 변환할 수 없습니다.
+         c:\users\이종석\desktop\txtrpg 합작\lecture2_gitpractice\lecture2_gitpractice\enum_string.h(6): note: 이 변환이 가능한 컨텍스트가 없습니다.
+     1>"C:\Users\이종석\Desktop\TxtRPG 합작\Lecture2_GitPractice\Lecture2_GitPractice\Lecture2_GitPractice.vcxproj" 프로젝트를 빌드했습니다(Build 대상). - 실패
+
+빌드하지 못했습니다.
+
+경과 시간: 00:00:01.13
