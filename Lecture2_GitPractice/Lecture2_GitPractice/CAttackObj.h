@@ -13,13 +13,6 @@ typedef struct tagStat // Struct.h로 옮겨야 한다.
 	tagStat(const int& _iMaxHp, const int& _iCurHp, const int& _iStr)
 		: m_iMaxHp(_iMaxHp), m_iCurHp(_iCurHp), m_iStr(_iStr) {}
 
-	/*const tagStat operator +=(const tagStat& _rStat)
-	{
-		tagStat tTemp(m_iMaxHp += _rStat.m_iMaxHp, m_iCurHp += _rStat.m_iCurHp, m_iStr += _rStat.m_iStr);
-
-		return tTemp;
-	}*/
-
 }ATTACK_OBJ_STAT;
 
 

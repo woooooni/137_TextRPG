@@ -13,8 +13,8 @@ public:
 	virtual ~CObj();
 
 public:
-	const OBJECT_TYPE& Get_ObjType() const { return m_eObjType; }
-	const bool Set_ObjType(const OBJECT_TYPE& _eType) { m_eObjType = _eType; }
+	const OBJECT_TYPE& Get_ObjType() const						{ return m_eObjType; }
+	const bool Set_ObjType(const OBJECT_TYPE& _eType)			{ m_eObjType = _eType; }
 
 protected:
 	OBJECT_TYPE m_eObjType;
