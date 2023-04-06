@@ -11,7 +11,7 @@ public:
 	virtual void Exit()		= 0;
 
 public:
-	explicit CScene();
+	explicit CScene(SCENE_TYPE _eType);
 	virtual ~CScene();
 };
 
