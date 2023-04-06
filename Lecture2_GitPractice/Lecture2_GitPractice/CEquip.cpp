@@ -31,12 +31,13 @@ void CEquip::Release()
 {
 }
 
-void CEquip::Equip_Item(CItem* _pItem)
-{
-	mapEquip.insert
-}
-
-void CEquip::Unequip_Item(CItem* _pItem)
-{
-
-}
+//void CEquip::Equip_Item(CItem* _pItem)
+//{
+//	mapEquip.insert({ _pItem->Get_Info().Type, _PItem });
+//}
+//
+//void CEquip::Unequip_Item(CItem* _pItem)
+//{
+//  iter = mapEquip.find(_pItem->Get_Info().Type);
+//  mapEquip.earase(iter);
+//}
