@@ -58,7 +58,7 @@ void CEquip::Equip_Item(CItem* _pItem)
 	else 
 	{
 		m_mapEquip.insert({ _pItem->GetItem()->strDetailType, _pItem });
-		// 장비 장착시 플레이어 능력치 변화
+		m_pEqPlayer->Reflect_Stat(_pItem, false);
 	}
 }
 
@@ -67,5 +67,5 @@ void CEquip::Unequip_Item(CItem* _pItem)
   m_iter = m_mapEquip.find(_pItem->GetItem()->strName);
   m_mapEquip.erase(m_iter);
   m_EqInven->AddItem(_pItem, 1);
-  // 장비 해제시 플레이어 능력치 변화
+  m_pEqPlayer->Reflect_Stat(_pItem, true);
 }
