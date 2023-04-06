@@ -6,9 +6,6 @@
 #include "CMapleCloth.h"
 #include "CMapleHat.h"
 #include "CMaplePants.h"
-#include "CRedPotion.h"
-#include "COrangePotion.h"
-#include "CWhitePotion.h"
 
 class CItemPack
 {

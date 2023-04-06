@@ -6,12 +6,15 @@
 class CInventory
 {
 public:
-	CInventory();
+	CInventory() : iAmount(0) {
+
+	}
 	~CInventory();
 
 private:
 	vector<CItem*> m_vecItems;
 	vector<CItem*>::iterator invenIter;
+	int iAmount;
 
 public:
 	void Init();
@@ -20,7 +23,6 @@ public:
 	void Release();
 
 public:
-	void AddItem(CItem* _pItem, int _iAmount = 1);
-	void UseItem(int _iIndex);
+	void AddItem(CItem* _pItem);
 };
 
