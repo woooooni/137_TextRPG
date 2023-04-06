@@ -1,5 +1,5 @@
 #pragma once
-#include "Dummy.h"
+
 #include "stdafx.h"
 
 class CShop
@@ -12,6 +12,7 @@ public:
 	void Release();
 	void ShowItem(int);
 	void BuyItem(/*CItem* pItem*/);
+	void SellItem();
 private:
 	//CDummy* m_pDummyItem[(int)(ITEM_CODE::END)];
 	//CDummy* m_pDummyPlayer;

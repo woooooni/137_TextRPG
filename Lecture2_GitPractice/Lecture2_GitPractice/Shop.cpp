@@ -22,19 +22,21 @@ void CShop::Update()
 	int iInput(0);
 	while (true)
 	{
-		cout << "1. 초급상점 2. 중급상점 3. 고급상점 :";
+		cout << "1. 초급상점 2. 중급상점 3. 고급상점 0. 전단계:";
 		cin >> iInput;
 		switch (iInput)
 		{
 		case 1:
-
+			ShowItem(0);
 			break;
 		case 2:
-
+			ShowItem(1);
 			break;
 		case 3:
-
+			ShowItem(0);
 			break;
+		case 0:
+			return;
 		}
 
 	}
@@ -81,9 +83,46 @@ void CShop::BuyItem(void)
 {
 	/*if (m_pItem->GetMoney() > m_pPlayer->GetMoney())
 	{
-		cout<<"Not enough Mineral"
+		cout<<"Not enough Mineral"<<endl;
 	}
-	else if(m_)
-	
+	else if(m_Inventory->isFull;)
+	{
+		cout<<"인벤토리가 가득 찼습니다."<<endl;
+	}
+	else
+	{
+	cout << "구매 성공" << endl;
+	}
 	*/
+}
+void CShop::SellItem()
+{
+
+	int		iInput = 0;
+
+	while (true)
+	{
+		system("cls");
+		/*m_pPlayer->Render();
+		m_pInventory->Render();*/
+		cout << "판매할 아이템을 고르시오.(0. 나가기):" << endl;
+		cin >> iInput;
+		--iInput;
+	
+			if (0 > iInput)
+				return;
+/*
+			if (최대 인벤토리 < iInput)
+				continue;
+*/
+			int		iMoney = 0;
+			/*if (아이템 판매(iInput, &iMoney))
+			{
+			
+				cout << "판매 성공" << endl;
+			}
+			else
+				cout << "판매 실패" << endl;*/
+	}
+
 }
