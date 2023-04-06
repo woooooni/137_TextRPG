@@ -1,5 +1,6 @@
 #include "stdafx.h"
 #include "CEquip.h"
+#include "CItem.h"
 
 
 CEquip::CEquip()
@@ -20,24 +21,30 @@ void CEquip::Update()
 
 void CEquip::Render()
 {
-	cout << "장비한 무기 : " << endl;
-	cout << "장비한 모자 : " << endl;
-	cout << "장비한 옷 : " << endl;
-	cout << "장비한 신발 : " << endl;
-	cout << "=============================" << endl;
+	iter = mapEquip.begin();
+
+	if (!mapEquip.empty())
+	{
+		if (iter->second != nullptr) cout << "장비한 모자 : " << iter->second->GetItem()->strName << endl; ++iter;
+		if (iter->second != nullptr) cout << "장비한 옷 : " << iter->second->GetItem()->strName << endl; ++iter;
+		if (iter->second != nullptr) cout << "장비한 신발 : " << iter->second->GetItem()->strName << endl; ++iter;
+		if (iter->second != nullptr) cout << "장비한 무기 : " << iter->second->GetItem()->strName << endl;
+		cout << "=============================" << endl;
+	}
+
 }
 
 void CEquip::Release()
 {
 }
 
-//void CEquip::Equip_Item(CItem* _pItem)
-//{
-//	mapEquip.insert({ _pItem->Get_Info().Type, _PItem });
-//}
-//
-//void CEquip::Unequip_Item(CItem* _pItem)
-//{
-//  iter = mapEquip.find(_pItem->Get_Info().Type);
-//  mapEquip.earase(iter);
-//}
+void CEquip::Equip_Item(CItem* _pItem)
+{
+	mapEquip.insert({ _pItem->GetItem()->strName, _pItem });
+}
+
+void CEquip::Unequip_Item(CItem* _pItem)
+{
+  iter = mapEquip.find(_pItem->GetItem()->strName);
+  mapEquip.erase(iter);
+}
