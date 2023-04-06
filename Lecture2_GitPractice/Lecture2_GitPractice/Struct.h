@@ -19,5 +19,4 @@ struct tagItem {
 	int iRecovery = 0;
 
 	int iPrice = 0;
->>>>>>> .merge_file_Q8ueDy
 };
