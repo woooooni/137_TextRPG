@@ -1,18 +1,16 @@
 #pragma once
 #include "stdafx.h"
 
-// ¾ÆÀÌÅÛ
+// Â¾Ã†Ã€ÃŒÃ…Ã›
 struct tagItem {
 	string strName;
 	string strType;
-<<<<<<< .merge_file_dRyo9x
 	string strRare;
 
 	int iAtk;
 	int iHp;
 
 	int iPrice;
-=======
 	string strDetailType = "";
 	string strRare;
 
