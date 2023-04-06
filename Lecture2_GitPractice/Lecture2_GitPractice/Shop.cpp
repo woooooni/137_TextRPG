@@ -3,6 +3,7 @@
 
 
 CShop::CShop()// :m_pDummyItem(nullptr),m_pDummyPlayer(nullptr) m_pInven(nullptr)
+	:CScene(SCENE_TYPE::SHOP)
 {
 
 }
