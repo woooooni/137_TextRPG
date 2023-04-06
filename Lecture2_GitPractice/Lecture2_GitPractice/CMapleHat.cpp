@@ -6,6 +6,7 @@ CMapleHat::CMapleHat()
 {
 	m_tItem->strName = "메이플모자";
 	m_tItem->strType = "방어구";
+	m_tItem->strDetailType = "모자";
 	m_tItem->strRare = "레어";
 	m_tItem->iAtk = 0;
 	m_tItem->iHp = 10;
