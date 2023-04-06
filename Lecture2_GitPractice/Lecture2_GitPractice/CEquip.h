@@ -2,7 +2,6 @@
 #include "CInventory.h"
 
 class CInventory;
-
 class CEquip
 {
 public:

@@ -64,6 +64,9 @@ void CAttackObj::Update()
 
 void CAttackObj::Render()
 {
+	cout << "이름 : " << Get_Name() << endl;
+	cout << "HP : " << Get_Stat().m_iCurHp << "/" << Get_Stat().m_iMaxHp <<  endl;
+	cout << "공격력 : " << Get_Stat().m_iStr << endl;
 }
 
 void CAttackObj::Release()

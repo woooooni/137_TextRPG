@@ -56,12 +56,12 @@ public:
 	const bool Attack(CAttackObj* const _pAttackObj);
 	const bool Damaged(const int _iDamage);
 
-	const bool Is_dead() const						{ return m_bDead; }
-	void Revive()									{ m_bDead = true; }
+	const bool	 Is_dead() const					{ return m_bDead; }
+	void		 Revive()							{ m_bDead = true; }
 
 protected:
-	string m_strName; // 아이템은 이름을 구조체에 저장.. 그럼 플레이어랑 몬스터는 여기에?
-	bool  m_bDead;
-	ATTACK_OBJ_STAT m_tStat;
+	string				m_strName; // 아이템은 이름을 구조체에 저장.. 그럼 플레이어랑 몬스터는 여기에?
+	bool				m_bDead;
+	ATTACK_OBJ_STAT		m_tStat;
 
 };

@@ -6,11 +6,6 @@ class CMonster;
 class CScene_Field :
 	public CScene
 {
-
-private:
-	CPlayer* m_pPlayer;
-	CMonster* m_pMonster;
-
 public:
 	explicit CScene_Field();
 	virtual ~CScene_Field();
@@ -24,5 +19,9 @@ public:
 
 private:
 	int Input();
+
+private:
+	CPlayer*	m_pPlayer;
+	CMonster*	m_pMonster;
 };
 
