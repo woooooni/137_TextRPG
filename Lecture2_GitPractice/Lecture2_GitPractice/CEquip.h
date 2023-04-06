@@ -1,4 +1,7 @@
 #pragma once
+#include "CInventory.h"
+
+class CInventory;
 
 class CEquip
 {
