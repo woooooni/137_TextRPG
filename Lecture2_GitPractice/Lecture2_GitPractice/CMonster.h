@@ -1,7 +1,7 @@
 #pragma once
-#include "CObj.h"
+#include "CAttackObj.h"
 class CMonster :
-	public CObj
+	public CAttackObj
 {
 
 public:
