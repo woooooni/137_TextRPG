@@ -126,3 +126,15 @@ void CShop::SellItem()
 	}
 
 }
+
+void CShop::Enter()
+{
+}
+
+void CShop::Render()
+{
+}
+
+void CShop::Exit()
+{
+}
