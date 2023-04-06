@@ -1,6 +1,10 @@
 #pragma once
 class CScene
 {
+private:
+	SCENE_TYPE _eType;
+
+
 public:
 	virtual void Enter()	= 0;
 	virtual void Update()	= 0;
@@ -8,6 +12,8 @@ public:
 	virtual void Exit()		= 0;
 
 public:
+	explicit CScene();
+	virtual ~CScene();
 	SCENE_TYPE GetSceneType() { return m_eType; }
 
 public:
