@@ -13,7 +13,8 @@ using namespace std;
 #include <tchar.h>
 #include <vector>
 #include <map>
-
+#include <algorithm>
+#include <stack>
 
 
 
