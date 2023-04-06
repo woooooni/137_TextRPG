@@ -91,35 +91,35 @@
     <ClInclude Include="CEquip.h">
       <Filter>22. Equip</Filter>
     </ClInclude>
-    <ClInclude Include="Item.h">
-      <Filter>07. Item</Filter>
-    </ClInclude>
-    <ClInclude Include="ItemPack.h">
-      <Filter>07. Item\ItemPackage</Filter>
-    </ClInclude>
-    <ClInclude Include="Mace.h">
-      <Filter>07. Item\Items\Weapon</Filter>
-    </ClInclude>
-    <ClInclude Include="WoodWand.h">
-      <Filter>07. Item\Items\Weapon</Filter>
-    </ClInclude>
-    <ClInclude Include="WarBow.h">
-      <Filter>07. Item\Items\Weapon</Filter>
-    </ClInclude>
-    <ClInclude Include="FruitDagger.h">
-      <Filter>07. Item\Items\Weapon</Filter>
-    </ClInclude>
-    <ClInclude Include="MapleCloth.h">
+    <ClInclude Include="CMapleCloth.h">
       <Filter>07. Item\Items\Armor</Filter>
     </ClInclude>
-    <ClInclude Include="MapleHat.h">
+    <ClInclude Include="CMapleHat.h">
       <Filter>07. Item\Items\Armor</Filter>
     </ClInclude>
-    <ClInclude Include="MaplePants.h">
+    <ClInclude Include="CMaplePants.h">
       <Filter>07. Item\Items\Armor</Filter>
     </ClInclude>
-    <ClInclude Include="Inventory.h">
+    <ClInclude Include="CWarBow.h">
+      <Filter>07. Item\Items\Weapon</Filter>
+    </ClInclude>
+    <ClInclude Include="CWoodWand.h">
+      <Filter>07. Item\Items\Weapon</Filter>
+    </ClInclude>
+    <ClInclude Include="CFruitDagger.h">
+      <Filter>07. Item\Items\Weapon</Filter>
+    </ClInclude>
+    <ClInclude Include="CMace.h">
+      <Filter>07. Item\Items\Weapon</Filter>
+    </ClInclude>
+    <ClInclude Include="CInventory.h">
       <Filter>Inventory</Filter>
+    </ClInclude>
+    <ClInclude Include="CItem.h">
+      <Filter>07. Item\Items</Filter>
+    </ClInclude>
+    <ClInclude Include="CItemPack.h">
+      <Filter>07. Item\ItemPackage</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -145,35 +145,35 @@
     <ClCompile Include="CEquip.cpp">
       <Filter>22. Equip</Filter>
     </ClCompile>
-    <ClCompile Include="Item.cpp">
-      <Filter>07. Item</Filter>
-    </ClCompile>
-    <ClCompile Include="ItemPack.cpp">
-      <Filter>07. Item\ItemPackage</Filter>
-    </ClCompile>
-    <ClCompile Include="Mace.cpp">
-      <Filter>07. Item\Items\Weapon</Filter>
-    </ClCompile>
-    <ClCompile Include="WoodWand.cpp">
-      <Filter>07. Item\Items\Weapon</Filter>
-    </ClCompile>
-    <ClCompile Include="WarBow.cpp">
-      <Filter>07. Item\Items\Weapon</Filter>
-    </ClCompile>
-    <ClCompile Include="FruitDagger.cpp">
-      <Filter>07. Item\Items\Weapon</Filter>
-    </ClCompile>
-    <ClCompile Include="MapleCloth.cpp">
+    <ClCompile Include="CMapleCloth.cpp">
       <Filter>07. Item\Items\Armor</Filter>
     </ClCompile>
-    <ClCompile Include="MapleHat.cpp">
+    <ClCompile Include="CMapleHat.cpp">
       <Filter>07. Item\Items\Armor</Filter>
     </ClCompile>
-    <ClCompile Include="MaplePants.cpp">
+    <ClCompile Include="CMaplePants.cpp">
       <Filter>07. Item\Items\Armor</Filter>
     </ClCompile>
-    <ClCompile Include="Inventory.cpp">
+    <ClCompile Include="CWarBow.cpp">
+      <Filter>07. Item\Items\Weapon</Filter>
+    </ClCompile>
+    <ClCompile Include="CWoodWand.cpp">
+      <Filter>07. Item\Items\Weapon</Filter>
+    </ClCompile>
+    <ClCompile Include="CFruitDagger.cpp">
+      <Filter>07. Item\Items\Weapon</Filter>
+    </ClCompile>
+    <ClCompile Include="CMace.cpp">
+      <Filter>07. Item\Items\Weapon</Filter>
+    </ClCompile>
+    <ClCompile Include="CInventory.cpp">
       <Filter>Inventory</Filter>
+    </ClCompile>
+    <ClCompile Include="CItem.cpp">
+      <Filter>07. Item\Items</Filter>
+    </ClCompile>
+    <ClCompile Include="CItemPack.cpp">
+      <Filter>07. Item\ItemPackage</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
