@@ -1,4 +1,5 @@
 #pragma once
+#include "stdafx.h"
 
 // æ∆¿Ã≈€
 struct tagItem {

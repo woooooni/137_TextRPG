@@ -5,17 +5,15 @@
 
 #pragma once
 
+using namespace std;
 
+#include <string>
 #include "targetver.h"
 #include <iostream>
-#include <string>
 #include <stdio.h>
 #include <tchar.h>
 #include <vector>
 #include <map>
-
-
-
 
 
 // TODO: 프로그램에 필요한 추가 헤더는 여기에서 참조합니다.
@@ -25,4 +23,3 @@
 #include "Enum_String.h"
 #include "Define.h"
 
-using namespace std;

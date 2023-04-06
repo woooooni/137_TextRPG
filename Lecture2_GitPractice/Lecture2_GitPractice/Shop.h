@@ -7,6 +7,7 @@ class CShop
 public:
 	CShop();
 	~CShop();
+
 	void Initialize();
 	void Update();
 	void Release();

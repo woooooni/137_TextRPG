@@ -147,6 +147,7 @@
   <ItemGroup>
     <ClInclude Include="CEquip.h" />
     <ClInclude Include="CGameCore.h" />
+    <ClInclude Include="CMonster.h" />
     <ClInclude Include="CObj.h" />
     <ClInclude Include="CScene.h" />
     <ClInclude Include="CSceneMgr.h" />
@@ -154,6 +155,7 @@
     <ClInclude Include="Define.h" />
     <ClInclude Include="Enum.h" />
     <ClInclude Include="Enum_String.h" />
+    <ClInclude Include="Player.h" />
     <ClInclude Include="Shop.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="Struct.h" />
@@ -162,11 +164,13 @@
   <ItemGroup>
     <ClCompile Include="CEquip.cpp" />
     <ClCompile Include="CGameCore.cpp" />
+    <ClCompile Include="CMonster.cpp" />
     <ClCompile Include="CObj.cpp" />
     <ClCompile Include="CScene.cpp" />
     <ClCompile Include="CSceneMgr.cpp" />
     <ClCompile Include="CScene_Field.cpp" />
     <ClCompile Include="Lecture2_GitPractice.cpp" />
+    <ClCompile Include="Player.cpp" />
     <ClCompile Include="Shop.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
