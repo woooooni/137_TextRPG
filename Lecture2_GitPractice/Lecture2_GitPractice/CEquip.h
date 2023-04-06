@@ -17,7 +17,7 @@ public:
 	void Render();
 	void Release();
 
-	void Equip_Item(CItem* _pItem);
-	void Unequip_Item(CItem* _pItem);
+	//void Equip_Item(CItem* _pItem);
+	//void Unequip_Item(CItem* _pItem);
 };
 
