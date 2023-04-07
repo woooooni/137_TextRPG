@@ -1,4 +1,5 @@
 #include "stdafx.h"
+#include "CGameCore.h"
 #include "CScene_Field.h"
 #include "CSceneMgr.h"
 #include "CPlayer.h"
@@ -10,7 +11,7 @@
 
 CScene_Field::CScene_Field()
 	:CScene(SCENE_TYPE::FIELD)
-	, m_pMonster(nullptr)
+	, m_pMonster(nullptr), m_pPlayer(nullptr)
 {
 }
 
@@ -23,8 +24,8 @@ CScene_Field::~CScene_Field()
 
 void CScene_Field::Enter()
 {
-	if(nullptr == m_pPlayer)
-		//TODO :: 플레이어 정보를 가져오기.
+	if (nullptr == m_pPlayer)
+		m_pPlayer = CGameCore::GetInst()->GetPlayer();
 
 
 	cout << "1. 초급\t 2. 중급\t 3.고급 (-1 : 나가기)" << endl;
