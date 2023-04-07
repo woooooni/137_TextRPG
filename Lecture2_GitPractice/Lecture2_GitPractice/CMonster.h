@@ -5,14 +5,14 @@ class CMonster :
 {
 
 public:
-	explicit CMonster();
+	explicit CMonster(string _strName);
 	virtual ~CMonster();
 
 public:
 	// CObj을(를) 통해 상속됨
-	virtual void Initialize() override;
-	virtual void Update() override;
-	virtual void Render() override;
-	virtual void Release() override;
+	virtual void Initialize()	= 0;
+	virtual void Update()		= 0;
+	virtual void Render()		= 0;
+	virtual void Release()		= 0;
 };
 

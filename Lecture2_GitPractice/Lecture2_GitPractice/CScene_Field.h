@@ -8,12 +8,15 @@ class CScene_Field :
 {
 
 private:
-	CPlayer* m_pPlayer;
-	CMonster* m_pMonster;
+	CPlayer*	m_pPlayer;
+	CMonster*	m_pMonster;
 
 public:
 	explicit CScene_Field();
 	virtual ~CScene_Field();
+
+public:
+	void SetPlayer(CPlayer* _pPlayer) { m_pPlayer = _pPlayer; }
 
 public:
 	// CScene을(를) 통해 상속됨
@@ -23,6 +26,8 @@ public:
 	virtual void Exit() override;
 
 private:
-	int Input();
+	int				Input();
+	void			Fight();
+	void			RunAway();
 };
 

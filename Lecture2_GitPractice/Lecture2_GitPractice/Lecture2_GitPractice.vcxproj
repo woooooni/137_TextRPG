@@ -156,10 +156,14 @@
     <ClInclude Include="CMapleHat.h" />
     <ClInclude Include="CMaplePants.h" />
     <ClInclude Include="CMonster.h" />
+    <ClInclude Include="CMonster_Easy.h" />
+    <ClInclude Include="CMonster_Hard.h" />
+    <ClInclude Include="CMonster_Normal.h" />
     <ClInclude Include="CObj.h" />
     <ClInclude Include="CScene.h" />
     <ClInclude Include="CSceneMgr.h" />
     <ClInclude Include="CScene_Field.h" />
+    <ClInclude Include="CShop.h" />
     <ClInclude Include="CWarBow.h" />
     <ClInclude Include="CWoodWand.h" />
     <ClInclude Include="Define.h" />
@@ -169,11 +173,11 @@
     <ClInclude Include="CPlayer.h" />
     <ClInclude Include="COrangePotion.h" />
     <ClInclude Include="CRedPotion.h" />
-    <ClInclude Include="Shop.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="Struct.h" />
     <ClInclude Include="targetver.h" />
     <ClInclude Include="CWhitePotion.h" />
+    <ClInclude Include="Template.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CAttackObj.cpp" />
@@ -187,10 +191,14 @@
     <ClCompile Include="CMapleHat.cpp" />
     <ClCompile Include="CMaplePants.cpp" />
     <ClCompile Include="CMonster.cpp" />
+    <ClCompile Include="CMonster_Easy.cpp" />
+    <ClCompile Include="CMonster_Hard.cpp" />
+    <ClCompile Include="CMonster_Normal.cpp" />
     <ClCompile Include="CObj.cpp" />
     <ClCompile Include="CScene.cpp" />
     <ClCompile Include="CSceneMgr.cpp" />
     <ClCompile Include="CScene_Field.cpp" />
+    <ClCompile Include="CShop.cpp" />
     <ClCompile Include="CWarBow.cpp" />
     <ClCompile Include="CWoodWand.cpp" />
     <ClCompile Include="CItemPack.cpp" />
@@ -198,7 +206,6 @@
     <ClCompile Include="CPlayer.cpp" />
     <ClCompile Include="COrangePotion.cpp" />
     <ClCompile Include="CRedPotion.cpp" />
-    <ClCompile Include="Shop.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
