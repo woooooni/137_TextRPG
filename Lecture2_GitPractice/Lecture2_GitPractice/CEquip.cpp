@@ -67,7 +67,7 @@ void CEquip::Render()
 		cout << "[현재 장착한 장비]" << endl;
 		for (m_iter = m_mapEquip.begin(); m_iter != m_mapEquip.end(); ++m_iter)
 		{
-			cout << "[" << iSloat << ".]" <<" 장비슬롯 : " << STR_EQUIPTYPE[(int)m_iter->first] << "\t이름 : " << m_iter->second->GetItem().strName << endl;
+			cout << "[" << iSloat << "]" <<" 장비슬롯 : " << STR_EQUIPTYPE[(int)m_iter->first] << "\t이름 : " << m_iter->second->GetItem().strName << endl;
 			cout << "===============================" << endl;
 			++iSloat;
 		}
@@ -80,19 +80,13 @@ void CEquip::Release()
 }
 
 bool CEquip::Equip_Item(CItem* _pItem)
-{
-	if (_pItem->GetItem().eType == EQUIP_TYPE::NONEQUIP)
-	{
-		cout << "장비할 수 없는 아이템입니다" << endl;
-		cout << endl;
-		return false;
-	}
-		
+{	
 	m_iter = m_mapEquip.find(_pItem->GetItem().eType);
 
 	if (m_iter != m_mapEquip.end()) 
 	{
 		cout << "이미 장착한 장비슬롯입니다" << endl;
+		system("pause");
 		cout << endl;
 		return false;
 	}
