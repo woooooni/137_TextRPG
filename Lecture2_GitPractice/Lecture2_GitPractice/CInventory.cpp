@@ -5,6 +5,9 @@
 #include "CPlayer.h"
 #include <algorithm>
 
+
+
+
 CInventory::CInventory()
 	:isEquip(0)
 {
@@ -25,16 +28,23 @@ void CInventory::Init()
 
 void CInventory::Render()
 {
-	int i = 1;
+	int curY = 1, i = 1;
+	int prevX = m_item.currentX();
+	int prevY = m_item.currentY();
+	m_item.gotoxy(50, 0);
 	cout << "============== 인벤토리 ==============" << endl;
 	if (!m_vecItems.empty()) {
 		sort(m_vecItems.begin(), m_vecItems.end(), tagSort());
 		invenIter = m_vecItems.begin();
 		for (; invenIter != m_vecItems.end(); ++invenIter) {
+			m_item.gotoxy(50, curY);
 			cout << i << ". ";
-			(*invenIter)->Render();
+			(*invenIter)->Render(i, curY);
+			i += 1;
+			curY += 3;
 		}
 	}
+	m_item.gotoxy(prevX, prevY);
 }
 
 void CInventory::Update()
@@ -42,11 +52,13 @@ void CInventory::Update()
 	int iInput = 0;
 	while (true) {
 		system("cls");
-		m_pPlayer->Get_Equip()->Render();
+ 		m_pPlayer->Get_Equip()->Render();
 		m_pPlayer->Render();
 		Render();
-		cout << "사용할 아이템 번호 입력 : ";
+		cout << "사용할 아이템 번호 입력 (돌아가기 : 0) : ";
 		cin >> iInput;
+		if (iInput == 0) break;
+		UseItem(iInput - 1);
 	}
 }
 
@@ -78,7 +90,7 @@ void CInventory::UseItem(int _iIndex)
 			// 장비 착용
 			isEquip = m_pPlayer->Get_Equip()->Equip_Item(m_vecItems[_iIndex]);
 			if (isEquip) {
-				Safe_Delete(m_vecItems[_iIndex]);
+				// Safe_Delete(m_vecItems[_iIndex]);
 				m_vecItems.erase(m_vecItems.begin() + _iIndex);
 			}
 		}

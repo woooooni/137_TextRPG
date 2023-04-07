@@ -15,6 +15,7 @@ private:
 	vector<CItem*> m_vecItems;
 	vector<CItem*>::iterator invenIter;
 	CPlayer* m_pPlayer;
+	CItem m_item;
 	bool isEquip;
 
 public:

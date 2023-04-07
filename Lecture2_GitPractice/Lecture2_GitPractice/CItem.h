@@ -3,6 +3,7 @@
 #include "Enum_String.h"
 #include "Struct.h"
 #include "Template.h"
+#include <Windows.h>
 
 class CItem
 {
@@ -14,9 +15,6 @@ protected:
 	tagItem m_tItem;
 	int iAmount;
 
-	ITEM_RARITY m_eRare;
-	EQUIP_TYPE m_eType;
-
 public:
 	tagItem GetItem() { return m_tItem; }
 	int GetAmount() { return iAmount; }
@@ -26,6 +24,10 @@ public:
 
 public:
 	void Render();
-
+	void Render(int _i, int _y);
+public:
+	void gotoxy(int _x, int _y);
+	int currentX();
+	int currentY();
 };
 
