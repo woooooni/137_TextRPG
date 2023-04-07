@@ -156,6 +156,9 @@
     <ClInclude Include="CMapleHat.h" />
     <ClInclude Include="CMaplePants.h" />
     <ClInclude Include="CMonster.h" />
+    <ClInclude Include="CMonster_Easy.h" />
+    <ClInclude Include="CMonster_Hard.h" />
+    <ClInclude Include="CMonster_Normal.h" />
     <ClInclude Include="CObj.h" />
     <ClInclude Include="CScene.h" />
     <ClInclude Include="CSceneMgr.h" />
@@ -188,6 +191,9 @@
     <ClCompile Include="CMapleHat.cpp" />
     <ClCompile Include="CMaplePants.cpp" />
     <ClCompile Include="CMonster.cpp" />
+    <ClCompile Include="CMonster_Easy.cpp" />
+    <ClCompile Include="CMonster_Hard.cpp" />
+    <ClCompile Include="CMonster_Normal.cpp" />
     <ClCompile Include="CObj.cpp" />
     <ClCompile Include="CScene.cpp" />
     <ClCompile Include="CSceneMgr.cpp" />
