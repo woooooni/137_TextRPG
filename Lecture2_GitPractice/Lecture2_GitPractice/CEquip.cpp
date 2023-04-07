@@ -1,9 +1,11 @@
 #include "stdafx.h"
 #include "CEquip.h"
+#include "CPlayer.h"
+#include "CInventory.h"
 #include "CItem.h"
 
 
-CEquip::CEquip() : m_pEqPlayer(nullptr), m_EqInven(nullptr), m_iter(m_mapEquip.begin())
+CEquip::CEquip() : m_pEqPlayer(nullptr), m_iter(m_mapEquip.begin())
 {
 }
 
@@ -17,34 +19,38 @@ void CEquip::Initialize()
 
 void CEquip::Update()
 {
-	// 이게 필요한지 모르겠음
-	//int iInput;
+	int iInput;
 
-	//while (true)
-	//{
-	//	system("cls");
+	while (true)
+	{
+		system("cls");
 
-	//	Render();
+		Render();
+		m_pEqPlayer->Render();
+		m_pEqPlayer->Get_Inventory()->Render();
 
-	//	cout << "1. [장비해제]" << '\t' << "2. [장비전체해제]" << "3. [나가기]" << endl;
-	//	cin >> iInput;
+		cout << "1. [장비해제]" << "  2. [장비전체해제]" << "  3. [돌아가기]" << endl;
+		cin >> iInput;
+		cout << endl;
 
-	//	switch (iInput)
-	//	{
-	//	case 1:
-	//		Unequip_Item();
-	//		break;
-	//	case 2:
-	//		Unequip_All();
-	//		break;
-	//	default:
-	//		break;
-	//	}
+		switch (iInput)
+		{
+		case 1:
+			Unequip_Item();
+			break;
+		case 2:
+			Unequip_All();
+			break;
+		case 3:
+			return;
+		default:
+			break;
+		}
 
-	//	system("pause");
-	//}
+		system("pause");
+	}
 
-	//
+	
 }
 
 void CEquip::Render()
@@ -111,10 +117,6 @@ void CEquip::Unequip_Item()
 
 	while (true)
 	{
-		system("cls");
-
-		Render();
-
 		cout << "[해제할 장비를 선택하세요] : ";
 		cin >> iInput;
 		cout << endl;
@@ -128,15 +130,13 @@ void CEquip::Unequip_Item()
 				++m_iter;
 			}
 
-			m_EqInven->AddItem(m_iter->second, 1);
+			m_pEqPlayer->Get_Inventory()->AddItem(m_iter->second, 1);
 			m_pEqPlayer->Reflect_Stat(m_iter->second, true);
 			m_mapEquip.erase(m_iter);
 			cout << "장비해제 성공" << endl;
 
 			return;
 		}	
-
-		system("pause");
 	}
 	
 }
@@ -153,7 +153,7 @@ void CEquip::Unequip_All()
 	{
 		for (m_iter = m_mapEquip.begin(); m_iter != m_mapEquip.end(); ++m_iter)
 		{
-			m_EqInven->AddItem(m_iter->second, 1);
+			m_pEqPlayer->Get_Inventory()->AddItem(m_iter->second, 1);
 			m_pEqPlayer->Reflect_Stat(m_iter->second, true);
 		}
 		m_mapEquip.clear();

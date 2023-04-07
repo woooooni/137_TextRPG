@@ -1,8 +1,7 @@
 #pragma once
-#include "CInventory.h"
 #include "CPlayer.h"
+#include "CInventory.h"
 
-class CInventory;
 class CPlayer;
 
 class CEquip
@@ -29,13 +28,10 @@ public:
 
 	// 플레이어랑 인벤 셋
 	void	Set_EqPlayer(CPlayer* _pPlayer)  { m_pEqPlayer = _pPlayer; }
-	void	Set_EqInven(CInventory* _pInven) { m_EqInven = _pInven; }
 
 private:
 	map<EQUIP_TYPE, CItem*>				m_mapEquip;
 	map<EQUIP_TYPE, CItem*>::iterator	m_iter;
 	CPlayer*		m_pEqPlayer;
-	CInventory*		m_EqInven;
-
 };
 
