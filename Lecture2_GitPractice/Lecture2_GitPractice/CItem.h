@@ -11,14 +11,14 @@ public:
 	virtual ~CItem();
 
 protected:
-	tagItem* m_tItem;
+	tagItem m_tItem;
 	int iAmount;
 
 	ITEM_RARITY m_eRare;
 	EQUIP_TYPE m_eType;
 
 public:
-	tagItem* GetItem() { return m_tItem; }
+	tagItem GetItem() { return m_tItem; }
 	int GetAmount() { return iAmount; }
 
 public:

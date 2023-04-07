@@ -4,12 +4,12 @@
 
 CFruitDagger::CFruitDagger()
 {
-	m_tItem->strName = "후르츠대거";
-	m_tItem->eType = EQUIP_TYPE::WEAPON;
-	m_tItem->eRare = ITEM_RARITY::UNIQUE;
-	m_tItem->iAtk = 8;
-	m_tItem->iHp = 0;
-	m_tItem->iPrice = 2000;
+	m_tItem.strName = "후르츠대거";
+	m_tItem.eType = EQUIP_TYPE::WEAPON;
+	m_tItem.eRare = ITEM_RARITY::UNIQUE;
+	m_tItem.iAtk = 8;
+	m_tItem.iHp = 0;
+	m_tItem.iPrice = 2000;
 }
 
 

@@ -4,12 +4,12 @@
 
 CWoodWand::CWoodWand()
 {
-	m_tItem->strName = "우드완드";
-	m_tItem->eType = EQUIP_TYPE::WEAPON;
-	m_tItem->eRare = ITEM_RARITY::EPIC;
-	m_tItem->iAtk = 5;
-	m_tItem->iHp = 0;
-	m_tItem->iPrice = 1500;
+	m_tItem.strName = "우드완드";
+	m_tItem.eType = EQUIP_TYPE::WEAPON;
+	m_tItem.eRare = ITEM_RARITY::EPIC;
+	m_tItem.iAtk = 5;
+	m_tItem.iHp = 0;
+	m_tItem.iPrice = 1500;
 }
 
 

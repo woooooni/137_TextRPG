@@ -1,4 +1,5 @@
 #pragma once
+// #include "CGameCore.h"
 #include "CItem.h"
 
 class CEquip;
@@ -36,7 +37,7 @@ public:
 
 struct tagSort{
 	bool operator()(CItem* _item1, CItem* _item2) {
-		return _item1->GetItem()->eType > _item2->GetItem()->eType;
+		return _item1->GetItem().eType > _item2->GetItem().eType;
 	}
 };
 

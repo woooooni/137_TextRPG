@@ -1,4 +1,5 @@
 #include "stdafx.h"
+// #include "CGameCore.h"
 #include "CInventory.h"
 #include "CEquip.h"
 #include "CPlayer.h"
@@ -7,6 +8,7 @@
 CInventory::CInventory()
 	:isEquip(0)
 {
+	// m_pPlayer = CGameCore::GetInst()->GetPlayer();
 }
 
 CInventory::~CInventory()
@@ -19,6 +21,7 @@ void CInventory::Init()
 
 void CInventory::Render()
 {
+	int i = 0;
 	invenIter = m_vecItems.begin();
 	for (; invenIter != m_vecItems.end(); ++invenIter) {
 		(*invenIter)->Render();
@@ -45,7 +48,7 @@ void CInventory::UseItem(int _iIndex)
 {
 	isEquip = false;
 	if (_iIndex < m_vecItems.size()) {
-		if (m_vecItems[_iIndex]->GetItem()->eType == EQUIP_TYPE::NONEQUIP) {
+		if (m_vecItems[_iIndex]->GetItem().eType == EQUIP_TYPE::NONEQUIP) {
 			// 플레이어 피 회복
 			m_pPlayer->Reflect_Stat(m_vecItems[_iIndex], false);
 

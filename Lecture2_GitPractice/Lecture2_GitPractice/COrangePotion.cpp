@@ -4,11 +4,11 @@
 
 COrangePotion::COrangePotion()
 {
-	m_tItem->strName = "林炔器记";
-	m_tItem->eType = EQUIP_TYPE::NONEQUIP;
-	m_tItem->eRare = ITEM_RARITY::RARE;
-	m_tItem->iHp = 30;
-	m_tItem->iPrice = 160;
+	m_tItem.strName = "林炔器记";
+	m_tItem.eType = EQUIP_TYPE::NONEQUIP;
+	m_tItem.eRare = ITEM_RARITY::RARE;
+	m_tItem.iHp = 30;
+	m_tItem.iPrice = 160;
 }
 
 

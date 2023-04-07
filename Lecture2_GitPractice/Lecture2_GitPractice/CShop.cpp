@@ -86,15 +86,15 @@ void CShop::BuyItem(CItem* _pItem)
 {
 	bool bSuccess;
 	int iInput(1), iPrice(0); 
-	if (_pItem->GetItem()->eType == EQUIP_TYPE::NONEQUIP)
+	if (_pItem->GetItem().eType == EQUIP_TYPE::NONEQUIP)
 	{
-		cout << "구매할" << (_pItem->GetItem()->strName) << "의 갯수를 선택하시오 :";
+		cout << "구매할" << (_pItem->GetItem().strName) << "의 갯수를 선택하시오 :";
 			cin >> iInput;
-			iPrice = _pItem->GetItem()->iPrice*iInput;
+			iPrice = _pItem->GetItem().iPrice*iInput;
 	}
 	else
 	{
-		iPrice = _pItem->GetItem()->iPrice;
+		iPrice = _pItem->GetItem().iPrice;
 	}
 	bSuccess = m_pPlayer->Set_Gold(m_pPlayer->Get_Stat().m_iGold - iPrice);
 	if (bSuccess==false)
