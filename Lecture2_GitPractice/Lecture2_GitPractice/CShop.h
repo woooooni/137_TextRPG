@@ -1,18 +1,18 @@
 #pragma once
 #include "CScene.h"
 #include "stdafx.h"
-
-class CShop:public CScene
+#include "CItemPack.h"
+class CShop :public CScene
 {
 public:
 	CShop();
 	~CShop();
-	//void		Set_Player(CEntity* pPlayer) { m_pPlayer = pPlayer; }
-	//void		Set_Inven(CInventory* pInven) { m_pInventory = pInven; }
+	//void		SetPlayer(CEntity* pPlayer) { m_pPlayer = pPlayer; }
+	//void		SetInven(CInventory* pInven) { m_pInventory = pInven; }
 
 
 	void ShowItem(int);
-	void BuyItem(/*CItem* pItem*/);
+	void BuyItem(CItem* pItem);
 	void SellItem();
 
 
@@ -29,5 +29,7 @@ public:
 	//CDummy* m_pDummyItem[(int)(ITEM_CODE::END)];
 	//CPlayer* m_pDummyPlayer;
 	//CItem* m_pDummyInven;
+	vector<CItem*> vecItemList[3];
+
 };
 
