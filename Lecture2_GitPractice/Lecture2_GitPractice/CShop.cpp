@@ -2,7 +2,7 @@
 #include "CShop.h"
 
 
-CShop::CShop():m_pPlayer(nullptr), m_pInven(nullptr),CScene(SCENE_TYPE::SHOP)//씬타입 넣은 기억이 읎는디;
+CShop::CShop():m_pPlayer(nullptr), m_pInven(nullptr),CScene(SCENE_TYPE::SHOP)
 {
 
 }
@@ -14,16 +14,28 @@ CShop::~CShop()
 
 void CShop::Enter()
 {
+	//빨주흰
+	//메,완, 후&워
+	//바지:에픽, 모자&옷: 레전
 	CItem* pItem = new CMace;
 	vecItemList[(int)SHOP_LEVEL::BEGGINER].push_back(pItem);
-	pItem = new COrangePotion;
+	pItem = new CRedPotion;
 	vecItemList[(int)SHOP_LEVEL::BEGGINER].push_back(pItem);
-	pItem = new CFruitDagger;
-	vecItemList[(int)SHOP_LEVEL::BEGGINER].push_back(pItem);
-	pItem = new CWarBow;
-	vecItemList[(int)SHOP_LEVEL::BEGGINER].push_back(pItem);
+	pItem = new CWoodWand;
 	vecItemList[(int)SHOP_LEVEL::MIDDLE].push_back(pItem);
-
+	pItem = new CMaplePants;
+	vecItemList[(int)SHOP_LEVEL::MIDDLE].push_back(pItem);
+	pItem = new COrangePotion;
+	vecItemList[(int)SHOP_LEVEL::MIDDLE].push_back(pItem);
+	pItem = new CMapleHat;
+	vecItemList[(int)SHOP_LEVEL::SENIOR].push_back(pItem);
+	pItem = new CMapleCloth;
+	vecItemList[(int)SHOP_LEVEL::SENIOR].push_back(pItem);
+	pItem = new CFruitDagger;
+	vecItemList[(int)SHOP_LEVEL::SENIOR].push_back(pItem);
+	pItem = new CWarBow;
+	vecItemList[(int)SHOP_LEVEL::SENIOR].push_back(pItem);
+	pItem = new CWhitePotion;
 	vecItemList[(int)SHOP_LEVEL::SENIOR].push_back(pItem);
 }
 
@@ -44,15 +56,24 @@ void CShop::ShowItem(int _iLevel)
 			(*iter)->Render();
 		}
 		cin >> iInput;
+		if (vecItemList[_iLevel].size() <= iInput)
+		{
+			cout << "상점 주인 : 이봐 거긴 출입 금지라고!." << endl;
+			system("pause");
+
+		}
+		else if (iInput == 0)
+		return;
+
 		
-		CItem* pItem = vecItemList[_iLevel][iInput - 1];
+		else
+		{
+			CItem* pItem = vecItemList[_iLevel][iInput - 1];
 
-		BuyItem(pItem);
-
-			if (!vecItemList[_iLevel][iInput - 1])
-				cout << "상점 주인 : 이봐 거긴 출입 금지라고!." << endl;
-		system("pause");
-		break;
+			BuyItem(pItem);
+			
+		}
+			
 	}
 
 }
@@ -60,26 +81,29 @@ void CShop::ShowItem(int _iLevel)
 
 void CShop::BuyItem(CItem* _pItem)
 {
-	int iInput;
-	if (_pItem->GetItem()->strType == "소모품")
+	bool bSuccess;
+	int iInput(1), iPrice(0); 
+	if (_pItem->GetItem()->eType == EQUIP_TYPE::NONEQUIP)
 	{
 		cout << "구매할" << (_pItem->GetItem()->strName) << "의 갯수를 선택하시오 :";
 			cin >> iInput;
+			iPrice = _pItem->GetItem()->iPrice*iInput;
 	}
-	//if (_pItem->GetItem()->iPrice> player's money )
-	//{
-	//cout<<"돈이 부족합니다"<<endl;
-	//}
-	//else if(m_pInven)//is full?
-	//{
-	//cout<<"인벤토리가 가득 찼습니다."<<endl;
-	//}
-	//else
-	//{
-
-	//buy Item?//take player money;
-	//cout << "구매 성공" << endl;
-	//}
+	else
+	{
+		iPrice = _pItem->GetItem()->iPrice;
+	}
+	bSuccess = m_pPlayer->Set_Gold(m_pPlayer->Get_Stat().m_iGold - iPrice);
+	if (bSuccess==false)
+	{
+	cout<<"돈이 부족합니다"<<endl;
+	}
+	else
+	{
+		m_pInven->AddItem(_pItem, iInput);
+	
+	cout << "구매 성공" << endl;
+	}
 	
 }
 void CShop::SellItem()
@@ -102,8 +126,9 @@ void CShop::SellItem()
 		if (최대 인벤토리 < iInput)
 		continue;
 		*/
+
 		int		iMoney = 0;
-		/*if (아이템 판매(iInput, &iMoney))
+	/*	if (아이템 판매(iInput, &iMoney))
 		{
 
 		cout << "좋은 물건이군. 좋은 값에 쳐드리지." << endl;

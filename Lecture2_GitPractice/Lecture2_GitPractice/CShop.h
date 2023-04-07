@@ -11,7 +11,7 @@ class CShop :public CScene
 public:
 	CShop();
 	~CShop();
-	void		SetPlayer(CObj* pPlayer) { m_pPlayer = pPlayer; }
+	void		SetPlayer(CPlayer* pPlayer) { m_pPlayer = pPlayer; }
 	void		SetInven(CInventory* pInven) { m_pInven = pInven; }
 
 
@@ -31,7 +31,7 @@ public:
 	virtual void Exit() override;
 
 	
-	CObj* m_pPlayer;
+	CPlayer* m_pPlayer;
 	CInventory* m_pInven;
 	vector<CItem*> vecItemList[(int)SHOP_LEVEL::END];
 
