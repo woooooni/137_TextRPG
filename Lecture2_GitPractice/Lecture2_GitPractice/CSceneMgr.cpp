@@ -11,7 +11,7 @@ CSceneMgr::CSceneMgr()
 
 CSceneMgr::~CSceneMgr()
 {
-
+	Release();
 }
 
 void CSceneMgr::ChangeScene(SCENE_TYPE _eType)
@@ -24,7 +24,7 @@ void CSceneMgr::ChangeScene(SCENE_TYPE _eType)
 	m_vecBackScene.push_back(m_pCurScene);
 
 	m_pCurScene->Exit();
-	m_pCurScene = m_vecScene[(unsigned int)_eType];
+	m_pCurScene = *findIt;
 	m_pCurScene->Enter();
 }
 
@@ -40,16 +40,14 @@ void CSceneMgr::BackScene()
 
 void CSceneMgr::Initialize()
 {
-	const int iDefalutSceneNum = 10;
-
-	m_vecScene.reserve(iDefalutSceneNum);
+	m_vecScene.reserve((unsigned int)SCENE_TYPE::END);
 
 	CScene* pTemp = new CScene_Field;
 	if(pTemp != nullptr) m_vecScene.push_back(pTemp);
 
 
 	// 여기서 다른 Scene들도 생성
-	// ex ============================================== 
+	// ==============  ex ===================
 	// pTemp = new CScene_Inventory;
 	// if(pTemp != nullptr) m_vecScene.push_back(pTemp);
 
