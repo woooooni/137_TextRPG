@@ -40,10 +40,30 @@ void CSceneMgr::BackScene()
 
 void CSceneMgr::Initialize()
 {
+	const int iDefalutSceneNum = 10;
+
+	m_vecScene.reserve(iDefalutSceneNum);
+
 	CScene* pTemp = new CScene_Field;
 	if(pTemp != nullptr) m_vecScene.push_back(pTemp);
 
-	// 다른 씬들도 생성....
+
+	// 여기서 다른 Scene들도 생성
+	// ex ============================================== 
+	// pTemp = new CScene_Inventory;
+	// if(pTemp != nullptr) m_vecScene.push_back(pTemp);
+
+
+
+
+
+
+
+
+
+	// 모든 Scene 생성 후, 처음 Scene 지정
+	m_pCurScene = m_vecScene.front();
+	m_pCurScene->Enter();
 }
 
 void CSceneMgr::Update()
@@ -58,8 +78,8 @@ void CSceneMgr::Render()
 
 void CSceneMgr::Release()
 {
-	for_each(m_vecScene.begin(), m_vecScene.end(), Safe_Delete<CScene>);
-	for_each(m_vecBackScene.begin(), m_vecBackScene.end(), Safe_Delete<CScene>);
+	for_each(m_vecScene.begin(), m_vecScene.end(), Safe_Delete<CScene*>);
+	for_each(m_vecBackScene.begin(), m_vecBackScene.end(), Safe_Delete<CScene*>);
 
 	m_vecScene.clear();
 	m_vecBackScene.clear();
