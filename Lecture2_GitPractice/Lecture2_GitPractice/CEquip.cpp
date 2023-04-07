@@ -76,9 +76,9 @@ void CEquip::Release()
 
 bool CEquip::Equip_Item(CItem* _pItem)
 {
-	if (!_pItem)
+	if (_pItem->GetItem()->eType == EQUIP_TYPE::NONEQUIP)
 	{
-		cout << "존재하지 않는 장비입니다" << endl;
+		cout << "장비할 수 없는 아이템입니다" << endl;
 		cout << endl;
 		return false;
 	}
