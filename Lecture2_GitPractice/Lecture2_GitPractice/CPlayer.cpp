@@ -118,3 +118,27 @@ bool CPlayer::Reflect_Stat(CItem & _rItem, bool _bUnEquip)
 
 	return true;
 }
+
+void CPlayer::OpenBag()
+{
+	int iInput = 0;
+	while (true) {
+		system("cls");
+		m_pEquip->Render();
+		Render();
+		m_pInventory->Render();
+		cout << "1. 인벤토리  2. 장비창  3. 돌아가기" << endl;
+		cin >> iInput;
+		if (iInput == 3) {
+			break;
+		}
+		switch (iInput) {
+		case 1:
+			m_pInventory->Update();
+			break;
+		case 2:
+			m_pEquip->Update();
+			break;
+		}
+	}
+}

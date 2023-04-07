@@ -1,4 +1,5 @@
 #pragma once
+
 class CScene
 {
 public:
@@ -9,7 +10,6 @@ public:
 
 public:
 	SCENE_TYPE GetSceneType() { return m_eType; }
-
 public:
 	explicit CScene(SCENE_TYPE _eType);
 	virtual ~CScene();
