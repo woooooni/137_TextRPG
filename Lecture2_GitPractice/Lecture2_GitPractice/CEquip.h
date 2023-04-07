@@ -36,5 +36,6 @@ private:
 	map<EQUIP_TYPE, CItem*>::iterator	m_iter;
 	CPlayer*		m_pEqPlayer;
 	CInventory*		m_EqInven;
+
 };
 
