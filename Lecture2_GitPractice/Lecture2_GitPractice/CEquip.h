@@ -18,7 +18,7 @@ public:
 	void Release();
 
 public:
-	void Equip_Item(CItem* _pItem);
+	bool Equip_Item(CItem* _pItem);
 	void Unequip_Item(CItem* _pItem);
 	void Unequip_All() { m_mapEquip.clear(); }
 

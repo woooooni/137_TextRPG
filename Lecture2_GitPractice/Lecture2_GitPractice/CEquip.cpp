@@ -43,7 +43,7 @@ void CEquip::Release()
 {
 }
 
-void CEquip::Equip_Item(CItem* _pItem)
+bool CEquip::Equip_Item(CItem* _pItem)
 {
 	if (!_pItem)
 		return;
@@ -53,12 +53,13 @@ void CEquip::Equip_Item(CItem* _pItem)
 	if (m_iter != m_mapEquip.end()) 
 	{
 		cout << "이미 장착한 장비슬롯입니다" << endl;
-		return;
+		return false;
 	}
 	else 
 	{
 		m_mapEquip.insert({ _pItem->GetItem()->strDetailType, _pItem });
 		m_pEqPlayer->Reflect_Stat(_pItem, false);
+		return true;
 	}
 }
 
