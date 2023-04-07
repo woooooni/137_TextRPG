@@ -54,6 +54,7 @@ void CEquip::Render()
 	if (m_mapEquip.empty())
 	{
 		cout << "[현재 장착한 장비가 없습니다]" << endl;
+		cout << endl;
 	}
 	else
 	{
@@ -78,6 +79,7 @@ bool CEquip::Equip_Item(CItem* _pItem)
 	if (!_pItem)
 	{
 		cout << "존재하지 않는 장비입니다" << endl;
+		cout << endl;
 		return false;
 	}
 		
@@ -87,6 +89,7 @@ bool CEquip::Equip_Item(CItem* _pItem)
 	if (m_iter != m_mapEquip.end()) 
 	{
 		cout << "이미 장착한 장비슬롯입니다" << endl;
+		cout << endl;
 		return false;
 	}
 	else 
@@ -104,6 +107,7 @@ void CEquip::Unequip_Item()
 	if (m_mapEquip.empty())
 	{
 		cout << "해제할 장비가 없습니다" << endl;
+		cout << endl;
 		return;
 	}
 
@@ -115,6 +119,7 @@ void CEquip::Unequip_Item()
 
 		cout << "[해제할 장비를 선택하세요] : ";
 		cin >> iInput;
+		cout << endl;
 
 		if (iInput < 5)
 		{
@@ -128,6 +133,7 @@ void CEquip::Unequip_Item()
 			m_EqInven->AddItem(m_iter->second, 1);
 			m_pEqPlayer->Reflect_Stat(m_iter->second, true);
 			m_mapEquip.erase(m_iter);
+			cout << "장비해제 성공" << endl;
 
 			return;
 		}	
@@ -142,6 +148,7 @@ void CEquip::Unequip_All()
 	if (m_mapEquip.empty())
 	{
 		cout << "해제할장비가 없습니다" << endl;
+		cout << endl;
 		return;
 	}
 	else 
