@@ -23,10 +23,11 @@ void CEquip::Render()
 {
 	if (m_mapEquip.empty())
 	{
-		cout << "현재 장착한 장비가 없습니다" << endl;
+		cout << "[현재 장착한 장비가 없습니다]" << endl;
 	}
 	else
 	{
+		cout << "[현재 장착한 장비]" << endl;
 		for (m_iter = m_mapEquip.begin(); m_iter != m_mapEquip.end(); ++m_iter)
 		{
 			cout << "장비슬롯 : " << m_iter->first << '\t' << "이름 : " << m_iter->second->GetItem()->strName << endl;
