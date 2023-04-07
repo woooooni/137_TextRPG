@@ -19,7 +19,6 @@ void CGameCore::Initialize()
 	m_pPlayer->Initialize();
 
 	CSceneMgr::GetInst()->Initialize();
-	
 }
 
 void CGameCore::Tick()

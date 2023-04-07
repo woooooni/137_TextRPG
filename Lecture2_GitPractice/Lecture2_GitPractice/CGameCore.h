@@ -11,7 +11,6 @@ private:
 	CPlayer* m_pPlayer;
 	bool	 m_bPlaying;
 
-
 public:
 	void Initialize();
 	void Tick();

@@ -17,11 +17,8 @@ CScene_Lobby::~CScene_Lobby()
 void CScene_Lobby::Enter()
 {
 	system("cls");
-
 	cout << "메뉴를 선택해주세요." << endl;
-
 	cout << "1. 사냥터  " << "2. 상점  " << "3. 가방 열기  " << "4. 종료\n";
-
 	cout << endl << "--->";
 }
 
