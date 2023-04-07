@@ -40,6 +40,10 @@ void CSceneMgr::BackScene()
 
 void CSceneMgr::Initialize()
 {
+	const int iDefalutSceneNum = 5;
+
+	m_vecScene.reserve(iDefalutSceneNum);
+
 	CScene* pTemp = new CScene_Field;
 	if(pTemp != nullptr) m_vecScene.push_back(pTemp);
 
@@ -58,8 +62,8 @@ void CSceneMgr::Render()
 
 void CSceneMgr::Release()
 {
-	for_each(m_vecScene.begin(), m_vecScene.end(), Safe_Delete<CScene>);
-	for_each(m_vecBackScene.begin(), m_vecBackScene.end(), Safe_Delete<CScene>);
+	for_each(m_vecScene.begin(), m_vecScene.end(), Safe_Delete<CScene*>);
+	for_each(m_vecBackScene.begin(), m_vecBackScene.end(), Safe_Delete<CScene*>);
 
 	m_vecScene.clear();
 	m_vecBackScene.clear();
