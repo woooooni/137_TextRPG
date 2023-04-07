@@ -8,18 +8,19 @@ class CPlayer;
 
 class CInventory
 {
+private:
+	CPlayer*					m_pPlayer;
+	vector<CItem*>				m_vecItems;
+	vector<CItem*>::iterator	invenIter;
+	CEquip*						m_pEquip;
+
 public:
 	CInventory();
 	~CInventory();
 
-private:
-	vector<CItem*> m_vecItems;
-	vector<CItem*>::iterator invenIter;
-	CEquip* m_pEquip;
-	CPlayer* m_pPlayer;
-
 public:
 	void SetPlayer(CPlayer* _pPlayer) { m_pPlayer = _pPlayer; }
+
 public:
 	void Init();
 	void Render();
@@ -35,5 +36,6 @@ struct tagSort{
 	bool operator()(CItem* _item1, CItem* _item2) {
 		return _item1->GetItem()->strType > _item2->GetItem()->strType;
 	}
+
 };
 

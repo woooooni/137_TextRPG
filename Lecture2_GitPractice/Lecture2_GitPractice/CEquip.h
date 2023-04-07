@@ -23,9 +23,9 @@ public:
 	void Unequip_All() { m_mapEquip.clear(); }
 
 private:
-	map<string, CItem*> m_mapEquip;
-	map<string, CItem*>::iterator m_iter;
-	CPlayer*	 m_pEqPlayer;
-	CInventory*  m_EqInven;
+	map<string, CItem*>				m_mapEquip;
+	map<string, CItem*>::iterator	m_iter;
+	CPlayer*						m_pEqPlayer;
+	CInventory*						m_EqInven;
 };
 
