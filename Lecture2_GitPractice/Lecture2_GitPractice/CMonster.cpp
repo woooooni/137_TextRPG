@@ -2,7 +2,8 @@
 #include "CMonster.h"
 
 
-CMonster::CMonster()
+CMonster::CMonster(string _strName)
+	: CAttackObj(_strName, OBJECT_TYPE::MONSTER)
 {
 }
 

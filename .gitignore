@@ -435,4 +435,5 @@ FodyWeavers.xsd
 # Additional files built by Visual Studio
 
 # End of https://www.toptal.com/developers/gitignore/api/visualstudio,c++
-*.filters
+Lecture2_GitPractice/Lecture2_GitPractice/Lecture2_GitPractice.vcxproj
+Lecture2_GitPractice/Lecture2_GitPractice/Lecture2_GitPractice.vcxproj.filters

@@ -32,9 +32,9 @@ public:
 	void	Set_EqInven(CInventory* _pInven) { m_EqInven = _pInven; }
 
 private:
-	map<string, CItem*> m_mapEquip;
-	map<string, CItem*>::iterator m_iter;
-	CPlayer*	 m_pEqPlayer;
-	CInventory*  m_EqInven;
+	map<string, CItem*>				m_mapEquip;
+	map<string, CItem*>::iterator	m_iter;
+	CPlayer*						m_pEqPlayer;
+	CInventory*						m_EqInven;
 };
 
