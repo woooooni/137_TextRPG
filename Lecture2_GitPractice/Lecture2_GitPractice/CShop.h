@@ -2,13 +2,17 @@
 #include "CScene.h"
 #include "stdafx.h"
 #include "CItemPack.h"
+#include "CPlayer.h"
+#include "CItemPack.h"
+#include "CInventory.h"
+
 class CShop :public CScene
 {
 public:
 	CShop();
 	~CShop();
-	//void		SetPlayer(CEntity* pPlayer) { m_pPlayer = pPlayer; }
-	//void		SetInven(CInventory* pInven) { m_pInventory = pInven; }
+	void		SetPlayer(CObj* pPlayer) { m_pPlayer = pPlayer; }
+	void		SetInven(CInventory* pInven) { m_pInven = pInven; }
 
 
 	void ShowItem(int);
@@ -26,10 +30,10 @@ public:
 
 	virtual void Exit() override;
 
-	//CDummy* m_pDummyItem[(int)(ITEM_CODE::END)];
-	//CPlayer* m_pDummyPlayer;
-	//CItem* m_pDummyInven;
-	vector<CItem*> vecItemList[3];
+	
+	CObj* m_pPlayer;
+	CInventory* m_pInven;
+	vector<CItem*> vecItemList[(int)SHOP_LEVEL::END];
 
 };
 
