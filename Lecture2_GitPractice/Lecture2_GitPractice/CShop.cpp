@@ -38,8 +38,8 @@ void CShop::ShowItem(int _iLevel)
 
 		m_pPlayer->Render();
 		cout << "상점 주인 : 어서오세요! 좋은것들만 모아놨습니다. (0. 나가기):";
-		vector<CItem*>::iterator iter = vecItemList[_iLevel].begin;
-		for (iter; iter != vecItemList[_iLevel].end; iter++)
+		vector<CItem*>::iterator iter = vecItemList[_iLevel].begin();
+		for (iter; iter != vecItemList[_iLevel].end(); iter++)
 		{
 			(*iter)->Render();
 		}
