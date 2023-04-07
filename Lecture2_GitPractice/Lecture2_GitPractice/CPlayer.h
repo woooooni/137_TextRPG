@@ -20,8 +20,8 @@ public:
 
 public:
 	// Access Methods 
-	PLAYER_JOB Get_Job() const			{ return m_eJob; }
-	bool Set_Job(PLAYER_JOB& _eJob)		{ if (PLAYER_JOB::END == _eJob) return false; m_eJob = _eJob; return true; }
+	PLAYER_JOB	Get_Job() const					{ return m_eJob; }
+	bool		Set_Job(PLAYER_JOB& _eJob)		{ if (PLAYER_JOB::END == _eJob) return false; m_eJob = _eJob; return true; }
 
 public:
 	// Item
