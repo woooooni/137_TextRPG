@@ -2,6 +2,7 @@
 #include "stdafx.h"
 #include <ctime>
 #include "Template.h"
+
 class CPlayer;
 class CGameCore
 {

@@ -146,7 +146,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CAttackObj.h" />
-    <ClInclude Include="CBag.h" />
     <ClInclude Include="CEquip.h" />
     <ClInclude Include="CFruitDagger.h" />
     <ClInclude Include="CGameCore.h" />
@@ -186,7 +185,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CAttackObj.cpp" />
-    <ClCompile Include="CBag.cpp" />
     <ClCompile Include="CEquip.cpp" />
     <ClCompile Include="CFruitDagger.cpp" />
     <ClCompile Include="CGameCore.cpp" />

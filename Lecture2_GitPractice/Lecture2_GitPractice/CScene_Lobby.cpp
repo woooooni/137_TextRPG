@@ -1,6 +1,8 @@
 #include "stdafx.h"
 #include "CScene_Lobby.h"
 #include "CSceneMgr.h"
+#include "CGameCore.h"
+#include "CPlayer.h"
 
 CScene_Lobby::CScene_Lobby()
 	: CScene(SCENE_TYPE::LOBBY)
@@ -34,6 +36,9 @@ void CScene_Lobby::Update()
 		break;
 	case 3:
 		// TODO :: 가방열기
+		CGameCore::GetInst()->GetPlayer()->OpenBag();
+		CSceneMgr::GetInst()->ChangeScene(SCENE_TYPE::LOBBY);
+		break;
 	default:
 		CSceneMgr::GetInst()->ChangeScene(SCENE_TYPE::EXIT);
 	}
