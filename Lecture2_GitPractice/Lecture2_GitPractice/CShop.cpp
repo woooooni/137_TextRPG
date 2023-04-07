@@ -2,7 +2,10 @@
 #include "CShop.h"
 
 
-CShop::CShop():m_pPlayer(nullptr), m_pInven(nullptr),CScene(SCENE_TYPE::SHOP)
+CShop::CShop()
+	: m_pPlayer(nullptr)
+	, m_pInven(nullptr)
+	, CScene(SCENE_TYPE::SHOP)
 {
 
 }

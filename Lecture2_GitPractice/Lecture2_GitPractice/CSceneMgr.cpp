@@ -2,7 +2,11 @@
 #include "CSceneMgr.h"
 #include "CScene.h"
 #include "Template.h"
+#include "CScene_Start.h"
+#include "CScene_JobChoice.h"
+#include "CScene_Lobby.h"
 #include "CScene_Field.h"
+#include "CShop.h"
 
 CSceneMgr::CSceneMgr()
 {
@@ -42,24 +46,21 @@ void CSceneMgr::Initialize()
 {
 	m_vecScene.reserve((unsigned int)SCENE_TYPE::END);
 
-	CScene* pTemp = new CScene_Field;
+	CScene* pTemp = new CScene_Start;
 	if(pTemp != nullptr) m_vecScene.push_back(pTemp);
 
+	pTemp = new CScene_JobChoice;
+	if (pTemp != nullptr) m_vecScene.push_back(pTemp);
 
-	// 여기서 다른 Scene들도 생성
-	// ==============  ex ===================
-	// pTemp = new CScene_Inventory;
-	// if(pTemp != nullptr) m_vecScene.push_back(pTemp);
+	pTemp = new CScene_Lobby;
+	if (pTemp != nullptr) m_vecScene.push_back(pTemp);
 
+	pTemp = new CScene_Field;
+	if (pTemp != nullptr) m_vecScene.push_back(pTemp);
 
+	pTemp = new CShop;
+	if (pTemp != nullptr) m_vecScene.push_back(pTemp);
 
-
-
-
-
-
-
-	// 모든 Scene 생성 후, 처음 Scene 지정
 	m_pCurScene = m_vecScene.front();
 	m_pCurScene->Enter();
 }
