@@ -1,10 +1,10 @@
 #pragma once
 #pragma region Enum
 
-// Start -> Job -> Lobby, Field, Shop
-enum class SCENE_TYPE { TEST, START, LOBBY, FIELD, RAID, SHOP, JOB_CHOICE, BLACK_SMITH, EQUIP, EXIT, END };
+// Start -> Job -> Lobby -> Field, Shop -> Exit
+enum class SCENE_TYPE { START, JOB_CHOICE, LOBBY, FIELD, SHOP, EXIT, END /*, TEST, RAID, BLACK_SMITH, EQUIP*/ };
 enum class PLAYER_JOB { BEGINNER, WARRIOR, WIZARD, ARCHER, ASSASIN, END };
-const char STR_JOB_NAME[(int)PLAYER_JOB::END][10] = { "초보자", "전사", "마법사","궁수","도적" };
+const char STR_JOB_NAME[(int)PLAYER_JOB::END][10] = { "초보자", "전사", "마법사", "궁수", "도적" };
 
 enum class OBJECT_TYPE { PLAYER, MONSTER, BOSS, PORTAL, UI, END };
 enum class MONSTER_TYPE { ORANGE_MUSHROOM, SLIME, BOSS, END };

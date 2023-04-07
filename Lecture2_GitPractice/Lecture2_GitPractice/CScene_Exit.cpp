@@ -7,7 +7,6 @@ CScene_Exit::CScene_Exit()
 {
 }
 
-
 CScene_Exit::~CScene_Exit()
 {
 }
