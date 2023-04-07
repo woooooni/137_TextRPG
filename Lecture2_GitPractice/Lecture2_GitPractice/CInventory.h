@@ -7,9 +7,7 @@ class CPlayer;
 class CInventory
 {
 public:
-	CInventory() :isEquip(0) {
-
-	}
+	CInventory();
 	~CInventory();
 
 private:

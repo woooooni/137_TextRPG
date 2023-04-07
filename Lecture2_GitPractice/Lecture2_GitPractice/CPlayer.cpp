@@ -1,24 +1,33 @@
 #include "stdafx.h"
 #include "CPlayer.h"
 #include "CItem.h"
+#include "CInventory.h"
+#include "CEquip.h"
 
 CPlayer::CPlayer()
+	: m_pInventory(nullptr)
+	, m_pEquip(nullptr)
 {
 }
 
 CPlayer::CPlayer(const string & _strName, const ATTACK_OBJ_STAT & _tStat, const OBJECT_TYPE & _eObjType)
-	: CAttackObj(_strName, _tStat, _eObjType)
+	: m_pInventory(nullptr)
+	, m_pEquip(nullptr)
+	, CAttackObj(_strName, _tStat, _eObjType)
 {
 }
 
 CPlayer::CPlayer(const string & _strName, const ATTACK_OBJ_STAT & _tStat, const OBJECT_TYPE & _eObjType, const PLAYER_JOB & _eJob)
 	: m_eJob(_eJob)
+	, m_pInventory(nullptr)
+	, m_pEquip(nullptr)
 	, CAttackObj(_strName, _tStat, _eObjType)
 {
 }
 
 CPlayer::~CPlayer()
 {
+	Release();
 }
 
 void CPlayer::Initialize()
@@ -34,6 +43,19 @@ void CPlayer::Initialize()
 	Set_Str(5);
 	Set_Gold(20000);
 
+	if (nullptr == m_pInventory)
+	{
+		m_pInventory = new CInventory;
+		m_pInventory->Init();
+		m_pInventory->SetPlayer(this);
+	}
+	
+	if (nullptr == m_pEquip)
+	{
+		m_pEquip = new CEquip;
+		m_pEquip->Initialize();
+		m_pEquip->Set_EqPlayer(this);
+	}
 }
 
 void CPlayer::Update()
@@ -49,7 +71,8 @@ void CPlayer::Render()
 
 void CPlayer::Release()
 {
-
+	Safe_Delete<CInventory*>(m_pInventory);
+	Safe_Delete<CEquip*>(m_pEquip);
 }
 
 bool CPlayer::Reflect_Stat(CItem * _pItem, bool _bUnEquip)

@@ -12,21 +12,34 @@ CScene_Lobby::~CScene_Lobby()
 {
 }
 
+// 1. 사냥터 2. 상점 3.가방열기 -> (인벤, 장비) 4. 종료
+
 void CScene_Lobby::Enter()
 {
 	system("cls");
 
 	cout << "메뉴를 선택해주세요." << endl;
 
-	for (int i = 0; i < (unsigned int)SCENE_TYPE::END; ++i)
-		cout << i + 1 << ". " << STR_MENU[i] << "  ";
+	cout << "1. 사냥터  " << "2. 상점  " << "3. 가방 열기  " << "4. 종료\n";
 
 	cout << endl << "--->";
 }
 
 void CScene_Lobby::Update()
 {
-	CSceneMgr::GetInst()->ChangeScene(static_cast<SCENE_TYPE>(Input()));
+	switch (Input())
+	{
+	case 1:
+		CSceneMgr::GetInst()->ChangeScene(SCENE_TYPE::FIELD);
+		break;
+	case 2:
+		CSceneMgr::GetInst()->ChangeScene(SCENE_TYPE::SHOP);
+		break;
+	case 3:
+		// TODO :: 가방열기
+	default:
+		CSceneMgr::GetInst()->ChangeScene(SCENE_TYPE::EXIT);
+	}
 }
 
 void CScene_Lobby::Render()

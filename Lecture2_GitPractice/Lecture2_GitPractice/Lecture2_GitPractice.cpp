@@ -10,6 +10,7 @@ int main()
 
 	CGameCore::GetInst()->Initialize();
 	CGameCore::GetInst()->Tick();
+	CGameCore::GetInst()->Release();
 
 	return 0;
 }

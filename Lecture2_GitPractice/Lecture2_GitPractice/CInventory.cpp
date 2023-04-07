@@ -4,9 +4,13 @@
 #include "CPlayer.h"
 #include <algorithm>
 
+CInventory::CInventory()
+	:isEquip(0)
+{
+}
+
 CInventory::~CInventory()
 {
-	Safe_Delete(m_pEquip);
 }
 
 void CInventory::Init()

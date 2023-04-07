@@ -1,7 +1,6 @@
 #pragma once
 #pragma region Enum
 
-// Start -> Job -> Lobby -> Field, Shop -> Exit
 enum class SCENE_TYPE { START, JOB_CHOICE, LOBBY, FIELD, SHOP, EXIT, END /*, TEST, RAID, BLACK_SMITH, EQUIP*/ };
 enum class PLAYER_JOB { BEGINNER, WARRIOR, WIZARD, ARCHER, ASSASIN, END };
 const char STR_JOB_NAME[(int)PLAYER_JOB::END][10] = { "초보자", "전사", "마법사", "궁수", "도적" };

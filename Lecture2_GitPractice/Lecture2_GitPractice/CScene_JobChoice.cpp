@@ -1,6 +1,8 @@
 #include "stdafx.h"
 #include "CScene_JobChoice.h"
 #include "CSceneMgr.h"
+#include "CGameCore.h"
+#include "CPlayer.h"
 
 
 CScene_JobChoice::CScene_JobChoice()
@@ -28,18 +30,16 @@ void CScene_JobChoice::Enter()
 
 void CScene_JobChoice::Update()
 {
-	switch (Input())
-	{
-	case 1:
+	const int iInput = Input();
+
+	if(-1 == iInput)
 		CSceneMgr::GetInst()->BackScene();
-		break;
-	default:
-		// TODO :: 플레이어 직업 세팅.
-		// ex) pPlayer->Set_Job(Input());
+	else
+	{
+		CGameCore::GetInst()->GetPlayer()->Set_Job(static_cast<PLAYER_JOB>(iInput));
 		Render();
 		CSceneMgr::GetInst()->ChangeScene(SCENE_TYPE::LOBBY);
-		break;
-	}	
+	}
 }
 
 void CScene_JobChoice::Render()
@@ -59,8 +59,11 @@ const int CScene_JobChoice::Input()
 
 	cin >> iInput;
 
-	if (0 > iInput || (unsigned int)PLAYER_JOB::END <= iInput)
+	if (0 >= iInput || (unsigned int)PLAYER_JOB::END <= iInput)
+	{
 		iInput = -1;
+		return iInput;
+	}
 
-	return iInput;
+	return iInput - 1;
 }

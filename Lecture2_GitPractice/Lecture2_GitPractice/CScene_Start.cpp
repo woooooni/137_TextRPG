@@ -13,9 +13,7 @@ CScene_Start::~CScene_Start()
 
 void CScene_Start::Enter()
 {
-	cout << "시작하려면 아무키나 입력해주세요." << endl;
-	
-	system("pause");
+
 }
 
 void CScene_Start::Update()

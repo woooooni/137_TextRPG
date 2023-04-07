@@ -10,6 +10,7 @@
 
 CScene_Field::CScene_Field()
 	:CScene(SCENE_TYPE::FIELD)
+	, m_pMonster(nullptr)
 {
 }
 
