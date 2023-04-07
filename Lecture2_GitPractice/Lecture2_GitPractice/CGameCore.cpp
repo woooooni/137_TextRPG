@@ -6,7 +6,6 @@ CGameCore::CGameCore()
 {
 }
 
-
 CGameCore::~CGameCore()
 {
 }

@@ -162,6 +162,7 @@
     <ClInclude Include="CObj.h" />
     <ClInclude Include="CScene.h" />
     <ClInclude Include="CSceneMgr.h" />
+    <ClInclude Include="CScene_Exit.h" />
     <ClInclude Include="CScene_Field.h" />
     <ClInclude Include="CScene_JobChoice.h" />
     <ClInclude Include="CScene_Lobby.h" />
@@ -200,6 +201,7 @@
     <ClCompile Include="CObj.cpp" />
     <ClCompile Include="CScene.cpp" />
     <ClCompile Include="CSceneMgr.cpp" />
+    <ClCompile Include="CScene_Exit.cpp" />
     <ClCompile Include="CScene_Field.cpp" />
     <ClCompile Include="CScene_JobChoice.cpp" />
     <ClCompile Include="CScene_Lobby.cpp" />
