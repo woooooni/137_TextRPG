@@ -22,7 +22,7 @@ public:
 	bool	Equip_Item(CItem* _pItem);
 
 	// 착용아이템 해제
-	void	Unequip_Item(CItem* _pItem);
+	void	Unequip_Item();
 
 	// 착용아이템 전체해제;
 	void	Unequip_All();
