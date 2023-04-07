@@ -18,9 +18,14 @@ public:
 	void Release();
 
 public:
-	void Equip_Item(CItem* _pItem);
+	// 아이템 장비
+	bool Equip_Item(CItem* _pItem);
+
+	// 착용아이템 해제
 	void Unequip_Item(CItem* _pItem);
-	void Unequip_All() { m_mapEquip.clear(); }
+
+	//착용아이템 전체해제;
+	void Unequip_All();
 
 private:
 	map<string, CItem*>				m_mapEquip;
