@@ -1,8 +1,8 @@
 #pragma once
 // #include "CGameCore.h"
 #include "CItem.h"
+#include "CItemPack.h"
 
-class CEquip;
 class CPlayer;
 
 class CInventory
@@ -14,7 +14,6 @@ public:
 private:
 	vector<CItem*> m_vecItems;
 	vector<CItem*>::iterator invenIter;
-	CEquip* m_pEquip;
 	CPlayer* m_pPlayer;
 	bool isEquip;
 
