@@ -49,6 +49,8 @@ void CEquip::Update()
 
 void CEquip::Render()
 {
+	int iSloat = 1;
+
 	if (m_mapEquip.empty())
 	{
 		cout << "[현재 장착한 장비가 없습니다]" << endl;
@@ -58,8 +60,10 @@ void CEquip::Render()
 		cout << "[현재 장착한 장비]" << endl;
 		for (m_iter = m_mapEquip.begin(); m_iter != m_mapEquip.end(); ++m_iter)
 		{
-			cout << "장비슬롯 : " << m_iter->first << '\t' << "이름 : " << m_iter->second->GetItem()->strName << endl;
-			cout << "============================" << endl;
+			cout << '[' << iSloat << ']' <<" 장비슬롯 : " << STR_EQUIPTYPE[(int)m_iter->first] << ' ' 
+				<< "이름 : " << m_iter->second->GetItem()->strName << endl;
+			cout << "===============================" << endl;
+			++iSloat;
 		}
 	}
 
@@ -72,9 +76,13 @@ void CEquip::Release()
 bool CEquip::Equip_Item(CItem* _pItem)
 {
 	if (!_pItem)
-		return;
+	{
+		cout << "존재하지 않는 장비입니다" << endl;
+		return false;
+	}
+		
 
-	m_iter = m_mapEquip.find(_pItem->GetItem()->strDetailType);
+	m_iter = m_mapEquip.find(_pItem->GetItem()->eType);
 
 	if (m_iter != m_mapEquip.end()) 
 	{
@@ -83,7 +91,7 @@ bool CEquip::Equip_Item(CItem* _pItem)
 	}
 	else 
 	{
-		m_mapEquip.insert({ _pItem->GetItem()->strDetailType, _pItem });
+		m_mapEquip.insert({ _pItem->GetItem()->eType, _pItem });
 		m_pEqPlayer->Reflect_Stat(_pItem, false);
 		return true;
 	}
@@ -105,12 +113,13 @@ void CEquip::Unequip_Item()
 
 		Render();
 
-		cout << "[해제할 장비를 선택하세요]";
-		cout << "1. [모자]  2.[상의]  3.[하의]  4.[무기] : ";
+		cout << "[해제할 장비를 선택하세요] : ";
 		cin >> iInput;
 
 		if (iInput < 5)
 		{
+			m_iter = m_mapEquip.begin();
+
 			for (int i = 0; i < (iInput - 1); ++i)
 			{
 				++m_iter;
