@@ -17,6 +17,33 @@ void CEquip::Initialize()
 
 void CEquip::Update()
 {
+	int iInput;
+
+	while (true)
+	{
+		system("cls");
+
+		Render();
+
+		cout << "1. [장비해제]" << '\t' << "2. [장비전체해제]" << "3. [나가기]" << endl;
+		cin >> iInput;
+
+		switch (iInput)
+		{
+		case 1:
+			Unequip_Item();
+			break;
+		case 2:
+			Unequip_All();
+			break;
+		default:
+			break;
+		}
+
+		system("pause");
+	}
+
+	
 }
 
 void CEquip::Render()
@@ -61,21 +88,57 @@ bool CEquip::Equip_Item(CItem* _pItem)
 	}
 }
 
-void CEquip::Unequip_Item(CItem* _pItem)
+void CEquip::Unequip_Item()
 {
-  m_iter = m_mapEquip.find(_pItem->GetItem()->strDetailType);
-  m_mapEquip.erase(m_iter);
-  m_EqInven->AddItem(_pItem, 1);
-  m_pEqPlayer->Reflect_Stat(_pItem, true);
+	int iInput;
+	
+	while (true)
+	{
+		system("cls");
+
+		Render();
+
+		cout << "[해제할 장비를 선택하세요]";
+		cout << "1. [모자]  2.[무기]  3.[상의]  4.[하의] : ";
+		cin >> iInput;
+
+		if (iInput < 5)
+		{
+			for (int i = 0; i < (iInput - 1); ++i)
+			{
+				++m_iter;
+			}
+
+			m_EqInven->AddItem(m_iter->second, 1);
+			m_pEqPlayer->Reflect_Stat(m_iter->second, true);
+			m_mapEquip.erase(m_iter);
+
+			return;
+		}	
+
+		system("pause");
+	}
+	
 }
 
 void CEquip::Unequip_All()
 {
-	for (m_iter = m_mapEquip.begin(); m_iter != m_mapEquip.end(); ++m_iter)
+	if (m_mapEquip.empty())
 	{
-		m_EqInven->AddItem(m_iter->second, 1);
-		m_pEqPlayer->Reflect_Stat(m_iter->second, true);
+		cout << "해제할장비가 없습니다" << endl;
+		return;
 	}
-
-	m_mapEquip.clear();
+	else 
+	{
+		for (m_iter = m_mapEquip.begin(); m_iter != m_mapEquip.end(); ++m_iter)
+		{
+			m_EqInven->AddItem(m_iter->second, 1);
+			m_pEqPlayer->Reflect_Stat(m_iter->second, true);
+		}
+		m_mapEquip.clear();
+	}
+	
+	if (m_mapEquip.empty()) cout << "장비전체해제 성공" << endl;
+	else cout << "장비전체해제 실패" << endl;
+	
 }
