@@ -55,6 +55,9 @@ bool CPlayer::Reflect_Stat(CItem * _pItem, bool _bUnEquip)
 		m_tStat.m_iMaxHp	+= _pItem->GetItem()->iHp;
 		m_tStat.m_iCurHp	+= _pItem->GetItem()->iRecovery;
 		m_tStat.m_iStr		+= _pItem->GetItem()->iAtk;
+
+		if (m_tStat.m_iMaxHp < m_tStat.m_iCurHp)
+			m_tStat.m_iCurHp = m_tStat.m_iMaxHp;
 	}
 
 	return true;
@@ -73,6 +76,9 @@ bool CPlayer::Reflect_Stat(CItem & _rItem, bool _bUnEquip)
 		m_tStat.m_iMaxHp	+= _rItem.GetItem()->iHp;
 		m_tStat.m_iCurHp	+= _rItem.GetItem()->iRecovery;
 		m_tStat.m_iStr		+= _rItem.GetItem()->iAtk;
+
+		if (m_tStat.m_iMaxHp < m_tStat.m_iCurHp)
+			m_tStat.m_iCurHp = m_tStat.m_iMaxHp;
 	}
 
 	return true;
