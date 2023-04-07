@@ -1,6 +1,7 @@
 #pragma once
 #include "Define.h"
 #include "Struct.h"
+#include "Template.h"
 #include "CItem.h"
 
 class CEquip;
@@ -9,7 +10,9 @@ class CPlayer;
 class CInventory
 {
 public:
-	CInventory();
+	CInventory() :isEquip(0) {
+
+	}
 	~CInventory();
 
 private:
@@ -17,6 +20,7 @@ private:
 	vector<CItem*>::iterator invenIter;
 	CEquip* m_pEquip;
 	CPlayer* m_pPlayer;
+	bool isEquip;
 
 public:
 	void SetPlayer(CPlayer* _pPlayer) { m_pPlayer = _pPlayer; }
@@ -27,9 +31,13 @@ public:
 	void Release();
 
 public:
+	vector<CItem*> GetInven() { return m_vecItems; }
+public:
 	void AddItem(CItem* _pItem, int _iAmount);
 	void UseItem(int _iIndex);
 };
+
+
 
 struct tagSort{
 	bool operator()(CItem* _item1, CItem* _item2) {

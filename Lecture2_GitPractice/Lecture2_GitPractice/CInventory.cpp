@@ -4,12 +4,9 @@
 #include "CPlayer.h"
 #include <algorithm>
 
-CInventory::CInventory()
-{
-}
-
 CInventory::~CInventory()
 {
+	Safe_Delete(m_pEquip);
 }
 
 void CInventory::Init()
@@ -42,6 +39,7 @@ void CInventory::AddItem(CItem * _pItem, int _iAmount)
 
 void CInventory::UseItem(int _iIndex)
 {
+	isEquip = false;
 	if (_iIndex < m_vecItems.size()) {
 		if (m_vecItems[_iIndex]->GetItem()->strType == "소모품") {
 			// 플레이어 피 회복
@@ -55,9 +53,9 @@ void CInventory::UseItem(int _iIndex)
 		}
 		else {
 			// 장비 착용
-			m_pEquip->Equip_Item(m_vecItems[_iIndex]);
-			// 인벤토리에서 지우기
-			m_vecItems.erase(m_vecItems.begin() + _iIndex);
+			isEquip = m_pEquip->Equip_Item(m_vecItems[_iIndex]);
+			if (isEquip) 
+				m_vecItems.erase(m_vecItems.begin() + _iIndex);
 		}
 	}
 }

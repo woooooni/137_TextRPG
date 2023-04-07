@@ -6,6 +6,7 @@ CWarBow::CWarBow()
 {
 	m_tItem->strName = "况焊快";
 	m_tItem->strType = "公扁";
+	m_tItem->strDetailType = "劝";
 	m_tItem->strRare = "畴富";
 	m_tItem->iAtk = 10;
 	m_tItem->iHp = 0;
