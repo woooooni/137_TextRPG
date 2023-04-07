@@ -24,7 +24,6 @@ void CScene_JobChoice::Enter()
 		cout << i + 1 << ". " << STR_JOB_NAME[i] << "  ";
 
 	cout << "  (-1 : ÀÌÀü)" << endl;
-
 	cout << endl << "--->";
 }
 

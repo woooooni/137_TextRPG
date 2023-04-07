@@ -8,6 +8,7 @@
 #include "CScene_Field.h"
 #include "CShop.h"
 #include "CScene_Exit.h"
+#include "CGameCore.h"
 
 CSceneMgr::CSceneMgr()
 {
@@ -61,6 +62,8 @@ void CSceneMgr::Initialize()
 	
 	pTemp = new CShop;
 	if (pTemp != nullptr) m_vecScene.push_back(pTemp);
+
+	static_cast<CShop*>(pTemp)->SetPlayer(CGameCore::GetInst()->GetPlayer());
 
 	pTemp = new CScene_Exit;
 	if (pTemp != nullptr) m_vecScene.push_back(pTemp);
