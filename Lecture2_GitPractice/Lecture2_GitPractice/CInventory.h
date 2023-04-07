@@ -1,6 +1,7 @@
 #pragma once
 #include "Define.h"
 #include "Struct.h"
+#include "Template.h"
 #include "CItem.h"
 
 class CEquip;
@@ -35,6 +36,8 @@ public:
 	void AddItem(CItem* _pItem, int _iAmount);
 	void UseItem(int _iIndex);
 };
+
+
 
 struct tagSort{
 	bool operator()(CItem* _item1, CItem* _item2) {
