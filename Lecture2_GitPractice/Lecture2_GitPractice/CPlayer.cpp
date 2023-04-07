@@ -23,6 +23,17 @@ CPlayer::~CPlayer()
 
 void CPlayer::Initialize()
 {
+	string name;
+	cout << "플레이어 이름을 입력하세요. : ";
+	cin >> name;
+
+	Set_Name(name);
+
+	Set_MaxHp(100);
+	Set_CurHp(100);
+	Set_Str(5);
+	Set_Gold(20000);
+
 }
 
 void CPlayer::Update()
@@ -38,6 +49,7 @@ void CPlayer::Render()
 
 void CPlayer::Release()
 {
+
 }
 
 bool CPlayer::Reflect_Stat(CItem * _pItem, bool _bUnEquip)
