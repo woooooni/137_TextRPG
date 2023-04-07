@@ -1,12 +1,12 @@
 #pragma once
 #include "stdafx.h"
+#include "Enum.h"
 
 // æ∆¿Ã≈€
 struct tagItem {
 	string strName;
-	string strType;
-	string strDetailType = "";
-	string strRare;
+	EQUIP_TYPE eType;
+	ITEM_RARITY eRare;
 
 	int iAtk = 0;
 	int iHp = 0;

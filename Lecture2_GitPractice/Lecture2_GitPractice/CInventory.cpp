@@ -41,7 +41,7 @@ void CInventory::UseItem(int _iIndex)
 {
 	isEquip = false;
 	if (_iIndex < m_vecItems.size()) {
-		if (m_vecItems[_iIndex]->GetItem()->strType == "소모품") {
+		if (m_vecItems[_iIndex]->GetItem()->eType == EQUIP_TYPE::NONEQUIP) {
 			// 플레이어 피 회복
 			m_pPlayer->Reflect_Stat(m_vecItems[_iIndex], false);
 
@@ -54,8 +54,10 @@ void CInventory::UseItem(int _iIndex)
 		else {
 			// 장비 착용
 			isEquip = m_pEquip->Equip_Item(m_vecItems[_iIndex]);
-			if (isEquip) 
+			if (isEquip) {
+				Safe_Delete(m_vecItems[_iIndex]);
 				m_vecItems.erase(m_vecItems.begin() + _iIndex);
+			}
 		}
 	}
 }
