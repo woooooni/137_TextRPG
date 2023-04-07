@@ -17,33 +17,34 @@ void CEquip::Initialize()
 
 void CEquip::Update()
 {
-	int iInput;
+	// 이게 필요한지 모르겠음
+	//int iInput;
 
-	while (true)
-	{
-		system("cls");
+	//while (true)
+	//{
+	//	system("cls");
 
-		Render();
+	//	Render();
 
-		cout << "1. [장비해제]" << '\t' << "2. [장비전체해제]" << "3. [나가기]" << endl;
-		cin >> iInput;
+	//	cout << "1. [장비해제]" << '\t' << "2. [장비전체해제]" << "3. [나가기]" << endl;
+	//	cin >> iInput;
 
-		switch (iInput)
-		{
-		case 1:
-			Unequip_Item();
-			break;
-		case 2:
-			Unequip_All();
-			break;
-		default:
-			break;
-		}
+	//	switch (iInput)
+	//	{
+	//	case 1:
+	//		Unequip_Item();
+	//		break;
+	//	case 2:
+	//		Unequip_All();
+	//		break;
+	//	default:
+	//		break;
+	//	}
 
-		system("pause");
-	}
+	//	system("pause");
+	//}
 
-	
+	//
 }
 
 void CEquip::Render()
@@ -92,6 +93,12 @@ void CEquip::Unequip_Item()
 {
 	int iInput;
 	
+	if (m_mapEquip.empty())
+	{
+		cout << "해제할 장비가 없습니다" << endl;
+		return;
+	}
+
 	while (true)
 	{
 		system("cls");
@@ -99,7 +106,7 @@ void CEquip::Unequip_Item()
 		Render();
 
 		cout << "[해제할 장비를 선택하세요]";
-		cout << "1. [모자]  2.[무기]  3.[상의]  4.[하의] : ";
+		cout << "1. [모자]  2.[상의]  3.[하의]  4.[무기] : ";
 		cin >> iInput;
 
 		if (iInput < 5)
