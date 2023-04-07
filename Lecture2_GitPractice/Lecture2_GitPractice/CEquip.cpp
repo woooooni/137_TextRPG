@@ -61,8 +61,7 @@ void CEquip::Render()
 		cout << "[현재 장착한 장비]" << endl;
 		for (m_iter = m_mapEquip.begin(); m_iter != m_mapEquip.end(); ++m_iter)
 		{
-			cout << '[' << iSloat << ']' <<" 장비슬롯 : " << STR_EQUIPTYPE[(int)m_iter->first] << ' ' 
-				<< "이름 : " << m_iter->second->GetItem()->strName << endl;
+			cout << "[" << iSloat << ".]" <<" 장비슬롯 : " << STR_EQUIPTYPE[(int)m_iter->first] << "\t이름 : " << m_iter->second->GetItem()->strName << endl;
 			cout << "===============================" << endl;
 			++iSloat;
 		}
@@ -83,7 +82,6 @@ bool CEquip::Equip_Item(CItem* _pItem)
 		return false;
 	}
 		
-
 	m_iter = m_mapEquip.find(_pItem->GetItem()->eType);
 
 	if (m_iter != m_mapEquip.end()) 
