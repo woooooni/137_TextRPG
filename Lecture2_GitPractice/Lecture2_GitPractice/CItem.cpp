@@ -21,7 +21,7 @@ void CItem::Render(int _i, int _y)
 	gotoxy(50, _y);
 	cout << _i << ". ";
 	cout << m_tItem.strName << "(" << STR_RARITY[(int)m_tItem.eRare] << ")" << "("
-		<< STR_EQUIPTYPE[(int)m_tItem.eType] << ")" << endl;
+		<< STR_EQUIPTYPE[(int)m_tItem.eType] << ")\t" << iAmount << "개" << endl;
 
 	gotoxy(50, _y + 1);
 	if (m_tItem.eType == EQUIP_TYPE::WEAPON)   cout << " \t공격력: " << m_tItem.iAtk;

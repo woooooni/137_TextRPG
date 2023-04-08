@@ -12,9 +12,14 @@ CInventory::CInventory()
 	:isEquip(0)
 {
 	m_vecItems.push_back(new CRedPotion());
+	m_vecItems[0]->SetAmount(40);
 	m_vecItems.push_back(new CMapleCloth());
 	m_vecItems.push_back(new CFruitDagger());
+	m_vecItems.push_back(new CMapleHat());
+	m_vecItems.push_back(new CMaplePants());
+	m_vecItems.push_back(new CWoodWand());
 	m_vecItems.push_back(new CWarBow());
+	m_vecItems.push_back(new CMace());
 	// m_pPlayer = CGameCore::GetInst()->GetPlayer();
 }
 
@@ -79,8 +84,7 @@ void CInventory::UseItem(int _iIndex)
 		if (m_vecItems[_iIndex]->GetItem().eType == EQUIP_TYPE::NONEQUIP) {
 			// 플레이어 피 회복
 			m_pPlayer->Reflect_Stat(m_vecItems[_iIndex], false);
-
-			m_vecItems[_iIndex]->SetAmount(-1);
+			m_vecItems[_iIndex]->SetAmount(m_vecItems[_iIndex]->GetAmount() - 1);
 			// 개수 0개되면 지우기
 			if (m_vecItems[_iIndex]->GetAmount() <= 0) {
 				m_vecItems.erase(m_vecItems.begin() + _iIndex);
