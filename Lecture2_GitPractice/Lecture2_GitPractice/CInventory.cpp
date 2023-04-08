@@ -17,9 +17,6 @@ CInventory::CInventory()
 CInventory::~CInventory()
 {
 	Release();
-
-
-
 }
 
 void CInventory::Init()
