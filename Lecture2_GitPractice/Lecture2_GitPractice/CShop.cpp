@@ -144,12 +144,12 @@ void CShop::SellItem()
 			iAmount = 1;
 		}
 
-		
+		int iPrice = m_pPlayer->Get_Inventory()->GetInven().at(iInput)->GetItem().iPrice *iAmount;
 		
 		bool bSuccess = m_pPlayer->Get_Inventory()->DecreaseItem(iInput, iAmount );
 		if (bSuccess == true)
 		{
-			m_pPlayer->Set_Gold(m_pPlayer->Get_Stat().m_iGold + m_pPlayer->Get_Inventory()->GetInven().at(iInput)->GetItem().iPrice *iAmount);
+			m_pPlayer->Set_Gold(m_pPlayer->Get_Stat().m_iGold + iPrice);
 			system("cls");
 			cout << "상점 주인 : 좋은 물건이군. 좋은 값에 쳐드리지." << endl;
 			system("pause");
