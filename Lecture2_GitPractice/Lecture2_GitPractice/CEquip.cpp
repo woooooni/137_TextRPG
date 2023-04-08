@@ -147,7 +147,7 @@ void CEquip::Unequip_All()
 	{
 		for (m_iter = m_mapEquip.begin(); m_iter != m_mapEquip.end(); ++m_iter)
 		{
-			m_pEqPlayer->Get_Inventory()->AddItem(m_iter->second, 1);
+			m_pEqPlayer->Get_Inventory()->AddItem(m_iter->second, 0);
 			m_pEqPlayer->Reflect_Stat(m_iter->second, true);
 		}
 		m_mapEquip.clear();
