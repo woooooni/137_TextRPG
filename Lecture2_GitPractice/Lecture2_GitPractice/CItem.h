@@ -20,7 +20,7 @@ public:
 	int GetAmount() { return iAmount; }
 
 public:
-	void SetAmount(int _iAmount) { iAmount = _iAmount; }
+	void SetAmount(int _iAmount) { iAmount += _iAmount; }
 
 public:
 	void Render();

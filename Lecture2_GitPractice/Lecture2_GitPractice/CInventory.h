@@ -3,6 +3,15 @@
 #include "CItem.h"
 #include "CItemPack.h"
 
+struct EqualName 
+{
+	EqualName(string _strName) : m_strName(_strName) {}
+	bool operator()(CItem* _pItem) const {
+		return _pItem->GetItem().strName == m_strName;
+	}
+	string m_strName;
+};
+
 class CPlayer;
 
 class CInventory

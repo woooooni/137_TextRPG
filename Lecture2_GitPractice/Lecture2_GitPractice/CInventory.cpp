@@ -13,13 +13,6 @@ CInventory::CInventory()
 {
 	m_vecItems.push_back(new CRedPotion());
 	m_vecItems[0]->SetAmount(40);
-	m_vecItems.push_back(new CMapleCloth());
-	m_vecItems.push_back(new CFruitDagger());
-	m_vecItems.push_back(new CMapleHat());
-	m_vecItems.push_back(new CMaplePants());
-	m_vecItems.push_back(new CWoodWand());
-	m_vecItems.push_back(new CWarBow());
-	m_vecItems.push_back(new CMace());
 	// m_pPlayer = CGameCore::GetInst()->GetPlayer();
 }
 
@@ -73,8 +66,21 @@ void CInventory::Release()
 
 void CInventory::AddItem(CItem * _pItem, int _iAmount)
 {
-	_pItem->SetAmount(_iAmount);
-	m_vecItems.push_back(_pItem);
+	if (_pItem->GetItem().eType == EQUIP_TYPE::NONEQUIP) {
+		invenIter = find_if(m_vecItems.begin(), m_vecItems.end(), EqualName(_pItem->GetItem().strName));
+		if (invenIter != m_vecItems.end()) {
+			(*invenIter)->SetAmount(_iAmount);
+		}
+		else {
+			_pItem->SetAmount(_iAmount);
+			m_vecItems.push_back(_pItem);
+		}
+	}
+	else {
+		CItem* tempItem = _pItem;
+		tempItem->SetAmount(_iAmount);
+		m_vecItems.push_back(tempItem);
+	}
 }
 
 void CInventory::UseItem(int _iIndex)
