@@ -149,6 +149,10 @@ void CEquip::Unequip_All()
 		{
 			m_pEqPlayer->Get_Inventory()->AddItem(m_iter->second, 0);
 			m_pEqPlayer->Reflect_Stat(m_iter->second, true);
+			if (m_iter->second != nullptr) {
+				delete m_iter->second;
+				m_iter->second = nullptr;
+			}
 		}
 		m_mapEquip.clear();
 	}
