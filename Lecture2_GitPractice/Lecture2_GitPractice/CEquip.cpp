@@ -124,7 +124,7 @@ void CEquip::Unequip_Item()
 				++m_iter;
 			}
 
-			m_pEqPlayer->Get_Inventory()->AddItem(m_iter->second, 1);
+			m_pEqPlayer->Get_Inventory()->AddItem(m_iter->second, 0);
 			m_pEqPlayer->Reflect_Stat(m_iter->second, true);
 			m_mapEquip.erase(m_iter);
 			cout << "장비해제 성공" << endl;

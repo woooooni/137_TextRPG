@@ -77,7 +77,7 @@ void CInventory::AddItem(CItem * _pItem, int _iAmount)
 		}
 	}
 	else {
-		CItem* tempItem = _pItem;
+		CItem* tempItem = new CItem(*_pItem);
 		tempItem->SetAmount(_iAmount);
 		m_vecItems.push_back(tempItem);
 	}

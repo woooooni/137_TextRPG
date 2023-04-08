@@ -9,6 +9,10 @@ class CItem
 {
 public:
 	explicit CItem() : iAmount(0) {}
+	CItem(const CItem& rhs) {
+	    iAmount = rhs.iAmount;
+		m_tItem = rhs.m_tItem;
+	}
 	virtual ~CItem();
 
 protected:
