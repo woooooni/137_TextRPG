@@ -16,11 +16,12 @@ CInventory::CInventory()
 
 CInventory::~CInventory()
 {
-	Release();
+
 }
 
 void CInventory::Init()
 {
+
 }
 
 void CInventory::Render()
@@ -47,7 +48,8 @@ void CInventory::Render()
 void CInventory::Update()
 {
 	int iInput = 0;
-	while (true) {
+	while (true) 
+	{
 		system("cls");
  		m_pPlayer->Get_Equip()->Render();
 		m_pPlayer->Render();
@@ -61,29 +63,26 @@ void CInventory::Update()
 
 void CInventory::Release()
 {
-	m_invenIter = m_vecItems.begin();
-	for (; m_invenIter != m_vecItems.end(); ++m_invenIter) {
-		if ((*m_invenIter) != nullptr) {
-			delete (*m_invenIter);
-			(*m_invenIter) = nullptr;
-		}
-	}
 }
 
 void CInventory::AddItem(CItem * _pItem, int _iAmount)
 {
-	if (_pItem->GetItem().eType == EQUIP_TYPE::NONEQUIP) {
+	if (_pItem->GetItem().eType == EQUIP_TYPE::NONEQUIP) 
+	{
 		m_invenIter = find_if(m_vecItems.begin(), m_vecItems.end(), EqualName(_pItem->GetItem().strName));
-		if (m_invenIter != m_vecItems.end()) {
+		if (m_invenIter != m_vecItems.end())
+		{
 			(*m_invenIter)->SetAmount(_iAmount);
 		}
-		else {
+		else 
+		{
 			CItem* tempItem = new CItem(*_pItem);
 			tempItem->SetAmount(_iAmount);
 			m_vecItems.push_back(tempItem);
 		}
 	}
-	else {
+	else 
+	{
 		CItem* tempItem = new CItem(*_pItem);
 		tempItem->SetAmount(_iAmount);
 		m_vecItems.push_back(tempItem);
@@ -97,7 +96,7 @@ void CInventory::UseItem(int _iIndex)
 		if (m_vecItems[_iIndex]->GetItem().eType == EQUIP_TYPE::NONEQUIP) {
 			// 플레이어 피 회복
 			m_pPlayer->Reflect_Stat(m_vecItems[_iIndex], false);
-			m_vecItems[_iIndex]->SetAmount(-1);
+			m_vecItems[_iIndex]->SetAmount(m_vecItems[_iIndex]->GetAmount() - 1);
 			// 개수 0개되면 지우기
 			if (m_vecItems[_iIndex]->GetAmount() <= 0) {
 				m_vecItems.erase(m_vecItems.begin() + _iIndex);
