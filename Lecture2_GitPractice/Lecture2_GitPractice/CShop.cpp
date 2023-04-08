@@ -4,7 +4,6 @@
 
 CShop::CShop()
 	: m_pPlayer(nullptr)
-	, m_pInven(nullptr)
 	, CScene(SCENE_TYPE::SHOP)
 {
 
@@ -103,8 +102,7 @@ void CShop::BuyItem(CItem* _pItem)
 	}
 	else
 	{
-		m_pInven->AddItem(_pItem, iInput);
-	
+		m_pPlayer->Get_Inventory()->AddItem(_pItem, iInput);
 	cout << "구매 성공" << endl;
 	}
 	
@@ -115,29 +113,21 @@ void CShop::SellItem()
 	int		iInput = 0;
 
 	while (true)
-	{
+	{	int		iMoney = 0;
 		system("cls");
 		m_pPlayer->Render();
-		m_pInven->Render();
+		m_pPlayer->Get_Inventory()->Render();
 		cout << "판매할 아이템을 고르시오.(0. 나가기):" << endl;
 		cin >> iInput;
 		--iInput;
 
 		if (0 > iInput)
 			return;
-		/*
-		if (최대 인벤토리 < iInput)
-		continue;
-		*/
-
-		int		iMoney = 0;
-	/*	if (아이템 판매(iInput, &iMoney))
-		{
-
+		m_pPlayer->Get_Inventory()->GetInven().erase(m_pPlayer->Get_Inventory()->GetInven().begin() + iInput);
+		if
 		cout << "좋은 물건이군. 좋은 값에 쳐드리지." << endl;
-		}
-		else
-		cout << "뭔가 잘못됐구만" << endl;*/
+	
+		
 	}
 
 }
@@ -179,6 +169,4 @@ void CShop::Exit()
 {
 	cout << "상점 주인 : 쇼핑할 시간이 없어? 다 끓인 차라도 한 잔 들고 가게." << endl;
 	system("pause");
-
-	// safedelete 아이템들?
 }
