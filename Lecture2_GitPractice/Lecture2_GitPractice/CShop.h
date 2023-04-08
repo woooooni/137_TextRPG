@@ -12,7 +12,7 @@ public:
 	CShop();
 	~CShop();
 	void		SetPlayer(CPlayer* pPlayer) { m_pPlayer = pPlayer; }
-	void		SetInven(CInventory* pInven) { m_pInven = pInven; }
+
 
 
 	void ShowItem(int);
@@ -30,9 +30,9 @@ public:
 
 	virtual void Exit() override;
 
-	
+	CItem* pItem;
 	CPlayer* m_pPlayer;
-	CInventory* m_pInven;
+	
 	vector<CItem*> vecItemList[(int)SHOP_LEVEL::END];
 
 };
