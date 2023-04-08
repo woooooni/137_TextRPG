@@ -22,7 +22,7 @@ public:
 
 private:
 	vector<CItem*> m_vecItems;
-	vector<CItem*>::iterator invenIter;
+	vector<CItem*>::iterator m_invenIter;
 	CPlayer* m_pPlayer;
 	CItem m_item;
 	bool isEquip;

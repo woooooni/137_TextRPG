@@ -12,6 +12,7 @@ public:
 	CItem(const CItem& rhs) {
 	    iAmount = rhs.iAmount;
 		m_tItem = rhs.m_tItem;
+		//delete &rhs;
 	}
 	virtual ~CItem();
 
