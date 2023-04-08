@@ -31,6 +31,7 @@ public:
 public:
 	void AddItem(CItem* _pItem, int _iAmount);
 	void UseItem(int _iIndex);
+	bool DecreaseItem(int _iIndex, int _iAmount);
 };
 
 

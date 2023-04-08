@@ -100,3 +100,15 @@ void CInventory::UseItem(int _iIndex)
 		}
 	}
 }
+
+bool CInventory::DecreaseItem(int _iIndex, int _iAmount)
+{
+	if (_iIndex < m_vecItems.size()) {
+		m_vecItems[_iIndex]->SetAmount(-_iAmount);
+		if (m_vecItems[_iIndex]->GetAmount() <= 0) {
+			m_vecItems.erase(m_vecItems.begin() + _iIndex);
+		}
+		return true;
+	}
+	else return false;
+}
