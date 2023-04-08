@@ -11,7 +11,8 @@
 
 CScene_Field::CScene_Field()
 	:CScene(SCENE_TYPE::FIELD)
-	, m_pMonster(nullptr), m_pPlayer(nullptr)
+	, m_pMonster(nullptr)
+	, m_pPlayer(nullptr)
 {
 }
 
@@ -27,6 +28,7 @@ void CScene_Field::Enter()
 	if (nullptr == m_pPlayer)
 		m_pPlayer = CGameCore::GetInst()->GetPlayer();
 
+	system("cls");
 
 	cout << "1. 초급\t 2. 중급\t 3.고급 (-1 : 나가기)" << endl;
 
@@ -41,12 +43,15 @@ void CScene_Field::Enter()
 	{
 	case 1:
 		m_pMonster = new CMonster_Easy;
+		m_pMonster->Initialize();
 		break;
 	case 2:
 		m_pMonster = new CMonster_Normal;
+		m_pMonster->Initialize();
 		break;
 	case 3:
 		m_pMonster = new CMonster_Hard;
+		m_pMonster->Initialize();
 		break;
 		
 	default:
@@ -73,7 +78,9 @@ void CScene_Field::Update()
 
 void CScene_Field::Render()
 {
+	system("cls");
 	m_pPlayer->Render();
+	cout << endl << endl;
 	m_pMonster->Render();
 
 	cout << "1. 때린다.\t 2. 도망간다." << endl;
@@ -105,6 +112,7 @@ void CScene_Field::Fight()
 		cout << m_pPlayer->Set_Gold(m_pPlayer->Get_Stat().m_iGold + 100);
 		system("pause");
 		CSceneMgr::GetInst()->ChangeScene(SCENE_TYPE::LOBBY);
+		return;
 	}
 
 	m_pMonster->Attack(m_pPlayer);
@@ -116,6 +124,7 @@ void CScene_Field::Fight()
 		system("pause");
 		m_pPlayer->Revive();
 		CSceneMgr::GetInst()->ChangeScene(SCENE_TYPE::LOBBY);
+		return;
 	}
 }
 
@@ -125,4 +134,5 @@ void CScene_Field::RunAway()
 	cout << "플레이어가 도망쳤습니다." << endl;
 	system("pause");
 	CSceneMgr::GetInst()->ChangeScene(SCENE_TYPE::LOBBY);
+	return;
 }
