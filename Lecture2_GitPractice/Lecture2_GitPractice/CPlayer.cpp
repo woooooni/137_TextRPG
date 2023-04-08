@@ -129,10 +129,11 @@ void CPlayer::OpenBag()
 		m_pInventory->Render();
 		cout << "1. 인벤토리  2. 장비창  3. 돌아가기" << endl;
 		cin >> iInput;
-		if (iInput == 3) {
+		if (iInput == 3)
 			break;
-		}
-		switch (iInput) {
+
+		switch (iInput) 
+		{
 		case 1:
 			m_pInventory->Update();
 			break;

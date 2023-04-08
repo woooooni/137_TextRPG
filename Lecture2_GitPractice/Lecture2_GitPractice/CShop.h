@@ -9,16 +9,17 @@
 class CShop :public CScene
 {
 public:
-	CShop();
-	~CShop();
-	void		SetPlayer(CPlayer* pPlayer) { m_pPlayer = pPlayer; }
+	explicit CShop();
+	virtual  ~CShop();
 
 
-
+public:
 	void ShowItem(int);
 	void BuyItem(CItem* pItem);
 	void SellItem();
 
+public:
+	void SetPlayer(CPlayer* pPlayer) { m_pPlayer = pPlayer; }
 
 public:
 	// CScene을(를) 통해 상속됨
@@ -30,10 +31,10 @@ public:
 
 	virtual void Exit() override;
 
-	CItem* pItem;
-	CPlayer* m_pPlayer;
+	CItem*		m_pItem;
+	CPlayer*	m_pPlayer;
 	
-	vector<CItem*> vecItemList[(int)SHOP_LEVEL::END];
+	vector<CItem*> m_vecItemList[(int)SHOP_LEVEL::END];
 
 };
 
