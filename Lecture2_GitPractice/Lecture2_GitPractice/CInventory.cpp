@@ -11,8 +11,6 @@
 CInventory::CInventory()
 	:isEquip(0)
 {
-	m_vecItems.push_back(new CRedPotion());
-	m_vecItems[0]->SetAmount(40);
 	// m_pPlayer = CGameCore::GetInst()->GetPlayer();
 }
 

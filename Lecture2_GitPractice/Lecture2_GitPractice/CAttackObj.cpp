@@ -9,7 +9,7 @@ CAttackObj::CAttackObj()
 }
 
 CAttackObj::CAttackObj(const string & _strName, const OBJECT_TYPE & _eObjType)
-	: m_strName("")
+	: m_strName(_strName)
 	, m_bDead(false)
 	, CObj(_eObjType)
 {
@@ -17,7 +17,7 @@ CAttackObj::CAttackObj(const string & _strName, const OBJECT_TYPE & _eObjType)
 }
 
 CAttackObj::CAttackObj(const string & _strName, const ATTACK_OBJ_STAT & _tStat, const OBJECT_TYPE & _eObjType)
-	: m_strName("")
+	: m_strName(_strName)
 	, m_bDead(false)
 	, m_tStat(_tStat)
 	, CObj(_eObjType)
