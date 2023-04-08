@@ -11,6 +11,7 @@ CEquip::CEquip() : m_pEqPlayer(nullptr), m_iter(m_mapEquip.begin())
 
 CEquip::~CEquip()
 {
+	Release();
 }
 
 void CEquip::Initialize()
@@ -77,6 +78,15 @@ void CEquip::Render()
 
 void CEquip::Release()
 {
+	for (m_iter = m_mapEquip.begin(); m_iter != m_mapEquip.end(); ++m_iter)
+	{
+		if (m_iter->second != nullptr)
+		{
+			delete m_iter->second;
+			m_iter->second = nullptr;
+		}
+	}
+	m_mapEquip.clear();
 }
 
 bool CEquip::Equip_Item(CItem* _pItem)

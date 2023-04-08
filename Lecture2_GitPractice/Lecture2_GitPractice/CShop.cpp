@@ -22,22 +22,31 @@ void CShop::Enter()
 	//바지:에픽, 모자&옷: 레전
 	CItem* pItem = new CMace;
 	m_vecItemList[(int)SHOP_LEVEL::BEGGINER].push_back(pItem);
+
 	pItem = new CRedPotion;
 	m_vecItemList[(int)SHOP_LEVEL::BEGGINER].push_back(pItem);
+
 	pItem = new CWoodWand;
 	m_vecItemList[(int)SHOP_LEVEL::MIDDLE].push_back(pItem);
+
 	pItem = new CMaplePants;
 	m_vecItemList[(int)SHOP_LEVEL::MIDDLE].push_back(pItem);
+
 	pItem = new COrangePotion;
 	m_vecItemList[(int)SHOP_LEVEL::MIDDLE].push_back(pItem);
+
 	pItem = new CMapleHat;
 	m_vecItemList[(int)SHOP_LEVEL::SENIOR].push_back(pItem);
+
 	pItem = new CMapleCloth;
 	m_vecItemList[(int)SHOP_LEVEL::SENIOR].push_back(pItem);
+
 	pItem = new CFruitDagger;
 	m_vecItemList[(int)SHOP_LEVEL::SENIOR].push_back(pItem);
+
 	pItem = new CWarBow;
 	m_vecItemList[(int)SHOP_LEVEL::SENIOR].push_back(pItem);
+
 	pItem = new CWhitePotion;
 	m_vecItemList[(int)SHOP_LEVEL::SENIOR].push_back(pItem);
 }
@@ -48,16 +57,20 @@ void CShop::ShowItem(int _iLevel)
 	int iInput(0);
 	while (true)
 	{
+		int i = 1;
+
 		system("cls");
 		m_pPlayer->Render();
-		cout << "상점 주인 : 어서오세요! 좋은것들만 모아놨습니다. (0. 나가기):" << endl;
+		cout << "상점 주인 : 어서오세요! 좋은것들만 모아놨습니다. (0. 나가기)\n" << endl;
 		vector<CItem*>::iterator iter = m_vecItemList[_iLevel].begin();
 		for (iter; iter != m_vecItemList[_iLevel].end(); iter++)
 		{
+			cout << "[" << i << "]. ";
 			(*iter)->Render();
+			++i;
 		}
 
-
+		cout << "\n사고싶은걸 말하라구 : ";
 		cin >> iInput;
 
 		if (m_vecItemList[_iLevel].size() < iInput)
@@ -98,6 +111,7 @@ void CShop::BuyItem(CItem* _pItem)
 	}
 
 	bSuccess = m_pPlayer->Set_Gold(m_pPlayer->Get_Stat().m_iGold - iPrice);
+
 	if (bSuccess==false)
 	{
 		system("cls");
@@ -126,7 +140,6 @@ void CShop::SellItem()
 
 		cout << "판매할 아이템을 고르시오.(0. 나가기):" << endl;
 		cin >> iInput;
-
 
 		--iInput;
 		if (0 > iInput)
