@@ -106,9 +106,7 @@ void CInventory::UseItem(int _iIndex)
 			m_vecItems[_iIndex]->SetAmount(-1);
 			// 개수 0개되면 지우기
 			if (m_vecItems[_iIndex]->GetAmount() <= 0) {
-				m_invenIter = m_vecItems.begin() + _iIndex;
-				delete (*m_invenIter);
-				(*m_invenIter) = nullptr;
+				DeleteItem(_iIndex);
 				m_vecItems.erase(m_invenIter);
 			}
 		}
@@ -116,7 +114,6 @@ void CInventory::UseItem(int _iIndex)
 			// 장비 착용
 			isEquip = m_pPlayer->Get_Equip()->Equip_Item(m_vecItems[_iIndex]);
 			if (isEquip) {
-				// Safe_Delete(m_vecItems[_iIndex]);
 				m_vecItems.erase(m_vecItems.begin() + _iIndex);
 			}
 		}
@@ -128,9 +125,17 @@ bool CInventory::DecreaseItem(int _iIndex, int _iAmount)
 	if (_iIndex < m_vecItems.size()) {
 		m_vecItems[_iIndex]->SetAmount(-_iAmount);
 		if (m_vecItems[_iIndex]->GetAmount() <= 0) {
+			DeleteItem(_iIndex);
 			m_vecItems.erase(m_vecItems.begin() + _iIndex);
 		}
 		return true;
 	}
 	else return false;
+}
+
+void CInventory::DeleteItem(int _iIndex)
+{
+	m_invenIter = m_vecItems.begin() + _iIndex;
+	delete (*m_invenIter);
+	(*m_invenIter) = nullptr;
 }
